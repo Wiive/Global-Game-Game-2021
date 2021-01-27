@@ -70,6 +70,8 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 [Aa]ssets/[Ss]treamingAssets/aa.meta
 [Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Rider auto-generated files
 GlobalGameJam2021/Assets/Scripts/RiderFileSpawn.cs.meta
 GlobalGameJam2021/.idea/.idea.GlobalGameJam2021/.idea/vcs.xml
 GlobalGameJam2021/.idea/.idea.GlobalGameJam2021/.idea/riderModule.iml
