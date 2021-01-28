@@ -5,12 +5,25 @@ using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+[DefaultExecutionOrder(-8)]
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
     private int gameScore;
-    
+    private float gameTime;
+    private bool countTime;
+
+    private void OnEnable()
+    {
+        GameStateManager.instance.onChangeGameState += OnGameStateChange;
+    }
+
+    private void OnDisable()
+    {
+        GameStateManager.instance.onChangeGameState -= OnGameStateChange;
+    }
+
     private void Awake()
     {
         if (instance == null)
@@ -19,9 +32,17 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-    private void Start()
+    private void Update()
     {
-        GameStateManager.instance.ChangeGameState(GameStateManager.GameState.GameLoop);
+        if (countTime)
+        {
+            gameTime += Time.deltaTime;
+        }
+    }
+
+    public float GetCurrentGameTime()
+    {
+        return gameTime;
     }
 
     public Action<int> onScoreUpdate;
@@ -45,5 +66,17 @@ public class GameManager : MonoBehaviour
         newPickerObject.pickedItem = pickedObject;
 
         onPickedUpObject?.Invoke(newPickerObject);
+    }
+    
+    void OnGameStateChange(GameStateManager.GameState newGameState)
+    {
+        if (newGameState == GameStateManager.GameState.GameLoop)
+        {
+            countTime = true;
+        }
+        else
+        {
+            countTime = false;
+        }
     }
 }
