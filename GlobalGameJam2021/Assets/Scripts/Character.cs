@@ -54,8 +54,16 @@ public class Character : MonoBehaviour
         Debug.Log($"{name} Attacks!");
     }
     
-    protected virtual void Pickup()
+    protected virtual void Pickup(Relic relic)
     {
         Debug.Log($"{name} Pickups Relic!");
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Relic")
+        {
+            Pickup(other.GetComponent<Relic>());
+        }
     }
 }
