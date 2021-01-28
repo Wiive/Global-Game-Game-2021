@@ -31,6 +31,11 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
     }
 
+    private void Start()
+    {
+        GameStateManager.instance.ChangeGameState(GameStateManager.GameState.GameLoop);
+    }
+
     private void Update()
     {
         if (countTime)

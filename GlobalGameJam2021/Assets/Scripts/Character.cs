@@ -11,6 +11,7 @@ public class Character : MonoBehaviour
     protected MovementController moveController;
 
     protected SpriteRenderer spriteRenderer;
+    private Transform gfxTransform;
     
     [SerializeField] protected Vector2 direction;
     public bool isAlive = true;
@@ -38,7 +39,8 @@ public class Character : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         moveController = GetComponent<MovementController>();
-        spriteRenderer = transform.Find("GFX").Find("Sprite").GetComponent<SpriteRenderer>();
+        gfxTransform = transform.Find("GFX");
+        spriteRenderer = gfxTransform.Find("Sprite").GetComponent<SpriteRenderer>();
     }
 
     protected virtual void Move()
@@ -75,6 +77,14 @@ public class Character : MonoBehaviour
             spriteRenderer.transform.eulerAngles = new Vector3(0, 0, -180);
         else
             spriteRenderer.transform.eulerAngles = new Vector3(0, 0, -270);
+    }
+
+    private void FixPixelPosition ()
+    {
+        int x = Mathf.RoundToInt (transform.position.x);
+        int y = Mathf.RoundToInt (transform.position.y);
+
+        gfxTransform.position = new Vector3( x, y, 0);
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D other)
