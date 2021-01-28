@@ -244,7 +244,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab780ad098559487dae45b96609a0c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
   direction: {x: 0, y: 0}
   isAlive: 1
 --- !u!114 &8395075013845601892
@@ -259,6 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd252858a84e0498aa2ed246beb7fcb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 60
 --- !u!61 &8395075013845601895
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -316,7 +316,7 @@ Animator:
   m_GameObject: {fileID: 8395075013845601891}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 526099d6834d1450ab9224279025370c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0534b762b46a24a9ea582f0e90a303fb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

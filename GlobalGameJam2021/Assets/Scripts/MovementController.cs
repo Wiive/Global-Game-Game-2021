@@ -29,10 +29,11 @@ public class MovementController : MonoBehaviour
     public void Move(Vector2 direction)
     {
         // body.velocity = velocity;
+        Vector2 currentPosition = transform.position;
         
         if (moveIsDone)
         {
-            // targetPosition = transform.position + (direction * TileSize);
+            targetPosition = currentPosition + (direction * TileSize);
         }
         
         transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
