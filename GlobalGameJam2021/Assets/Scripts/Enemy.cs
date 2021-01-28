@@ -28,6 +28,7 @@ public class Enemy : Character
 
     protected override void Update()
     {
+        base.Update();
         if (pathIndexPosition <= path.Count -2)
         {
             MoveEnemyAlongPath();
@@ -95,13 +96,13 @@ public class Enemy : Character
 
     private void MoveEnemyAlongPath()
     {
-        var targetPosition = path[pathIndexPosition + 1].transform.position;
-        var movementThisFrame = moveSpeed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, movementThisFrame);
-        if (transform.position == targetPosition)
-        {
-            pathIndexPosition++;
-        }
+        if (moveController.IsMoving) return;
+
+        currentPos = path[pathIndexPosition].GridPos;
+        direction = path[pathIndexPosition + 1].GridPos - currentPos;
+        Debug.Log(direction);
+        moveController.SetTargetPosition(direction);
+        pathIndexPosition++;
     }
 
     IEnumerator HandleNewPath()

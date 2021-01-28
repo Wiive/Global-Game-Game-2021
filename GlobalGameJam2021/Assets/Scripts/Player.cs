@@ -4,16 +4,50 @@ using UnityEngine;
 
 public class Player : Character
 {
-    [SerializeField] private bool moveConstant = true;
+    [SerializeField] private bool moveConstant = false;
+    Dictionary<Vector2Int, WayPoint> grid = new Dictionary<Vector2Int, WayPoint>();
+
+    Vector2Int currentPos = new Vector2Int(0, 0); // set this to get the value of player spawnPos
+
+    protected override void Awake()
+    {
+        base.Awake();
+        LoadBlocks();
+    }
+    private void LoadBlocks()
+    {
+        grid = new Dictionary<Vector2Int, WayPoint>();
+        WayPoint[] waypoints = FindObjectsOfType<WayPoint>();
+
+        foreach (WayPoint waypoint in waypoints)
+        {
+            AddToGrid(waypoint);
+        }
+    }
+    private void AddToGrid(WayPoint waypoint)
+    {
+        var gridPos = waypoint.GridPos;
+        if (grid.ContainsKey(gridPos))
+        {
+            return;
+        }
+        else
+        {
+            grid.Add(gridPos, waypoint);
+        }
+    }
+
+
     protected override void Update()
     {
         base.Update();
-        
+
+        if (moveController.IsMoving) return;
+
         // TODO: REMOVE LATER (DEBUG ONLY)
         DebugInput();
         
-        Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-
+        Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));       
         if (moveConstant)
         {
             if ((input.x != 0 && input.y == 0 || input.x == 0 && input.y != 0) && input != Vector2.zero)
@@ -27,10 +61,22 @@ public class Player : Character
                 direction = input;
         }
         
-        if (direction != Vector2.zero)
+        if (direction != Vector2.zero && IsValidInput())
+        {
+            currentPos += new Vector2Int((int)direction.x,(int)direction.y);
+            Debug.Log(currentPos);
             moveController.SetTargetPosition(direction);
+        }
+
     }
     
+    bool IsValidInput()
+    {
+        Vector2Int inputTry = new Vector2Int((int) direction.x, (int) direction.y) + currentPos;
+        if(grid.ContainsKey(inputTry) && !grid[inputTry].isBlocked ) return true;
+        return false;
+    }
+
     protected override void Pickup(Relic relic)
     {
         Debug.Log($"{name} Pickups Relic!");
@@ -66,4 +112,6 @@ public class Player : Character
         if (Input.GetKeyDown(KeyCode.C))
             moveConstant = !moveConstant;
     }
+
+
 }
