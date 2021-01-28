@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[DefaultExecutionOrder(-9)]
 public class GameStateManager : MonoBehaviour
 {
     public static GameStateManager instance;
@@ -32,7 +33,7 @@ public class GameStateManager : MonoBehaviour
             Destroy(this);
     }
     
-    
+    public Action<GameStateManager.GameState> onChangeGameState;
     public void ChangeGameState(GameState newGameState)
     {
         if (newGameState == currentGameState)
@@ -66,6 +67,6 @@ public class GameStateManager : MonoBehaviour
 
         currentGameState = newGameState;
         
-        EventManager.instance.BroadcastOnChangeGameState(newGameState);
+        onChangeGameState?.Invoke(newGameState);
     }
 }

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[DefaultExecutionOrder(-10)]
+[DefaultExecutionOrder(-11)]
 public class EventManager : MonoBehaviour
 {
     public static EventManager instance;
@@ -23,12 +23,12 @@ public class EventManager : MonoBehaviour
         onScoreUpdate?.Invoke(amount);
     }
     
-    // CHANGE GAMESTATE
-    public Action<GameStateManager.GameState> onChangeGameState;
-    public void BroadcastOnChangeGameState(GameStateManager.GameState newGameState)
-    {
-        onChangeGameState?.Invoke(newGameState);
-    }
+    // // CHANGE GAMESTATE
+    // public Action<GameStateManager.GameState> onChangeGameState;
+    // public void BroadcastOnChangeGameState(GameStateManager.GameState newGameState)
+    // {
+    //     onChangeGameState?.Invoke(newGameState);
+    // }
 
     // PICKED UP ITEM
     public Action<PickerItemWrapper> onPickedUpItem;

@@ -15,12 +15,12 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
-        EventManager.instance.onChangeGameState += OnGameStateChange;
+        GameStateManager.instance.onChangeGameState += OnGameStateChange;
     }
 
     private void OnDisable()
     {
-        EventManager.instance.onChangeGameState -= OnGameStateChange;
+        GameStateManager.instance.onChangeGameState -= OnGameStateChange;
     }
 
     private void Awake()
