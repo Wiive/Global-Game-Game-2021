@@ -1199,14 +1199,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5552137707795701899, guid: cea5fbadfe71d455d88f3a872e1a8392, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5552137707795701899, guid: cea5fbadfe71d455d88f3a872e1a8392, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5552137708123889255, guid: cea5fbadfe71d455d88f3a872e1a8392, type: 3}
       propertyPath: m_Name
       value: Relic (3)
@@ -1217,11 +1209,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5552137708123889258, guid: cea5fbadfe71d455d88f3a872e1a8392, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 102.6
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 5552137708123889258, guid: cea5fbadfe71d455d88f3a872e1a8392, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 51.8
+      value: 44.3
       objectReference: {fileID: 0}
     - target: {fileID: 5552137708123889258, guid: cea5fbadfe71d455d88f3a872e1a8392, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1576,6 +1568,10 @@ PrefabInstance:
     - target: {fileID: 4788416560999021894, guid: ba4bf7ffc10a5c344a6f683ccbad31e3, type: 3}
       propertyPath: m_Name
       value: RelicPointer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4788416560999021894, guid: ba4bf7ffc10a5c344a6f683ccbad31e3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba4bf7ffc10a5c344a6f683ccbad31e3, type: 3}
