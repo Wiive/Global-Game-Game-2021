@@ -45,9 +45,19 @@ public class Enemy : Character
         Debug.Log($"{name} Pickups Relic!");
     }
 
+    protected override void Attack(Character character)
+    {
+        base.Attack(character);
+    }
+    
+    protected override void GotKilled()
+    {
+        base.GotKilled();
+    }
+
     protected override void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Relic")
+        if (other.CompareTag("Relic"))
         {
             Pickup(other.GetComponent<Relic>());
 

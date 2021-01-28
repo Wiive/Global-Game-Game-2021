@@ -36,6 +36,24 @@ public class Player : Character
         Debug.Log($"{name} Pickups Relic!");
         relic.ReturnToStartPosition();
     }
+    
+    protected override void Attack(Character character)
+    {
+        base.Attack(character);
+    }
+    
+    protected override void GotKilled()
+    {
+        base.GotKilled();
+    }
+    
+    protected override void OnTriggerEnter2D(Collider2D other)
+    {
+        base.OnTriggerEnter2D(other);
+        
+        if (other.CompareTag("Enemy"))
+            Attack(other.GetComponent<Enemy>());
+    }
 
     // TODO REMOVE LATER (DEBUG ONLY)
     private void DebugInput()

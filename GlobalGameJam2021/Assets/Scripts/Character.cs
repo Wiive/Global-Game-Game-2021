@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(MovementController))]
@@ -62,20 +61,25 @@ public class Character : MonoBehaviour
         moveController.Move();
     }
 
+    protected virtual void Respawn()
+    {
+        
+    }
+
     protected virtual void GotKilled()
     {
         Debug.Log($"{name} got Killed!");
         isAlive = false;
     }
     
-    protected virtual void Attack()
+    protected virtual void Attack(Character character)
     {
-        Debug.Log($"{name} Attacks!");
+        Debug.Log($"{name} Attacks {character.name}!");
     }
     
     protected virtual void Pickup(Relic relic)
     {
-        Debug.Log($"{name} Pickups Relic!");
+        Debug.Log($"{name} Pickups Relic \"{relic.name}\"!");
     }
 
     private void UpdateAnimations()
@@ -98,9 +102,7 @@ public class Character : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Relic")
-        {
+        if (other.CompareTag("Relic"))
             Pickup(other.GetComponent<Relic>());
-        }
     }
 }
