@@ -8,21 +8,28 @@ public class RelicPointerController : MonoBehaviour
     public Image targetSymbol;
     public Image arrow;
 
-    public GameObject target;
+    public Transform target;
 
     public float speed = 1.0f;
+    [SerializeField] int angleOffset;
 
     private void Update()
     {
-        Vector3 targetDirection = target.transform.position - arrow.transform.position;
+        Vector3 targetDirection = target.transform.position - Camera.main.WorldToScreenPoint(arrow.rectTransform.position);
 
-        float singleStep = speed * Time.deltaTime;
+        var angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg + angleOffset;
 
-        Vector3 newDirection = Vector3.RotateTowards(arrow.transform.forward, targetDirection, singleStep, 0.0f);
+        Debug.DrawRay(targetDirection * 10000, arrow.rectTransform.position, Color.red);
 
-        Debug.DrawRay(arrow.transform.position, newDirection, Color.red);
+        //float singleStep = speed * Time.deltaTime;
 
-        arrow.transform.rotation = Quaternion.LookRotation(newDirection);
+        //Vector3 newDirection = Vector3.RotateTowards(arrow.transform.up, targetDirection, singleStep, 0.0f);
+
+        //Debug.DrawRay(arrow.transform.position, newDirection, Color.red);
+
+        arrow.rectTransform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+        //arrow.transform.rotation = Quaternion.LookRotation(newDirection);
     }
 
 

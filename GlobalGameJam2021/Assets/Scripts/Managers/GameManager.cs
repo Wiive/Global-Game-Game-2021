@@ -21,8 +21,8 @@ public class GameManager : MonoBehaviour
     {
         if (instance == null)
             instance = this;
-        else
-            Destroy(this);
+        else if (instance != this)
+            Destroy(gameObject);
     }
 
     public Action<int> onScoreUpdate;
