@@ -60,10 +60,6 @@ public class Character : MonoBehaviour
     protected virtual void Pickup(Relic relic)
     {
         Debug.Log($"{name} Pickups Relic!");
-        // if (typeof(this.GetType()) == Player)
-        // {
-        //     
-        // }
     }
 
     private void UpdateFaceDirection()
@@ -81,7 +77,7 @@ public class Character : MonoBehaviour
             spriteRenderer.transform.eulerAngles = new Vector3(0, 0, -270);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Relic")
         {
