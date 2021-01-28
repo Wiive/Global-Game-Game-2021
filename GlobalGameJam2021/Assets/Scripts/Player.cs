@@ -9,11 +9,14 @@ public class Player : Character
     {
         base.Update();
         
+        // TODO: REMOVE LATER (DEBUG ONLY)
+        DebugInput();
+        
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
         if (moveConstant)
         {
-            if (input.x != input.y && input != Vector2.zero)
+            if ((input.x != 0 && input.y == 0 || input.x == 0 && input.y != 0) && input != Vector2.zero)
                 direction = input;
         }
         else
@@ -32,5 +35,12 @@ public class Player : Character
     {
         Debug.Log($"{name} Pickups Relic!");
         relic.ReturnToStartPosition();
+    }
+
+    // TODO REMOVE LATER (DEBUG ONLY)
+    private void DebugInput()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+            moveConstant = !moveConstant;
     }
 }
