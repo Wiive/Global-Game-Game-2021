@@ -99,6 +99,8 @@ MonoBehaviour:
   addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 0, y: 0}
   blocked:
     serializedVersion: 2
@@ -106,3 +108,9 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294311680
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278247935

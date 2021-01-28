@@ -5,9 +5,10 @@ using UnityEngine;
 public class WayPoint : MonoBehaviour
 {
     public bool isExplored = false;
-    public bool addedToGrid = false;
     public WayPoint exploredFrom;
     public bool isBlocked = false;
+    public bool hasRelic = false;
+    public bool isExit = false;
     int size = 10;
 
     [SerializeField] Vector2Int gridPos = new Vector2Int();
@@ -15,6 +16,8 @@ public class WayPoint : MonoBehaviour
 
     [SerializeField] Color32 blocked = new Color32();
     [SerializeField] Color32 nonBlocked = new Color32();
+    [SerializeField] Color32 exit = new Color32();
+    [SerializeField] Color32 relicPlaced = new Color32();
 
     public int GetGridSize()
     {
@@ -34,6 +37,14 @@ public class WayPoint : MonoBehaviour
         if (isBlocked)
         {
             GetComponent<SpriteRenderer>().color = blocked;
+        }
+        else if (isExit)
+        {
+            GetComponent<SpriteRenderer>().color = exit;
+        }
+        else if (hasRelic)
+        {
+            GetComponent<SpriteRenderer>().color = relicPlaced;
         }
         else
         {

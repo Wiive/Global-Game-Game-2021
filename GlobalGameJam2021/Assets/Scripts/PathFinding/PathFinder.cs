@@ -11,6 +11,10 @@ public class PathFinder : MonoBehaviour
     Queue<WayPoint> waypointQueue = new Queue<WayPoint>();
     List<WayPoint> path = new List<WayPoint>();
 
+    WayPoint startSearchPoint;
+    Queue<WayPoint> searchPoints = new Queue<WayPoint>();
+
+
     bool searchForPath = false;
 
     WayPoint searchCenter;
@@ -33,11 +37,9 @@ public class PathFinder : MonoBehaviour
     {
         grid = new Dictionary<Vector2Int, WayPoint>();
         waypoints = FindObjectsOfType<WayPoint>();
-        Debug.Log(grid.Count);
 
         foreach (WayPoint waypoint in waypoints)
         {
-            waypoint.isExplored = false;
             AddToGrid(waypoint);
         }
     }
@@ -47,14 +49,15 @@ public class PathFinder : MonoBehaviour
         var gridPos = waypoint.GridPos;
         if (grid.ContainsKey(gridPos))
         {
-            Debug.LogWarning("Skipping due to overlapping waypoint at " + waypoint.name);
+            return;
         }
         else
         {
-            waypoint.addedToGrid = true;
             grid.Add(gridPos, waypoint);
         }
     }
+
+
     public List<WayPoint> SearchForPath(Vector2Int startPoint, Vector2Int endPoint)
     {
         startWaypoint = GetWayPoint(startPoint);
@@ -81,11 +84,6 @@ public class PathFinder : MonoBehaviour
             waypoint.exploredFrom = null;
         }
     }
-    private void SearchNearby()
-    {
-        if (!searchForPath) { return; }
-        SearchDirections();
-    }
     private void EndNodeFound()
     {
         if (searchCenter == endWaypoint)
@@ -94,18 +92,10 @@ public class PathFinder : MonoBehaviour
             CreatePath();
         }
     }
-    private void CreatePath()
+    private void SearchNearby()
     {
-        path.Clear();
-        path.Add(endWaypoint);
-        WayPoint previous = endWaypoint.exploredFrom;
-        while (previous != startWaypoint)
-        {
-            path.Add(previous);
-            previous = previous.exploredFrom;
-        }
-        path.Add(startWaypoint);
-        path.Reverse();
+        if (!searchForPath) { return; }
+        SearchDirections();
     }
 
     private void SearchDirections()
@@ -131,6 +121,103 @@ public class PathFinder : MonoBehaviour
         }
     }
 
+    private void CreatePath()
+    {
+        path.Clear();
+        path.Add(endWaypoint);
+        WayPoint previous = endWaypoint.exploredFrom;
+        while (previous != startWaypoint)
+        {
+            path.Add(previous);
+            previous = previous.exploredFrom;
+        }
+        path.Add(startWaypoint);
+        path.Reverse();
+    }
+
+
+
+
+    // refactor this more nicely! this takes care of the searching for relic
+    // and exit in the vicinity (range decides how far it looks) 
+    public Vector2Int SearchForRelic(int range, Vector2Int startPoint)
+    {
+        ResetWaypoints();
+        startSearchPoint = GetWayPoint(startPoint);
+        searchPoints.Clear();
+        searchPoints.Enqueue(startSearchPoint);
+
+        while (searchPoints.Count > 0)
+        {
+            searchCenter = searchPoints.Dequeue();
+            searchCenter.isExplored = true;
+
+            if(searchCenter.hasRelic)
+            {
+                Debug.Log("Found Relic"); // remove
+                searchCenter.hasRelic = false;
+                return searchCenter.GridPos;            
+            }
+            else
+            {
+                SearchDirections(range, startPoint);
+            }
+        }
+        return new Vector2Int(0,0);
+    }
+    public Vector2Int SearchForExit(int range, Vector2Int startPoint)
+    {
+        ResetWaypoints();
+        startSearchPoint = GetWayPoint(startPoint);
+        searchPoints.Clear();
+        searchPoints.Enqueue(startSearchPoint);
+
+        while (searchPoints.Count > 0)
+        {
+            searchCenter = searchPoints.Dequeue();
+            searchCenter.isExplored = true;
+
+            if (searchCenter.isExit)
+            {
+                Debug.Log("Found Exit"); // remove
+                return searchCenter.GridPos;
+            }
+            else
+            {
+                SearchDirections(range, startPoint);
+            }
+        }
+        return new Vector2Int(0, 0);
+    }
+    private void SearchDirections(int range, Vector2Int startPoint)
+    {
+        foreach (var direction in directions)
+        {
+            nearbyCoordinates = searchCenter.GridPos + direction;
+            if (Mathf.Abs(nearbyCoordinates.x - startPoint.x) > range || 
+                Mathf.Abs(nearbyCoordinates.y - startPoint.y) > range)
+            {
+                return;
+            }
+
+            if (grid.ContainsKey(nearbyCoordinates))
+            {
+                AddSearchPoint(nearbyCoordinates);
+            }
+        }
+    }
+    private void AddSearchPoint(Vector2Int nearbyCoordinates)
+    {
+        WayPoint nearbyWaypoint = grid[nearbyCoordinates];
+        if (searchPoints.Contains(nearbyWaypoint) || nearbyWaypoint.isExplored) { return; }
+        else
+        {
+            searchPoints.Enqueue(nearbyWaypoint);
+        }
+    }
+
+
+
     public WayPoint GetWayPoint(Vector2Int positionKey)
     {
         try
@@ -144,4 +231,5 @@ public class PathFinder : MonoBehaviour
             return null;
         }
     }
+
 }

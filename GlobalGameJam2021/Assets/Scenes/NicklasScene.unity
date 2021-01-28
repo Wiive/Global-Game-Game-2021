@@ -168,9 +168,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 9, y: 0}
   blocked:
     serializedVersion: 2
@@ -178,6 +179,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &4766719
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -274,9 +281,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 6, y: 14}
   blocked:
     serializedVersion: 2
@@ -284,6 +292,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &6404276
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -380,9 +394,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 7, y: 11}
   blocked:
     serializedVersion: 2
@@ -390,6 +405,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &15533396
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -486,9 +507,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 4, y: 4}
   blocked:
     serializedVersion: 2
@@ -496,6 +518,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &18503375
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -592,9 +620,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 9, y: 18}
   blocked:
     serializedVersion: 2
@@ -602,6 +631,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &21543600
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -698,9 +733,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 6, y: 18}
   blocked:
     serializedVersion: 2
@@ -708,6 +744,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &43682717
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -804,9 +846,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 0, y: 18}
   blocked:
     serializedVersion: 2
@@ -814,6 +857,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &49708092
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -910,9 +959,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 5, y: 9}
   blocked:
     serializedVersion: 2
@@ -920,6 +970,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &52854804
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1016,9 +1072,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 1, y: 18}
   blocked:
     serializedVersion: 2
@@ -1026,6 +1083,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &61504092
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1122,9 +1185,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 3, y: 11}
   blocked:
     serializedVersion: 2
@@ -1132,6 +1196,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &85299981
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1228,9 +1298,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 1, y: 6}
   blocked:
     serializedVersion: 2
@@ -1238,6 +1309,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &97666666
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1334,9 +1411,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 2, y: 7}
   blocked:
     serializedVersion: 2
@@ -1344,6 +1422,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &118726051
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1440,9 +1524,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 8, y: 0}
   blocked:
     serializedVersion: 2
@@ -1450,6 +1535,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &128776860
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1546,9 +1637,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 4, y: 17}
   blocked:
     serializedVersion: 2
@@ -1556,6 +1648,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &143868269
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1607,6 +1705,91 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &167464719
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3877720369482156754, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: moveSpeed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877720369482156754, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: currentPos.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877720369482156754, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: currentPos.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877720369482156754, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: destination.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877720369482156754, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: destination.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -311
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -172.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601891, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_Name
+      value: Enemy 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601891, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601895, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
 --- !u!1 &176692852
 GameObject:
   m_ObjectHideFlags: 0
@@ -1652,9 +1835,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 3, y: 13}
   blocked:
     serializedVersion: 2
@@ -1662,6 +1846,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &176692855
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1758,9 +1948,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 1, y: 17}
   blocked:
     serializedVersion: 2
@@ -1768,6 +1959,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &183527568
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1864,9 +2061,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 4, y: 8}
   blocked:
     serializedVersion: 2
@@ -1874,6 +2072,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &193234737
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1970,9 +2174,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 5, y: 18}
   blocked:
     serializedVersion: 2
@@ -1980,6 +2185,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &205580382
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2076,9 +2287,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 3, y: 8}
   blocked:
     serializedVersion: 2
@@ -2086,6 +2298,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &235133060
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2182,9 +2400,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 8, y: 10}
   blocked:
     serializedVersion: 2
@@ -2192,6 +2411,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &285816665
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2288,9 +2513,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 0, y: 4}
   blocked:
     serializedVersion: 2
@@ -2298,6 +2524,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &302108826
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2394,9 +2626,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 0, y: 0}
   blocked:
     serializedVersion: 2
@@ -2404,6 +2637,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &328065330
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2455,6 +2694,91 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &328744872
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3877720369482156754, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: moveSpeed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877720369482156754, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: currentPos.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877720369482156754, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: currentPos.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877720369482156754, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: destination.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877720369482156754, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: destination.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -311
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -172.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601891, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_Name
+      value: Enemy 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601891, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601895, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
 --- !u!1 &331913155
 GameObject:
   m_ObjectHideFlags: 0
@@ -2500,9 +2824,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 3, y: 18}
   blocked:
     serializedVersion: 2
@@ -2510,6 +2835,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &331913158
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2606,9 +2937,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 1
+  isExit: 0
   gridPos: {x: 8, y: 12}
   blocked:
     serializedVersion: 2
@@ -2616,6 +2948,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &345374599
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2712,9 +3050,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 5, y: 12}
   blocked:
     serializedVersion: 2
@@ -2722,6 +3061,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &346967089
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2818,9 +3163,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 6, y: 5}
   blocked:
     serializedVersion: 2
@@ -2828,6 +3174,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &351718249
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2924,9 +3276,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 4, y: 1}
   blocked:
     serializedVersion: 2
@@ -2934,6 +3287,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &363760185
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3030,9 +3389,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 9, y: 16}
   blocked:
     serializedVersion: 2
@@ -3040,6 +3400,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &373306100
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3136,9 +3502,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 1
+  isExit: 0
   gridPos: {x: 7, y: 0}
   blocked:
     serializedVersion: 2
@@ -3146,6 +3513,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &377197973
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3242,9 +3615,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 1, y: 16}
   blocked:
     serializedVersion: 2
@@ -3252,6 +3626,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &388138423
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3348,9 +3728,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 0, y: 16}
   blocked:
     serializedVersion: 2
@@ -3358,6 +3739,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &392995320
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3454,9 +3841,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 4, y: 11}
   blocked:
     serializedVersion: 2
@@ -3464,6 +3852,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &401047138
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3515,6 +3909,91 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &419704767
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3877720369482156754, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: moveSpeed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877720369482156754, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: currentPos.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877720369482156754, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: currentPos.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877720369482156754, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: destination.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877720369482156754, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: destination.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -311
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -172.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601891, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_Name
+      value: Enemy 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601891, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601895, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
 --- !u!1 &426266933
 GameObject:
   m_ObjectHideFlags: 0
@@ -3560,9 +4039,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 7, y: 3}
   blocked:
     serializedVersion: 2
@@ -3570,6 +4050,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &426266936
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3686,9 +4172,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 3, y: 17}
   blocked:
     serializedVersion: 2
@@ -3696,6 +4183,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &438362794
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3792,9 +4285,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 7, y: 13}
   blocked:
     serializedVersion: 2
@@ -3802,6 +4296,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &441195157
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3898,9 +4398,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 9, y: 15}
   blocked:
     serializedVersion: 2
@@ -3908,6 +4409,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &446594377
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4004,9 +4511,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 3, y: 12}
   blocked:
     serializedVersion: 2
@@ -4014,6 +4522,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &449992597
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4110,9 +4624,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 4, y: 16}
   blocked:
     serializedVersion: 2
@@ -4120,6 +4635,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &455110504
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4216,9 +4737,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 5, y: 13}
   blocked:
     serializedVersion: 2
@@ -4226,6 +4748,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &460771631
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4322,9 +4850,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 3, y: 14}
   blocked:
     serializedVersion: 2
@@ -4332,6 +4861,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &462725550
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4485,9 +5020,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 1, y: 0}
   blocked:
     serializedVersion: 2
@@ -4495,6 +5031,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &474125164
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4591,9 +5133,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 2, y: 5}
   blocked:
     serializedVersion: 2
@@ -4601,6 +5144,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &493360087
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4697,9 +5246,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 5, y: 4}
   blocked:
     serializedVersion: 2
@@ -4707,6 +5257,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &506393323
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4803,9 +5359,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 9, y: 11}
   blocked:
     serializedVersion: 2
@@ -4813,6 +5370,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &520609332
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4909,9 +5472,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 3, y: 7}
   blocked:
     serializedVersion: 2
@@ -4919,6 +5483,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &521577728
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5015,9 +5585,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 1, y: 7}
   blocked:
     serializedVersion: 2
@@ -5025,6 +5596,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &535838592
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5121,9 +5698,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 8, y: 19}
   blocked:
     serializedVersion: 2
@@ -5131,6 +5709,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &539234382
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5227,9 +5811,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 9, y: 9}
   blocked:
     serializedVersion: 2
@@ -5237,6 +5822,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &550342903
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5333,9 +5924,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 7, y: 7}
   blocked:
     serializedVersion: 2
@@ -5343,6 +5935,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &553106973
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5439,9 +6037,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 6, y: 10}
   blocked:
     serializedVersion: 2
@@ -5449,6 +6048,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &567607578
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5545,9 +6150,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 5, y: 7}
   blocked:
     serializedVersion: 2
@@ -5555,6 +6161,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &581106248
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5651,9 +6263,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 1
+  isExit: 0
   gridPos: {x: 0, y: 12}
   blocked:
     serializedVersion: 2
@@ -5661,6 +6274,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &584299224
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5757,9 +6376,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 0, y: 2}
   blocked:
     serializedVersion: 2
@@ -5767,6 +6387,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &587840973
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5945,9 +6571,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 8, y: 15}
   blocked:
     serializedVersion: 2
@@ -5955,6 +6582,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &608413190
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6051,9 +6684,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 6, y: 16}
   blocked:
     serializedVersion: 2
@@ -6061,6 +6695,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &634181618
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6157,9 +6797,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 8, y: 14}
   blocked:
     serializedVersion: 2
@@ -6167,6 +6808,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &654410939
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6263,9 +6910,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 3, y: 6}
   blocked:
     serializedVersion: 2
@@ -6273,6 +6921,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &663763169
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6369,9 +7023,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 2, y: 1}
   blocked:
     serializedVersion: 2
@@ -6379,6 +7034,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &665059962
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6475,9 +7136,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 6, y: 0}
   blocked:
     serializedVersion: 2
@@ -6485,6 +7147,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &665240534
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6581,9 +7249,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 0, y: 10}
   blocked:
     serializedVersion: 2
@@ -6591,6 +7260,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &669703323
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6687,9 +7362,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 8, y: 9}
   blocked:
     serializedVersion: 2
@@ -6697,6 +7373,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &681335117
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6793,9 +7475,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 8, y: 13}
   blocked:
     serializedVersion: 2
@@ -6803,6 +7486,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &694079152
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6899,9 +7588,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 0, y: 14}
   blocked:
     serializedVersion: 2
@@ -6909,6 +7599,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &697670301
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7005,9 +7701,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 4, y: 9}
   blocked:
     serializedVersion: 2
@@ -7015,6 +7712,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &735982545
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7111,9 +7814,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 2, y: 0}
   blocked:
     serializedVersion: 2
@@ -7121,6 +7825,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &738641089
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7217,9 +7927,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 2, y: 15}
   blocked:
     serializedVersion: 2
@@ -7227,6 +7938,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &750101403
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7323,9 +8040,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 9, y: 13}
   blocked:
     serializedVersion: 2
@@ -7333,6 +8051,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &754450882
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7429,9 +8153,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 1, y: 1}
   blocked:
     serializedVersion: 2
@@ -7439,6 +8164,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &755525432
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7651,9 +8382,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 4, y: 14}
   blocked:
     serializedVersion: 2
@@ -7661,6 +8393,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &775263622
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7757,9 +8495,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 8, y: 16}
   blocked:
     serializedVersion: 2
@@ -7767,6 +8506,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &808922948
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7863,9 +8608,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 5, y: 16}
   blocked:
     serializedVersion: 2
@@ -7873,6 +8619,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &825331428
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7969,9 +8721,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 3, y: 16}
   blocked:
     serializedVersion: 2
@@ -7979,6 +8732,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &838524436
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8075,9 +8834,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 1, y: 10}
   blocked:
     serializedVersion: 2
@@ -8085,6 +8845,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &840431116
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8181,9 +8947,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 7, y: 18}
   blocked:
     serializedVersion: 2
@@ -8191,6 +8958,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &844191994
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8287,9 +9060,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 7, y: 4}
   blocked:
     serializedVersion: 2
@@ -8297,6 +9071,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &845741401
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8393,9 +9173,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 5, y: 3}
   blocked:
     serializedVersion: 2
@@ -8403,6 +9184,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &858702043
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8499,9 +9286,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 7, y: 19}
   blocked:
     serializedVersion: 2
@@ -8509,6 +9297,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &881969139
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8852,9 +9646,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 1, y: 2}
   blocked:
     serializedVersion: 2
@@ -8862,6 +9657,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &896958030
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8958,9 +9759,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 0, y: 11}
   blocked:
     serializedVersion: 2
@@ -8968,6 +9770,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &909360789
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9064,9 +9872,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 0, y: 7}
   blocked:
     serializedVersion: 2
@@ -9074,6 +9883,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &916461172
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9170,9 +9985,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 0, y: 13}
   blocked:
     serializedVersion: 2
@@ -9180,6 +9996,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &938887416
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9276,9 +10098,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 5, y: 2}
   blocked:
     serializedVersion: 2
@@ -9286,6 +10109,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &963954254
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9382,9 +10211,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 9, y: 4}
   blocked:
     serializedVersion: 2
@@ -9392,6 +10222,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &970598634
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9488,9 +10324,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 4, y: 12}
   blocked:
     serializedVersion: 2
@@ -9498,6 +10335,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &983292897
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9594,9 +10437,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 0, y: 1}
   blocked:
     serializedVersion: 2
@@ -9604,6 +10448,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &988778724
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9700,9 +10550,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 2, y: 17}
   blocked:
     serializedVersion: 2
@@ -9710,6 +10561,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1005225362
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9761,6 +10618,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1015073791 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8395075013845601891, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+  m_PrefabInstance: {fileID: 419704767}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1015073792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015073791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aefd050b4ed97a445b43b2f751d6a820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startWaypoint: {fileID: 0}
+  endWaypoint: {fileID: 0}
+  gridSize: {x: 10, y: 20}
 --- !u!1 &1031869343
 GameObject:
   m_ObjectHideFlags: 0
@@ -9806,9 +10683,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 1, y: 4}
   blocked:
     serializedVersion: 2
@@ -9816,6 +10694,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1031869346
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9912,9 +10796,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 9, y: 10}
   blocked:
     serializedVersion: 2
@@ -9922,6 +10807,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1033212261
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10018,9 +10909,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 8, y: 4}
   blocked:
     serializedVersion: 2
@@ -10028,6 +10920,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1053255735
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10124,9 +11022,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 6, y: 13}
   blocked:
     serializedVersion: 2
@@ -10134,6 +11033,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1063232782
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10230,9 +11135,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 5, y: 15}
   blocked:
     serializedVersion: 2
@@ -10240,6 +11146,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1064526195
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10336,9 +11248,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 6, y: 15}
   blocked:
     serializedVersion: 2
@@ -10346,6 +11259,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1065950999
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10442,9 +11361,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 6, y: 12}
   blocked:
     serializedVersion: 2
@@ -10452,6 +11372,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1075846885
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10516,7 +11442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5552137708123889258, guid: cea5fbadfe71d455d88f3a872e1a8392, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5552137708123889258, guid: cea5fbadfe71d455d88f3a872e1a8392, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10560,6 +11486,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cea5fbadfe71d455d88f3a872e1a8392, type: 3}
+--- !u!1 &1087833811 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8395075013845601891, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+  m_PrefabInstance: {fileID: 167464719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1087833812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087833811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aefd050b4ed97a445b43b2f751d6a820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startWaypoint: {fileID: 0}
+  endWaypoint: {fileID: 0}
+  gridSize: {x: 10, y: 20}
 --- !u!1 &1105908655
 GameObject:
   m_ObjectHideFlags: 0
@@ -10605,9 +11551,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 2, y: 18}
   blocked:
     serializedVersion: 2
@@ -10615,6 +11562,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1105908658
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10711,9 +11664,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 0, y: 9}
   blocked:
     serializedVersion: 2
@@ -10721,6 +11675,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1120697832
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10817,9 +11777,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 4, y: 19}
   blocked:
     serializedVersion: 2
@@ -10827,6 +11788,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1133584101
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10923,9 +11890,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 7, y: 8}
   blocked:
     serializedVersion: 2
@@ -10933,6 +11901,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1145116823
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10984,6 +11958,91 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1148056508
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3877720369482156754, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: moveSpeed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877720369482156754, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: currentPos.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877720369482156754, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: currentPos.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877720369482156754, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: destination.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877720369482156754, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: destination.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -311
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -172.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601891, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_Name
+      value: Enemy 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601891, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601895, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
 --- !u!1 &1149937323
 GameObject:
   m_ObjectHideFlags: 0
@@ -11029,9 +12088,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 5, y: 5}
   blocked:
     serializedVersion: 2
@@ -11039,6 +12099,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1149937326
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11135,9 +12201,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 3, y: 5}
   blocked:
     serializedVersion: 2
@@ -11145,6 +12212,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1161903996
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11241,9 +12314,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 9, y: 7}
   blocked:
     serializedVersion: 2
@@ -11251,6 +12325,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1170803030
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11347,9 +12427,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 7, y: 15}
   blocked:
     serializedVersion: 2
@@ -11357,6 +12438,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1180747753
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11437,7 +12524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11457,15 +12544,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8395075013845601888, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -11481,7 +12568,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8395075013845601891, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
       propertyPath: m_Name
-      value: Enemy (3)
+      value: Enemy 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395075013845601895, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
@@ -11530,9 +12621,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 0, y: 5}
   blocked:
     serializedVersion: 2
@@ -11540,6 +12632,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1200404730
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11636,9 +12734,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 9, y: 6}
   blocked:
     serializedVersion: 2
@@ -11646,6 +12745,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1200800661
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11742,9 +12847,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 7, y: 6}
   blocked:
     serializedVersion: 2
@@ -11752,6 +12858,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1206582967
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11848,9 +12960,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 1, y: 9}
   blocked:
     serializedVersion: 2
@@ -11858,6 +12971,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1215068329
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11954,9 +13073,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 2, y: 6}
   blocked:
     serializedVersion: 2
@@ -11964,6 +13084,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1216020797
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12060,9 +13186,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 0, y: 6}
   blocked:
     serializedVersion: 2
@@ -12070,6 +13197,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1216980218
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12166,9 +13299,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 2, y: 3}
   blocked:
     serializedVersion: 2
@@ -12176,6 +13310,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1236728008
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12272,9 +13412,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 2, y: 8}
   blocked:
     serializedVersion: 2
@@ -12282,6 +13423,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1238824607
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12378,9 +13525,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 0, y: 15}
   blocked:
     serializedVersion: 2
@@ -12388,6 +13536,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1242060713
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12484,9 +13638,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 0, y: 3}
   blocked:
     serializedVersion: 2
@@ -12494,6 +13649,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1251142751
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12590,9 +13751,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 3, y: 4}
   blocked:
     serializedVersion: 2
@@ -12600,6 +13762,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1253434404
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12696,9 +13864,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 6, y: 3}
   blocked:
     serializedVersion: 2
@@ -12706,6 +13875,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1253737499
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12802,9 +13977,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 3, y: 9}
   blocked:
     serializedVersion: 2
@@ -12812,6 +13988,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1256509545
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12908,9 +14090,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 8, y: 17}
   blocked:
     serializedVersion: 2
@@ -12918,6 +14101,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1259714221
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13014,9 +14203,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 0, y: 17}
   blocked:
     serializedVersion: 2
@@ -13024,6 +14214,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1281274321
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13120,9 +14316,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 5, y: 10}
   blocked:
     serializedVersion: 2
@@ -13130,6 +14327,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1286868867
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13226,9 +14429,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 7, y: 5}
   blocked:
     serializedVersion: 2
@@ -13236,6 +14440,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1291384048
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13332,9 +14542,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 4, y: 6}
   blocked:
     serializedVersion: 2
@@ -13342,6 +14553,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1293463312
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13438,9 +14655,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 4, y: 10}
   blocked:
     serializedVersion: 2
@@ -13448,6 +14666,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1300341108
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13544,9 +14768,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 1, y: 12}
   blocked:
     serializedVersion: 2
@@ -13554,6 +14779,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1307182570
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13618,7 +14849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5552137708123889258, guid: cea5fbadfe71d455d88f3a872e1a8392, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5552137708123889258, guid: cea5fbadfe71d455d88f3a872e1a8392, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13707,9 +14938,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 1, y: 8}
   blocked:
     serializedVersion: 2
@@ -13717,6 +14949,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1347640309
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13813,9 +15051,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 4, y: 15}
   blocked:
     serializedVersion: 2
@@ -13823,6 +15062,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1354573548
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13887,7 +15132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5552137708123889258, guid: cea5fbadfe71d455d88f3a872e1a8392, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5552137708123889258, guid: cea5fbadfe71d455d88f3a872e1a8392, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13976,9 +15221,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 9, y: 2}
   blocked:
     serializedVersion: 2
@@ -13986,6 +15232,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1359276269
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14082,9 +15334,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 4, y: 7}
   blocked:
     serializedVersion: 2
@@ -14092,6 +15345,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1362502631
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14188,9 +15447,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 7, y: 2}
   blocked:
     serializedVersion: 2
@@ -14198,6 +15458,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1377629140
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14294,9 +15560,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 3, y: 10}
   blocked:
     serializedVersion: 2
@@ -14304,6 +15571,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1382304595
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14400,9 +15673,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 2, y: 4}
   blocked:
     serializedVersion: 2
@@ -14410,6 +15684,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1413579779
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14506,9 +15786,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 7, y: 16}
   blocked:
     serializedVersion: 2
@@ -14516,6 +15797,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1414893795
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14612,9 +15899,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 1, y: 11}
   blocked:
     serializedVersion: 2
@@ -14622,6 +15910,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1445526169
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14718,9 +16012,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 4, y: 0}
   blocked:
     serializedVersion: 2
@@ -14728,6 +16023,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1446628463
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14824,9 +16125,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 6, y: 1}
   blocked:
     serializedVersion: 2
@@ -14834,6 +16136,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1449138863
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14930,9 +16238,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 6, y: 19}
   blocked:
     serializedVersion: 2
@@ -14940,6 +16249,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1454359107
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15036,9 +16351,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 4, y: 18}
   blocked:
     serializedVersion: 2
@@ -15046,6 +16362,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1487508967
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15142,9 +16464,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 8, y: 7}
   blocked:
     serializedVersion: 2
@@ -15152,6 +16475,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1493124855
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15248,9 +16577,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 6, y: 17}
   blocked:
     serializedVersion: 2
@@ -15258,6 +16588,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1496504354
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15354,9 +16690,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 9, y: 17}
   blocked:
     serializedVersion: 2
@@ -15364,6 +16701,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1511119337
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15460,9 +16803,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 8, y: 11}
   blocked:
     serializedVersion: 2
@@ -15470,6 +16814,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1512830533
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15566,9 +16916,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 8, y: 2}
   blocked:
     serializedVersion: 2
@@ -15576,6 +16927,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1513446972
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15672,9 +17029,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 8, y: 18}
   blocked:
     serializedVersion: 2
@@ -15682,6 +17040,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1517128955
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15778,9 +17142,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 6, y: 4}
   blocked:
     serializedVersion: 2
@@ -15788,6 +17153,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1521091143
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15868,7 +17239,7 @@ Transform:
   m_Children:
   - {fileID: 883658613}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1525649203
 GameObject:
@@ -15915,9 +17286,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 9, y: 19}
   blocked:
     serializedVersion: 2
@@ -15925,6 +17297,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1525649206
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16021,9 +17399,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 2, y: 14}
   blocked:
     serializedVersion: 2
@@ -16031,6 +17410,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1526437818
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16127,9 +17512,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 1, y: 13}
   blocked:
     serializedVersion: 2
@@ -16137,6 +17523,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1536705943
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16233,9 +17625,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 5, y: 17}
   blocked:
     serializedVersion: 2
@@ -16243,6 +17636,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1544308864
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16339,9 +17738,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 1
+  isExit: 0
   gridPos: {x: 7, y: 17}
   blocked:
     serializedVersion: 2
@@ -16349,6 +17749,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1568043235
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16445,9 +17851,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 2, y: 19}
   blocked:
     serializedVersion: 2
@@ -16455,6 +17862,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1570411325
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16551,9 +17964,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 6, y: 6}
   blocked:
     serializedVersion: 2
@@ -16561,6 +17975,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1576781492
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16657,9 +18077,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 3, y: 19}
   blocked:
     serializedVersion: 2
@@ -16667,6 +18088,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1578891970
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16763,9 +18190,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 1, y: 19}
   blocked:
     serializedVersion: 2
@@ -16773,6 +18201,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1587476980
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16869,9 +18303,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 6, y: 7}
   blocked:
     serializedVersion: 2
@@ -16879,6 +18314,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1600793824
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16975,9 +18416,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 9, y: 14}
   blocked:
     serializedVersion: 2
@@ -16985,6 +18427,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1618084472
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17081,9 +18529,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 6, y: 2}
   blocked:
     serializedVersion: 2
@@ -17091,6 +18540,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1625737042
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17187,9 +18642,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 4, y: 13}
   blocked:
     serializedVersion: 2
@@ -17197,6 +18653,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1626430328
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17293,9 +18755,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 5, y: 1}
   blocked:
     serializedVersion: 2
@@ -17303,6 +18766,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1633747077
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17399,9 +18868,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 3, y: 2}
   blocked:
     serializedVersion: 2
@@ -17409,6 +18879,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1634435944
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17460,6 +18936,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1641613715 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8395075013845601891, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+  m_PrefabInstance: {fileID: 328744872}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1641613716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641613715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aefd050b4ed97a445b43b2f751d6a820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startWaypoint: {fileID: 0}
+  endWaypoint: {fileID: 0}
+  gridSize: {x: 10, y: 20}
 --- !u!1 &1676146135
 GameObject:
   m_ObjectHideFlags: 0
@@ -17505,9 +19001,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 8, y: 1}
   blocked:
     serializedVersion: 2
@@ -17515,6 +19012,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1676146138
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17611,9 +19114,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 2, y: 12}
   blocked:
     serializedVersion: 2
@@ -17621,6 +19125,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1678690513
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17717,9 +19227,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 2, y: 2}
   blocked:
     serializedVersion: 2
@@ -17727,6 +19238,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1682361755
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17823,9 +19340,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 2, y: 13}
   blocked:
     serializedVersion: 2
@@ -17833,6 +19351,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1688608956
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17929,9 +19453,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 1, y: 3}
   blocked:
     serializedVersion: 2
@@ -17939,6 +19464,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1694854780
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18035,9 +19566,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 7, y: 14}
   blocked:
     serializedVersion: 2
@@ -18045,6 +19577,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1711489744
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18141,9 +19679,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 7, y: 12}
   blocked:
     serializedVersion: 2
@@ -18151,6 +19690,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1739254534
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18247,9 +19792,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 4, y: 5}
   blocked:
     serializedVersion: 2
@@ -18257,6 +19803,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1751921276
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18353,9 +19905,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 9, y: 5}
   blocked:
     serializedVersion: 2
@@ -18363,6 +19916,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1778912164
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18459,9 +20018,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 4, y: 2}
   blocked:
     serializedVersion: 2
@@ -18469,6 +20029,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1796677518
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18565,9 +20131,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 8, y: 3}
   blocked:
     serializedVersion: 2
@@ -18575,6 +20142,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1799910810
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18671,9 +20244,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 1, y: 15}
   blocked:
     serializedVersion: 2
@@ -18681,6 +20255,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1823248305
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18777,9 +20357,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 7, y: 10}
   blocked:
     serializedVersion: 2
@@ -18787,6 +20368,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1837299345
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18883,9 +20470,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 3, y: 15}
   blocked:
     serializedVersion: 2
@@ -18893,6 +20481,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1839252077
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18989,9 +20583,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 0, y: 8}
   blocked:
     serializedVersion: 2
@@ -18999,6 +20594,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1842134864
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19095,9 +20696,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 6, y: 11}
   blocked:
     serializedVersion: 2
@@ -19105,6 +20707,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1843495520
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19201,9 +20809,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 5, y: 8}
   blocked:
     serializedVersion: 2
@@ -19211,6 +20820,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1849784163
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19307,9 +20922,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 8, y: 5}
   blocked:
     serializedVersion: 2
@@ -19317,6 +20933,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1864906465
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19413,9 +21035,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 3, y: 1}
   blocked:
     serializedVersion: 2
@@ -19423,6 +21046,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1865606745
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19519,9 +21148,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 7, y: 1}
   blocked:
     serializedVersion: 2
@@ -19529,6 +21159,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1880300340
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19625,9 +21261,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 9, y: 1}
   blocked:
     serializedVersion: 2
@@ -19635,6 +21272,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1883319867
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19731,9 +21374,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 2, y: 11}
   blocked:
     serializedVersion: 2
@@ -19741,6 +21385,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1892547219
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19837,9 +21487,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 5, y: 11}
   blocked:
     serializedVersion: 2
@@ -19847,6 +21498,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1896369460
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19943,9 +21600,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 3, y: 3}
   blocked:
     serializedVersion: 2
@@ -19953,6 +21611,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1906103116
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20004,6 +21668,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1911907048 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8395075013845601891, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+  m_PrefabInstance: {fileID: 1148056508}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1911907049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911907048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aefd050b4ed97a445b43b2f751d6a820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startWaypoint: {fileID: 0}
+  endWaypoint: {fileID: 0}
+  gridSize: {x: 10, y: 20}
 --- !u!1 &1915393314
 GameObject:
   m_ObjectHideFlags: 0
@@ -20049,9 +21733,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 3, y: 0}
   blocked:
     serializedVersion: 2
@@ -20059,6 +21744,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1915393317
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20155,9 +21846,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 5, y: 6}
   blocked:
     serializedVersion: 2
@@ -20165,6 +21857,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1920143780
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20261,9 +21959,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 9, y: 8}
   blocked:
     serializedVersion: 2
@@ -20271,6 +21970,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1928314443
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20367,9 +22072,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 9, y: 12}
   blocked:
     serializedVersion: 2
@@ -20377,6 +22083,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1933341324
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20473,9 +22185,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 1, y: 14}
   blocked:
     serializedVersion: 2
@@ -20483,6 +22196,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1940684043
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20579,9 +22298,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 5, y: 0}
   blocked:
     serializedVersion: 2
@@ -20589,6 +22309,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1947333221
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20685,9 +22411,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 5, y: 19}
   blocked:
     serializedVersion: 2
@@ -20695,6 +22422,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1948674355
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20791,9 +22524,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 2, y: 16}
   blocked:
     serializedVersion: 2
@@ -20801,6 +22535,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1949632680
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20897,9 +22637,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 7, y: 9}
   blocked:
     serializedVersion: 2
@@ -20907,6 +22648,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1972098362
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21003,9 +22750,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 6, y: 8}
   blocked:
     serializedVersion: 2
@@ -21013,6 +22761,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1981653927
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21109,9 +22863,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 2, y: 9}
   blocked:
     serializedVersion: 2
@@ -21119,6 +22874,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &1984882656
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21215,9 +22976,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 8, y: 6}
   blocked:
     serializedVersion: 2
@@ -21225,6 +22987,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &2012437636
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21321,9 +23089,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
-  isBlocked: 0
+  isBlocked: 1
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 8, y: 8}
   blocked:
     serializedVersion: 2
@@ -21331,6 +23100,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &2016000205
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21427,9 +23202,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 2, y: 10}
   blocked:
     serializedVersion: 2
@@ -21437,6 +23213,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &2021371749
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21533,9 +23315,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 4, y: 3}
   blocked:
     serializedVersion: 2
@@ -21543,6 +23326,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &2055453631
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21639,9 +23428,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 1
   gridPos: {x: 9, y: 3}
   blocked:
     serializedVersion: 2
@@ -21649,6 +23439,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &2080395229
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21745,9 +23541,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 6, y: 9}
   blocked:
     serializedVersion: 2
@@ -21755,6 +23552,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &2091955749
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21851,9 +23654,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 1
+  isExit: 0
   gridPos: {x: 0, y: 19}
   blocked:
     serializedVersion: 2
@@ -21861,6 +23665,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &2126654158
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21957,9 +23767,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 5, y: 14}
   blocked:
     serializedVersion: 2
@@ -21967,6 +23778,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &2126958679
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22063,9 +23880,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExplored: 0
-  addedToGrid: 0
   exploredFrom: {fileID: 0}
   isBlocked: 0
+  hasRelic: 0
+  isExit: 0
   gridPos: {x: 1, y: 5}
   blocked:
     serializedVersion: 2
@@ -22073,6 +23891,12 @@ MonoBehaviour:
   nonBlocked:
     serializedVersion: 2
     rgba: 4278255372
+  exit:
+    serializedVersion: 2
+    rgba: 4294246144
+  relicPlaced:
+    serializedVersion: 2
+    rgba: 4278255602
 --- !u!212 &2130439678
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22137,11 +23961,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8395075013845601888, guid: 0e1f151f707c8430fbdf6b57bc171c04, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8
+      value: -311
       objectReference: {fileID: 0}
     - target: {fileID: 8395075013845601888, guid: 0e1f151f707c8430fbdf6b57bc171c04, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: -172.9
       objectReference: {fileID: 0}
     - target: {fileID: 8395075013845601888, guid: 0e1f151f707c8430fbdf6b57bc171c04, type: 3}
       propertyPath: m_LocalPosition.z
