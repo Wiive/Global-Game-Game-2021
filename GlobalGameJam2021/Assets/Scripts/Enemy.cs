@@ -38,7 +38,7 @@ public class Enemy : Character
             StartCoroutine(HandleNewPath());
         }
 
-        // UpdateFlashlightDirection();
+        UpdateFlashlightDirection();
     }
 
     protected override void GetAllComponents()

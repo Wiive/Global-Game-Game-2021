@@ -4,7 +4,7 @@ using UnityEngine;
 public class Flashlight : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
-    private const int TileSize = 16;
+    private const int Offset = 8;
 
     private void Awake()
     {
@@ -15,10 +15,12 @@ public class Flashlight : MonoBehaviour
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
-
+    
     public void UpdateDirection(Vector2 direction)
     {
-        transform.localPosition = direction * TileSize;
+        transform.localPosition = direction * Offset;
+
+        transform.up = direction;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
