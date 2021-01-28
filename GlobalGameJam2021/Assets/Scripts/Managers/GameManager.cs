@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+[DefaultExecutionOrder(-8)]
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
