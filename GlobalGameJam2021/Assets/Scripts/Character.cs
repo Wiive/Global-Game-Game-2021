@@ -9,6 +9,8 @@ public class Character : MonoBehaviour
 {
     protected Animator animator;
     protected MovementController moveController;
+
+    protected SpriteRenderer spriteRenderer;
     
     [SerializeField] protected Vector2 direction;
     public bool isAlive = true;
@@ -24,6 +26,7 @@ public class Character : MonoBehaviour
     
     protected virtual void Update()
     {
+        UpdateFaceDirection();
     }
     
     protected virtual void FixedUpdate()
@@ -35,6 +38,7 @@ public class Character : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         moveController = GetComponent<MovementController>();
+        spriteRenderer = transform.Find("GFX").Find("Sprite").GetComponent<SpriteRenderer>();
     }
 
     protected virtual void Move()
@@ -56,6 +60,21 @@ public class Character : MonoBehaviour
     protected virtual void Pickup(Relic relic)
     {
         Debug.Log($"{name} Pickups Relic!");
+    }
+
+    private void UpdateFaceDirection()
+    {
+        if (direction == Vector2.zero)
+            return;
+
+        if (direction == Vector2.up)
+            spriteRenderer.transform.eulerAngles = new Vector3(0, 0, 0);
+        else if (direction == Vector2.right)
+            spriteRenderer.transform.eulerAngles = new Vector3(0, 0, -90);
+        else if (direction == Vector2.down)
+            spriteRenderer.transform.eulerAngles = new Vector3(0, 0, -180);
+        else
+            spriteRenderer.transform.eulerAngles = new Vector3(0, 0, -270);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
