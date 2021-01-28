@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 [DefaultExecutionOrder(-9)]
 public class GameStateManager : MonoBehaviour
 {
@@ -31,8 +32,8 @@ public class GameStateManager : MonoBehaviour
         else
             Destroy(this);
     }
-
-    public Action<GameState> onChangeGameState;
+    
+    public Action<GameStateManager.GameState> onChangeGameState;
     public void ChangeGameState(GameState newGameState)
     {
         if (newGameState == currentGameState)
@@ -65,6 +66,7 @@ public class GameStateManager : MonoBehaviour
         }
 
         currentGameState = newGameState;
+        
         onChangeGameState?.Invoke(newGameState);
     }
 }

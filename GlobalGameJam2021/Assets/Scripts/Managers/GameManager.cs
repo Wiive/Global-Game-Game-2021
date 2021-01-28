@@ -5,7 +5,6 @@ using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-[DefaultExecutionOrder(-8)]
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -49,20 +48,18 @@ public class GameManager : MonoBehaviour
     {
         return gameTime;
     }
-
-    public Action<int> onScoreUpdate;
+    
     public void AddToScore(int amount)
     {
         gameScore += amount;
-        onScoreUpdate?.Invoke(gameScore);
+        EventManager.instance.BroadcastOnScoreUpdate(gameScore);
     }
 
     public int GetCurrentScore()
     {
         return gameScore;
     }
-
-    public Action<PickerItemWrapper> onPickedUpObject;
+    
     public void PickedUpObject(GameObject picker, GameObject pickedObject)
     {
         PickerItemWrapper newPickerObject = new PickerItemWrapper();
@@ -70,7 +67,7 @@ public class GameManager : MonoBehaviour
         newPickerObject.picker = picker;
         newPickerObject.pickedItem = pickedObject;
 
-        onPickedUpObject?.Invoke(newPickerObject);
+        EventManager.instance.BroadcastOnPickedUpItem(newPickerObject);
     }
     
     void OnGameStateChange(GameStateManager.GameState newGameState)
