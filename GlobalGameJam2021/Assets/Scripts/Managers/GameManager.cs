@@ -5,11 +5,10 @@ using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-
 public class PickerObject
 {
     public GameObject picker;
-    public GameObject pickedObject;
+    public GameObject pickedItem;
 }
 
 public class GameManager : MonoBehaviour
@@ -44,7 +43,7 @@ public class GameManager : MonoBehaviour
         PickerObject newPickerObject = new PickerObject();
 
         newPickerObject.picker = picker;
-        newPickerObject.pickedObject = pickedObject;
+        newPickerObject.pickedItem = pickedObject;
 
         onPickedUpObject?.Invoke(newPickerObject);
     }
