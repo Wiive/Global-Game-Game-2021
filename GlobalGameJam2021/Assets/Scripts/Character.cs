@@ -39,7 +39,7 @@ public class Character : MonoBehaviour
 
     protected virtual void Move()
     {
-        moveController.Move(direction);
+        moveController.Move();
     }
 
     protected virtual void GotKilled()
