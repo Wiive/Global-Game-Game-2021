@@ -15,13 +15,21 @@ public class RelicPointerController : MonoBehaviour
 
     private void Update()
     {
+
+
         if (isActive == true)
         {
-            gameObject.SetActive(true);
+            targetSymbol.enabled = true;
+            arrow.enabled = true;
+
             RotateArrow();
         }
         else
-            gameObject.SetActive(false);
+        {
+            targetSymbol.enabled = false;
+            arrow.enabled = false;
+        }
+
     }
 
     private void RotateArrow()

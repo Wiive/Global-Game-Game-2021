@@ -1470,6 +1470,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1969097142}
     - target: {fileID: 4788416560999021888, guid: ba4bf7ffc10a5c344a6f683ccbad31e3, type: 3}
+      propertyPath: isActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4788416560999021888, guid: ba4bf7ffc10a5c344a6f683ccbad31e3, type: 3}
       propertyPath: angleOffset
       value: -90
       objectReference: {fileID: 0}
