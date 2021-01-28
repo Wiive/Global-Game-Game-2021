@@ -10,7 +10,6 @@ public class Character : MonoBehaviour
     protected Animator animator;
     protected MovementController moveController;
     
-    [SerializeField] protected float speed = 60f;
     [SerializeField] protected Vector2 direction;
     public bool isAlive = true;
 
@@ -40,7 +39,7 @@ public class Character : MonoBehaviour
 
     protected virtual void Move()
     {
-        moveController.Move(direction * speed);
+        moveController.Move(direction);
     }
 
     protected virtual void GotKilled()
