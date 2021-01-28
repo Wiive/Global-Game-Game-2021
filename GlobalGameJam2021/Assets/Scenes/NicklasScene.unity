@@ -843,7 +843,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4689288461395163450, guid: 3b6f56ca4e6d2124eb42830920d3b90b, type: 3}
       propertyPath: m_Name
-      value: Grid Creator
+      value: Map
       objectReference: {fileID: 0}
     - target: {fileID: 4689288461395163451, guid: 3b6f56ca4e6d2124eb42830920d3b90b, type: 3}
       propertyPath: m_RootOrder

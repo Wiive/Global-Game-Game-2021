@@ -10180,8 +10180,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4689288461395163451}
   - component: {fileID: 4689288461395163448}
+  - component: {fileID: -4774869084292895287}
   m_Layer: 0
-  m_Name: Grid Creator
+  m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10413,10 +10414,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 658c23d928011fb458c3003d49af5abe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: {x: 10, y: 20}
+  gridSize: {x: 40, y: 22}
   generateGrid: 0
   wayPoint: {fileID: 3287882493945825587, guid: cb92405dd4009134998c21cc93d60857, type: 3}
   TileSize: 16
+--- !u!61 &-4774869084292895287
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4689288461395163450}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 640, y: 360}
+  m_EdgeRadius: 0
 --- !u!1 &4689288461397635518
 GameObject:
   m_ObjectHideFlags: 0
