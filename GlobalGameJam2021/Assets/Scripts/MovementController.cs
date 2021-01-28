@@ -1,18 +1,27 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class MovementController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Rigidbody2D body;
+    private Collider2D myCollider;
+
+    private void Awake()
     {
-        
+        GetAllComponents();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void GetAllComponents()
     {
-        
+        body = GetComponent<Rigidbody2D>();
+        myCollider = GetComponent<Collider2D>();
+    }
+
+    public void Move(Vector2 velocity)
+    {
+        body.velocity = velocity;
     }
 }
