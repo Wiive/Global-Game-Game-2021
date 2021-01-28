@@ -16,12 +16,12 @@ public class SpawnManager : MonoBehaviour
 
     private void OnEnable()
     {
-        GameStateManager.instance.onChangeGameState += OnGameStateChange;
+        EventManager.instance.onChangeGameState += OnGameStateChange;
     }
 
     private void OnDisable()
     {
-        GameStateManager.instance.onChangeGameState -= OnGameStateChange;
+        EventManager.instance.onChangeGameState -= OnGameStateChange;
     }
 
     private void Awake()

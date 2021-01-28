@@ -10,12 +10,12 @@ public class CameraController : MonoBehaviour
     
     private void OnEnable()
     {
-        GameStateManager.instance.onChangeGameState += OnChangeGameState;
+        EventManager.instance.onChangeGameState += OnChangeGameState;
     }
 
     private void OnDisable()
     {
-        GameStateManager.instance.onChangeGameState -= OnChangeGameState;
+        EventManager.instance.onChangeGameState -= OnChangeGameState;
     }
 
     private void Update()

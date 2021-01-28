@@ -12,12 +12,12 @@ public class UIScore : MonoBehaviour
 
     private void OnEnable()
     {
-        GameManager.instance.onScoreUpdate += UpdateScore;
+        EventManager.instance.onScoreUpdate += UpdateScore;
     }
 
     private void OnDisable()
     {
-        GameManager.instance.onScoreUpdate -= UpdateScore;
+        EventManager.instance.onScoreUpdate -= UpdateScore;
     }
 
     private void UpdateScore(int score)
