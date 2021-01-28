@@ -6,31 +6,36 @@ using UnityEngine;
 public class EnemySound : MonoBehaviour
 {
 
-    AudioSource soundPlayer;
-    public AudioClip[] attackSounds;
-    public AudioClip spawnSounds;
-    public AudioClip relicPickup;
+    AudioSource audioSource;
 
+    public AudioClip[] attackSounds;
+    public AudioClip[] deathSounds;
+    public AudioClip spawnSound;
+    public AudioClip relicPickup;
 
     void Start()
     {
-        soundPlayer = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
 
     }
 
     void PlaySound(AudioClip soundToPlay)
     {
-        if (soundPlayer.isPlaying)
-        {
-            soundPlayer.Stop();
-        }
-        soundPlayer.clip = soundToPlay;
-        soundPlayer.Play();
+        audioSource.clip = soundToPlay;
+        audioSource.pitch = 1f;
+        audioSource.Play();
+    }
+
+    void PlayRandomSoundFromArray(AudioClip[] soundsToPlay)
+    {
+        audioSource.clip = soundsToPlay[Random.Range(0 , soundsToPlay.Length)];
+        audioSource.pitch = Random.Range(0.9f, 1.2f);
+        audioSource.Play();
     }
 
     public void PlayAttackSound()
     {
-        PlaySound(attackSounds[0]);
+        PlayRandomSoundFromArray(attackSounds);
     }
 
     public void PlayPickUpSound()
@@ -38,6 +43,11 @@ public class EnemySound : MonoBehaviour
         PlaySound(relicPickup);
     }
 
+    public void PlayDeathSound()
+    {
+        PlayRandomSoundFromArray(deathSounds);
+
+    }
 
 
 }

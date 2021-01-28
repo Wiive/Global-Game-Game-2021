@@ -3,7 +3,9 @@ guid: df366ffbc15359f43b69957592e3963b
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - spawnSound: {instanceID: 0}
+  - relicPickup: {fileID: 8300000, guid: 8cc8cc9b29e8ddb47b82830e36fdaf8c, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

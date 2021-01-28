@@ -5,8 +5,13 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class PlayerSound : MonoBehaviour
 {
-    AudioSource audioSource;
+
+    public bool test = false;
+    private AudioSource audioSource;
+    public AudioClip AttackSound;
     public AudioClip SpawnSound;
+    public AudioClip Ping;
+    
 
     void Start()
     {
@@ -16,20 +21,39 @@ public class PlayerSound : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (test)
         {
-            PlaySound(SpawnSound);
+            SoundTest();
+
         }
     }
 
-
-    public void PlaySound(AudioClip soundToPlay)
+    void SoundTest()
     {
-        //if (soundPlayer.isPlaying)
-        //{
-        //    soundPlayer.Stop();
-        //}
+        if (Input.GetButtonDown("Jump"))
+        {
+            audioSource.PlayOneShot(Ping);           
+        }
+    }
+
+    void PlaySound(AudioClip soundToPlay)
+    {
+
         audioSource.clip = soundToPlay;
         audioSource.Play();
     }
+
+    public void PlayAttackSound()
+    {
+        audioSource.PlayOneShot(AttackSound);
+    }
+    public void PlaySpawnSound()
+    {
+        PlaySound(SpawnSound);
+    }
+
+
+
+
+
 }
