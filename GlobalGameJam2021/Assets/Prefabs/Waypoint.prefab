@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 948979891428818297}
-  - component: {fileID: 5020865357880328103}
   - component: {fileID: 2072584498415946502}
+  - component: {fileID: 2562541659866384089}
   m_Layer: 0
   m_Name: Waypoint
   m_TagString: Untagged
@@ -32,28 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5020865357880328103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3287882493945825587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff9caf5d8367a3542bd2f98044651504, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isExplored: 0
-  exploredFrom: {fileID: 0}
-  isBlocked: 0
-  gridPos: {x: 0, y: 0}
-  blocked:
-    serializedVersion: 2
-    rgba: 4278190335
-  nonBlocked:
-    serializedVersion: 2
-    rgba: 4278255417
 --- !u!212 &2072584498415946502
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -105,3 +83,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2562541659866384089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3287882493945825587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5955d422bfa624fb6b14fc154e3085, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isExplored: 0
+  addedToGrid: 0
+  exploredFrom: {fileID: 0}
+  isBlocked: 0
+  gridPos: {x: 0, y: 0}
+  blocked:
+    serializedVersion: 2
+    rgba: 4278190335
+  nonBlocked:
+    serializedVersion: 2
+    rgba: 4278255372
