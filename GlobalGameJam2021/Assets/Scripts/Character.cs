@@ -13,6 +13,7 @@ public class Character : MonoBehaviour
     protected SpriteRenderer spriteRenderer;
     private Transform gfxTransform;
     
+    protected Vector2Int currentPos = new Vector2Int(0, 0); // set this to get the value of player spawnPos
     [SerializeField] protected Vector2 direction;
     public bool isAlive = true;
 
@@ -53,7 +54,9 @@ public class Character : MonoBehaviour
     {
         animator.SetBool("IsMoving", false);
         animator.SetFloat("DirectionX", 0);
-        animator.SetFloat("DirectionY", 1);
+        animator.SetFloat("DirectionY", -1);
+
+        currentPos = new Vector2Int();
     }
 
     protected virtual void Move()

@@ -129,5 +129,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d09775154143b140b80ae4e33e37e1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomBorder: {fileID: -4774869084292895287, guid: 3b6f56ca4e6d2124eb42830920d3b90b, type: 3}
+  roomBorder: {fileID: 0}
   offset: {x: 0, y: 0}

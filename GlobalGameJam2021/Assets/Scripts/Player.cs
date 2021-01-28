@@ -7,36 +7,12 @@ public class Player : Character
     [SerializeField] private bool moveConstant = false;
     Dictionary<Vector2Int, WayPoint> grid = new Dictionary<Vector2Int, WayPoint>();
 
-    Vector2Int currentPos = new Vector2Int(0, 0); // set this to get the value of player spawnPos
-
     protected override void Awake()
     {
         base.Awake();
+        
         LoadBlocks();
     }
-    private void LoadBlocks()
-    {
-        grid = new Dictionary<Vector2Int, WayPoint>();
-        WayPoint[] waypoints = FindObjectsOfType<WayPoint>();
-
-        foreach (WayPoint waypoint in waypoints)
-        {
-            AddToGrid(waypoint);
-        }
-    }
-    private void AddToGrid(WayPoint waypoint)
-    {
-        var gridPos = waypoint.GridPos;
-        if (grid.ContainsKey(gridPos))
-        {
-            return;
-        }
-        else
-        {
-            grid.Add(gridPos, waypoint);
-        }
-    }
-
 
     protected override void Update()
     {
@@ -64,16 +40,15 @@ public class Player : Character
         if (direction != Vector2.zero && IsValidInput())
         {
             currentPos += new Vector2Int((int)direction.x,(int)direction.y);
-            Debug.Log(currentPos);
             moveController.SetTargetPosition(direction);
         }
-
     }
     
     bool IsValidInput()
     {
         Vector2Int inputTry = new Vector2Int((int) direction.x, (int) direction.y) + currentPos;
-        if(grid.ContainsKey(inputTry) && !grid[inputTry].isBlocked ) return true;
+        if (grid.ContainsKey(inputTry) && !grid[inputTry].isBlocked )
+            return true;
         return false;
     }
 
@@ -96,6 +71,29 @@ public class Player : Character
     protected override void UpdateTimers()
     {
         base.UpdateTimers();
+    }
+    
+    private void LoadBlocks()
+    {
+        grid = new Dictionary<Vector2Int, WayPoint>();
+        WayPoint[] waypoints = FindObjectsOfType<WayPoint>();
+
+        foreach (WayPoint waypoint in waypoints)
+        {
+            AddToGrid(waypoint);
+        }
+    }
+    private void AddToGrid(WayPoint waypoint)
+    {
+        var gridPos = waypoint.GridPos;
+        if (grid.ContainsKey(gridPos))
+        {
+            return;
+        }
+        else
+        {
+            grid.Add(gridPos, waypoint);
+        }
     }
     
     protected override void OnTriggerEnter2D(Collider2D other)

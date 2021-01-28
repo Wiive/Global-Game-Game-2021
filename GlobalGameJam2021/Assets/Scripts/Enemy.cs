@@ -11,8 +11,6 @@ public class Enemy : Character
     [SerializeField]int range = 4;
     private Flashlight flashlight;
 
-    [SerializeField] Vector2Int currentPos = new Vector2Int(0,0);
-
     Vector2Int gridSize = new Vector2Int(0,0);
 
     bool gettingNewPath = false;
@@ -29,6 +27,7 @@ public class Enemy : Character
     protected override void Update()
     {
         base.Update();
+        
         if (pathIndexPosition <= path.Count -2)
         {
             MoveEnemyAlongPath();
