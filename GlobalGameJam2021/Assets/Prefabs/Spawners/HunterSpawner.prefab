@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2571912091978289343}
   m_Layer: 0
   m_Name: HunterSpawner
-  m_TagString: Untagged
+  m_TagString: HunterSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
