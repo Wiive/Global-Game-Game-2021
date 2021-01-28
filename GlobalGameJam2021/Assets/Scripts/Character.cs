@@ -91,6 +91,10 @@ public class Character : MonoBehaviour
         }
         animator.SetBool("IsMoving", moveController.IsMoving);
     }
+    
+    protected virtual void UpdateTimers()
+    {
+    }
 
     private void FixPixelPosition ()
     {

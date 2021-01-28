@@ -46,6 +46,11 @@ public class Player : Character
     {
         base.GotKilled();
     }
+
+    protected override void UpdateTimers()
+    {
+        base.UpdateTimers();
+    }
     
     protected override void OnTriggerEnter2D(Collider2D other)
     {

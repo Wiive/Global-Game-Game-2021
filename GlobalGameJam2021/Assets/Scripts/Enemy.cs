@@ -8,6 +8,7 @@ public class Enemy : Character
     [SerializeField] Vector2Int destination = new Vector2Int(0, 0);
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float WaitTime = 2f;
+    private Flashlight flashlight;
 
     [SerializeField] Vector2Int currentPos = new Vector2Int(0,0);
 
@@ -17,27 +18,50 @@ public class Enemy : Character
 
     int pathIndexPosition = 0;
     PathFinder pathFinder;
+    
+    // TODO REMOVE LATER (Debug Only)
+    private float randomDirectionTimer;
+    [SerializeField] private float randomDirectionTime = 1f;
+    
     protected override void Start()
     {
         base.Start();
-        
-        pathFinder = GetComponent<PathFinder>();
-        gridSize = pathFinder.GridSize;
-        destination = TryToGetDestination();
-        path = pathFinder.SearchForPath(currentPos, destination);
     }
 
     protected override void Update()
     {
-        if(pathIndexPosition <= path.Count -2)
+        if (pathIndexPosition <= path.Count -2)
         {
             MoveEnemyAlongPath();
         }
-        else if(!gettingNewPath)
+        else if (!gettingNewPath)
         {
             gettingNewPath = true;
             StartCoroutine(HandleNewPath());
         }
+
+        // TODO REMOVE LATER (Debug Only)
+        SetNewRandomDirection();
+
+        UpdateFlashlightDirection();
+    }
+
+    protected override void GetAllComponents()
+    {
+        base.GetAllComponents();
+        pathFinder = GetComponent<PathFinder>();
+        flashlight = GetComponentInChildren<Flashlight>();
+    }
+
+    protected override void Init()
+    {
+        base.Init();
+        
+        gridSize = pathFinder.GridSize;
+        destination = TryToGetDestination();
+        path = pathFinder.SearchForPath(currentPos, destination);
+
+        randomDirectionTimer = randomDirectionTime;
     }
 
     protected override void Pickup(Relic relic)
@@ -53,6 +77,32 @@ public class Enemy : Character
     protected override void GotKilled()
     {
         base.GotKilled();
+    }
+
+    // TODO REMOVE LATER (Debug Only)
+    private void SetNewRandomDirection()
+    {
+        direction.x = UnityEngine.Random.Range(-1, 1);
+        direction.y = direction.x == 0 ? UnityEngine.Random.Range(-1, 1) : 0;
+        
+        // move
+    }
+
+    private void UpdateFlashlightDirection()
+    {
+        flashlight.UpdateDirection(direction);
+    }
+    
+    protected override void UpdateTimers()
+    {
+        base.UpdateTimers();
+
+        randomDirectionTimer -= Time.deltaTime;
+        if (randomDirectionTimer <= 0)
+        {
+            SetNewRandomDirection();
+            randomDirectionTimer = randomDirectionTime;
+        }
     }
 
     protected override void OnTriggerEnter2D(Collider2D other)
