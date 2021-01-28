@@ -41,9 +41,9 @@ public class Enemy : Character
         }
 
         // TODO REMOVE LATER (Debug Only)
-        SetNewRandomDirection();
-
-        UpdateFlashlightDirection();
+        // SetNewRandomDirection();
+        //
+        // UpdateFlashlightDirection();
     }
 
     protected override void GetAllComponents()
@@ -61,7 +61,7 @@ public class Enemy : Character
         destination = TryToGetDestination();
         path = pathFinder.SearchForPath(currentPos, destination);
 
-        randomDirectionTimer = randomDirectionTime;
+        // randomDirectionTimer = randomDirectionTime;
     }
 
     protected override void Pickup(Relic relic)
@@ -97,12 +97,12 @@ public class Enemy : Character
     {
         base.UpdateTimers();
 
-        randomDirectionTimer -= Time.deltaTime;
-        if (randomDirectionTimer <= 0)
-        {
-            SetNewRandomDirection();
-            randomDirectionTimer = randomDirectionTime;
-        }
+        // randomDirectionTimer -= Time.deltaTime;
+        // if (randomDirectionTimer <= 0)
+        // {
+        //     SetNewRandomDirection();
+        //     randomDirectionTimer = randomDirectionTime;
+        // }
     }
 
     protected override void OnTriggerEnter2D(Collider2D other)
