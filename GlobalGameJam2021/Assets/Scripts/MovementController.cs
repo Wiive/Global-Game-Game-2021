@@ -14,6 +14,7 @@ public class MovementController : MonoBehaviour
     private Vector2 targetPosition;
     private bool moveIsDone;
     private const int TileSize = 16;
+    
 
     private void Awake()
     {
