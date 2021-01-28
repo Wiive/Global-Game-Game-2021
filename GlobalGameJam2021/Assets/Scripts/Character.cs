@@ -60,6 +60,10 @@ public class Character : MonoBehaviour
     protected virtual void Pickup(Relic relic)
     {
         Debug.Log($"{name} Pickups Relic!");
+        // if (typeof(this.GetType()) == Player)
+        // {
+        //     
+        // }
     }
 
     private void UpdateFaceDirection()
