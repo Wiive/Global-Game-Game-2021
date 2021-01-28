@@ -95,7 +95,8 @@ public class Enemy : Character
 
     private void MoveEnemyAlongPath()
     {
-        if (moveController.IsMoving) return;
+        if (moveController.IsMoving)
+            return;
 
         currentPos = path[pathIndexPosition].GridPos;
         direction = path[pathIndexPosition + 1].GridPos - currentPos;

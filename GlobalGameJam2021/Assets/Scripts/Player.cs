@@ -37,16 +37,16 @@ public class Player : Character
                 direction = input;
         }
         
-        if (direction != Vector2.zero && IsValidInput())
+        if (!moveController.IsMoving && direction != Vector2.zero && IsValidInput())
         {
-            currentPos += new Vector2Int((int)direction.x,(int)direction.y);
+            currentPos += new Vector2Int((int)direction.x, (int)direction.y);
             moveController.SetTargetPosition(direction);
         }
     }
     
     bool IsValidInput()
     {
-        Vector2Int inputTry = new Vector2Int((int) direction.x, (int) direction.y) + currentPos;
+        Vector2Int inputTry = new Vector2Int((int)direction.x, (int)direction.y) + currentPos;
         if (grid.ContainsKey(inputTry) && !grid[inputTry].isBlocked )
             return true;
         return false;
@@ -110,6 +110,4 @@ public class Player : Character
         if (Input.GetKeyDown(KeyCode.C))
             moveConstant = !moveConstant;
     }
-
-
 }

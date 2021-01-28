@@ -58,8 +58,8 @@ public class Character : MonoBehaviour
         animator.SetFloat("DirectionX", 0);
         animator.SetFloat("DirectionY", -1);
 
-        currentPos = new Vector2Int(Mathf.RoundToInt(transform.position.x / TileSize), Mathf.RoundToInt(transform.position.y / TileSize));
-        Debug.Log($"currentPos: {currentPos}");
+        currentPos = new Vector2Int(Mathf.RoundToInt(transform.position.x / TileSize),
+                                    Mathf.RoundToInt(transform.position.y / TileSize));
     }
 
     protected virtual void Move()
