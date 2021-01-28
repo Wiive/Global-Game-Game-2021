@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,8 @@ public class Enemy : Character
         if (other.tag == "Relic")
         {
             Pickup(other.GetComponent<Relic>());
+            
+            GameManager.instance.PickedUpObject(this.gameObject, other.gameObject);
         }
     }
 }
