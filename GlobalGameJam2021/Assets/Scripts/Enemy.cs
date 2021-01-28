@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Enemy : Character
 {
+    private bool tabort_mig;
     protected override void Pickup(Relic relic)
     {
         Debug.Log($"{name} Pickups Relic!");
@@ -18,5 +19,10 @@ public class Enemy : Character
             
             GameManager.instance.PickedUpObject(this.gameObject, other.gameObject);
         }
+    }
+
+    public bool TABORTMIG()
+    {
+        return true;
     }
 }

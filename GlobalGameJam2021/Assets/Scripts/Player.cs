@@ -27,4 +27,10 @@ public class Player : Character
         if (direction != Vector2.zero)
             moveController.SetTargetPosition(direction);
     }
+    
+    protected override void Pickup(Relic relic)
+    {
+        Debug.Log($"{name} Pickups Relic!");
+        relic.ReturnToStartPosition();
+    }
 }
