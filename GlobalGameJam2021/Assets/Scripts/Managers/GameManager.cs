@@ -10,13 +10,38 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     private int gameScore;
-    
+    private float gameTime;
+    private bool countTime;
+
+    private void OnEnable()
+    {
+        GameStateManager.instance.onChangeGameState += OnGameStateChange;
+    }
+
+    private void OnDisable()
+    {
+        GameStateManager.instance.onChangeGameState -= OnGameStateChange;
+    }
+
     private void Awake()
     {
         if (instance == null)
             instance = this;
         else if (instance != this)
             Destroy(gameObject);
+    }
+
+    private void Update()
+    {
+        if (countTime)
+        {
+            gameTime += Time.deltaTime;
+        }
+    }
+
+    public float GetCurrentGameTime()
+    {
+        return gameTime;
     }
 
     public Action<int> onScoreUpdate;
@@ -40,5 +65,17 @@ public class GameManager : MonoBehaviour
         newPickerObject.pickedItem = pickedObject;
 
         onPickedUpObject?.Invoke(newPickerObject);
+    }
+    
+    void OnGameStateChange(GameStateManager.GameState newGameState)
+    {
+        if (newGameState == GameStateManager.GameState.GameLoop)
+        {
+            countTime = true;
+        }
+        else
+        {
+            countTime = false;
+        }
     }
 }
