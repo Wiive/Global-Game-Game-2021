@@ -33,9 +33,7 @@ public class MovementController : MonoBehaviour
             return;
         
         Vector2 currentPosition = transform.position;
-        
-        if (isMoving)
-            transform.position = Vector2.MoveTowards(currentPosition, targetPosition, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(currentPosition, targetPosition, speed * Time.deltaTime);
 
         if (Vector2.Distance(currentPosition, targetPosition) <= 0.1f)
         {
@@ -46,10 +44,7 @@ public class MovementController : MonoBehaviour
 
     public void SetTargetPosition(Vector2 direction)
     {
-        if (isMoving)
-            return;
-        
-        this.targetPosition = (Vector2)transform.position + direction * TileSize;
+        targetPosition = (Vector2)transform.position + direction * TileSize;
         isMoving = true;
     }
 }
