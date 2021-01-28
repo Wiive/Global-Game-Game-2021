@@ -19,6 +19,11 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
     }
 
+    private void Start()
+    {
+        GameStateManager.instance.ChangeGameState(GameStateManager.GameState.GameLoop);
+    }
+
     public Action<int> onScoreUpdate;
     public void AddToScore(int amount)
     {
