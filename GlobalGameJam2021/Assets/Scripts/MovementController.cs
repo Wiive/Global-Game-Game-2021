@@ -12,10 +12,9 @@ public class MovementController : MonoBehaviour
     
     [SerializeField] protected float speed = 60f;
     private Vector2 targetPosition;
-    private bool moveIsDone;
+    private bool isMoving;
     private const int TileSize = 16;
     
-
     private void Awake()
     {
         GetAllComponents();
@@ -27,16 +26,29 @@ public class MovementController : MonoBehaviour
         myCollider = GetComponent<Collider2D>();
     }
 
-    public void Move(Vector2 direction)
+    public void Move()
     {
-        // body.velocity = velocity;
+        if (!isMoving)
+            return;
+        
         Vector2 currentPosition = transform.position;
         
-        if (moveIsDone)
+        if (isMoving)
+            transform.position = Vector2.MoveTowards(currentPosition, targetPosition, speed * Time.deltaTime);
+
+        if (Vector2.Distance(currentPosition, targetPosition) <= 0.1f)
         {
-            targetPosition = currentPosition + (direction * TileSize);
+            transform.position = targetPosition;
+            isMoving = false;
         }
+    }
+
+    public void SetTargetPosition(Vector2 direction)
+    {
+        if (isMoving)
+            return;
         
-        transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+        this.targetPosition = (Vector2)transform.position + direction * TileSize;
+        isMoving = true;
     }
 }

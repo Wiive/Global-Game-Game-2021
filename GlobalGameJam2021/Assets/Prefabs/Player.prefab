@@ -244,9 +244,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18d85c97b9824f4f94391671bf1623a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
   direction: {x: 0, y: 0}
   isAlive: 1
+  moveConstant: 1
 --- !u!114 &8395075013845601892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,6 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd252858a84e0498aa2ed246beb7fcb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 60
 --- !u!61 &8395075013845601895
 BoxCollider2D:
   m_ObjectHideFlags: 0
