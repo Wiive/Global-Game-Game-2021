@@ -18,8 +18,6 @@ public class Enemy : Character
     bool gettingNewPath = false;
     bool isCarryingRelic = false;
 
-
-
     int pathIndexPosition = 0;
     PathFinder pathFinder;
     
@@ -46,6 +44,7 @@ public class Enemy : Character
     protected override void GetAllComponents()
     {
         base.GetAllComponents();
+        
         pathFinder = GetComponent<PathFinder>();
         flashlight = GetComponentInChildren<Flashlight>();
     }
@@ -158,7 +157,6 @@ public class Enemy : Character
         {
             isCarryingRelic = true;
         }
-
 
         return wayPointDestination.GridPos;
     }
