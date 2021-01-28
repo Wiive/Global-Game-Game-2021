@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5233627390156333481
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3649502152866042579}
+  - component: {fileID: 25900908904625590}
+  m_Layer: 0
+  m_Name: SpawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3649502152866042579
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5233627390156333481}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.33790213, y: -0.02709836, z: -0.8190152}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &25900908904625590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5233627390156333481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6134080d5118d74f85c3fa705b1d5d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  huntSpawners: []
+  playerSpawners: []
+  relicSpawners: []
+  hunterPrefab:
+  - {fileID: 8395075013845601891, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+  playerPrefab: {fileID: 8395075013845601891, guid: 0e1f151f707c8430fbdf6b57bc171c04, type: 3}
+  relicPrefab:
+  - {fileID: 5552137708123889255, guid: cea5fbadfe71d455d88f3a872e1a8392, type: 3}
