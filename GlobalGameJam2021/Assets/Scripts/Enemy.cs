@@ -10,17 +10,18 @@ public class Enemy : Character
     [SerializeField] float WaitTime = 2f;
 
     [SerializeField] Vector2Int currentPos = new Vector2Int(0,0);
+    [SerializeField] int range = 4;
 
     Vector2Int gridSize = new Vector2Int(0,0);
 
     bool gettingNewPath = false;
+    bool isCarryingRelic = false;
 
     int pathIndexPosition = 0;
     PathFinder pathFinder;
     protected override void Start()
     {
         base.Start();
-        
         pathFinder = GetComponent<PathFinder>();
         gridSize = pathFinder.GridSize;
         destination = TryToGetDestination();
@@ -49,7 +50,7 @@ public class Enemy : Character
     {
         base.Attack(character);
     }
-    
+
     protected override void GotKilled()
     {
         base.GotKilled();
@@ -78,6 +79,12 @@ public class Enemy : Character
 
     IEnumerator HandleNewPath()
     {
+        currentPos = path[pathIndexPosition].GridPos;
+        if (pathFinder.GetWayPoint(currentPos).isExit && isCarryingRelic)
+        {
+            Debug.Log("I Enemy: " + name + " have now exited the labyrinth with a relic");
+            Destroy(gameObject);
+        }
         yield return new WaitForSeconds(WaitTime);
         GetNewPath();
         gettingNewPath = false;
@@ -85,26 +92,46 @@ public class Enemy : Character
 
     private void GetNewPath()
     {
-        currentPos = path[pathIndexPosition].GridPos;
         destination = TryToGetDestination();
-        Debug.Log("currentPos: " + currentPos);
-        Debug.Log("Destination: " + destination);
         pathIndexPosition = 0;
         path = pathFinder.SearchForPath(currentPos, destination);
     }
 
-
     private Vector2Int TryToGetDestination()
     {
-        WayPoint destination;
-        do
+        if(!isCarryingRelic)
         {
-            int x = Random.Range(0, gridSize.x);
-            int y = Random.Range(0, gridSize.y);
-            Vector2Int wayPointKey = new Vector2Int(x,y);
-            destination = pathFinder.GetWayPoint(wayPointKey);
+            destination = pathFinder.SearchForRelic(range, currentPos);
         }
-        while (destination == null || destination.isBlocked || destination.GridPos == currentPos);
-        return destination.GridPos;
+        else
+        {
+            destination = pathFinder.SearchForExit(range, currentPos);
+        }
+
+        WayPoint wayPointDestination = pathFinder.GetWayPoint(destination);
+
+        if(destination.x == 0 && destination.y == 0)
+        {
+            do
+            {
+                int minX = Mathf.Clamp(currentPos.x - range, 0, 100);
+                int minY = Mathf.Clamp(currentPos.y - range, 0, 100);
+
+                int maxX = Mathf.Clamp(currentPos.x + range, 0, gridSize.x) +1;
+                int maxY = Mathf.Clamp(currentPos.y + range, 0, gridSize.y) +1;
+                int x = Random.Range(minX, maxX);
+                int y = Random.Range(minY, maxY);
+                Vector2Int wayPointKey = new Vector2Int(x, y);
+                wayPointDestination = pathFinder.GetWayPoint(wayPointKey);
+            }
+            while (wayPointDestination == null || wayPointDestination.isBlocked || wayPointDestination.GridPos == currentPos);
+        }
+        else
+        {
+            isCarryingRelic = true;
+        }
+
+
+        return wayPointDestination.GridPos;
     }
 }
