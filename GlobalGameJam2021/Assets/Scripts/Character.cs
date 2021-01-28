@@ -81,7 +81,7 @@ public class Character : MonoBehaviour
             spriteRenderer.transform.eulerAngles = new Vector3(0, 0, -270);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Relic")
         {
