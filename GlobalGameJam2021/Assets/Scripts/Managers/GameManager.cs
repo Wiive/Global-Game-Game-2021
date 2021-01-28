@@ -6,6 +6,12 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 
+public class PickerObject
+{
+    public GameObject picker;
+    public GameObject pickedObject;
+}
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -30,5 +36,16 @@ public class GameManager : MonoBehaviour
     public int GetCurrentScore()
     {
         return gameScore;
+    }
+
+    public Action<PickerObject> onPickedUpObject;
+    public void PickedUpObject(GameObject picker, GameObject pickedObject)
+    {
+        PickerObject newPickerObject = new PickerObject();
+
+        newPickerObject.picker = picker;
+        newPickerObject.pickedObject = pickedObject;
+
+        onPickedUpObject?.Invoke(newPickerObject);
     }
 }
