@@ -384,6 +384,7 @@ GameObject:
   - component: {fileID: 8395075013845601895}
   - component: {fileID: 8395075013845601894}
   - component: {fileID: 8395075013845601889}
+  - component: {fileID: 432466697}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
@@ -422,11 +423,11 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   isAlive: 1
   path: []
-  destination: {x: 0, y: 0}
-  moveSpeed: 10
+  destination: {x: 9, y: 9}
+  moveSpeed: 40
   WaitTime: 2
+  range: 4
   currentPos: {x: 0, y: 0}
-  randomDirectionTime: 1
 --- !u!114 &8395075013845601892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -447,7 +448,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8395075013845601891}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -506,3 +507,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &432466697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8395075013845601891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aefd050b4ed97a445b43b2f751d6a820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startWaypoint: {fileID: 0}
+  endWaypoint: {fileID: 0}
+  gridSize: {x: 10, y: 20}
