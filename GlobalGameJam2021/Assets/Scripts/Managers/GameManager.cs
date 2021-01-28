@@ -5,12 +5,6 @@ using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class PickerObject
-{
-    public GameObject picker;
-    public GameObject pickedItem;
-}
-
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -37,10 +31,10 @@ public class GameManager : MonoBehaviour
         return gameScore;
     }
 
-    public Action<PickerObject> onPickedUpObject;
+    public Action<PickerItemWrapper> onPickedUpObject;
     public void PickedUpObject(GameObject picker, GameObject pickedObject)
     {
-        PickerObject newPickerObject = new PickerObject();
+        PickerItemWrapper newPickerObject = new PickerItemWrapper();
 
         newPickerObject.picker = picker;
         newPickerObject.pickedItem = pickedObject;
