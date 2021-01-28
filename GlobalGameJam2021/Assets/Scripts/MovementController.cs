@@ -13,6 +13,8 @@ public class MovementController : MonoBehaviour
     [SerializeField] protected float speed = 60f;
     private Vector2 targetPosition;
     private bool isMoving;
+    public bool IsMoving => isMoving;
+
     private const int TileSize = 16;
     
     private void Awake()

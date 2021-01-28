@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(MovementController))]
@@ -23,16 +24,22 @@ public class Character : MonoBehaviour
     
     protected virtual void Start()
     {
+        Init();
     }
     
     protected virtual void Update()
     {
-        UpdateFaceDirection();
+        UpdateAnimations();
     }
     
     protected virtual void FixedUpdate()
     {
         Move();
+    }
+
+    protected void LateUpdate()
+    {
+        FixPixelPosition();
     }
 
     protected virtual void GetAllComponents()
@@ -41,6 +48,13 @@ public class Character : MonoBehaviour
         moveController = GetComponent<MovementController>();
         gfxTransform = transform.Find("GFX");
         spriteRenderer = gfxTransform.Find("Sprite").GetComponent<SpriteRenderer>();
+    }
+
+    protected virtual void Init()
+    {
+        animator.SetBool("IsMoving", false);
+        animator.SetFloat("DirectionX", 0);
+        animator.SetFloat("DirectionY", 1);
     }
 
     protected virtual void Move()
@@ -64,19 +78,14 @@ public class Character : MonoBehaviour
         Debug.Log($"{name} Pickups Relic!");
     }
 
-    private void UpdateFaceDirection()
+    private void UpdateAnimations()
     {
-        if (direction == Vector2.zero)
-            return;
-
-        if (direction == Vector2.up)
-            spriteRenderer.transform.eulerAngles = new Vector3(0, 0, 0);
-        else if (direction == Vector2.right)
-            spriteRenderer.transform.eulerAngles = new Vector3(0, 0, -90);
-        else if (direction == Vector2.down)
-            spriteRenderer.transform.eulerAngles = new Vector3(0, 0, -180);
-        else
-            spriteRenderer.transform.eulerAngles = new Vector3(0, 0, -270);
+        if (direction != Vector2.zero)
+        {
+            animator.SetFloat("DirectionX", direction.x);
+            animator.SetFloat("DirectionY", direction.y);
+        }
+        animator.SetBool("IsMoving", moveController.IsMoving);
     }
 
     private void FixPixelPosition ()

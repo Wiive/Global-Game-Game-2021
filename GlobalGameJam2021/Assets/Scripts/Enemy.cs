@@ -17,8 +17,10 @@ public class Enemy : Character
 
     int pathIndexPosition = 0;
     PathFinder pathFinder;
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
+        
         pathFinder = GetComponent<PathFinder>();
         gridSize = pathFinder.GridSize;
         destination = TryToGetDestination();

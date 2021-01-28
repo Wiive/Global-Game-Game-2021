@@ -246,6 +246,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0}
   isAlive: 1
+  path: []
+  destination: {x: 0, y: 0}
+  moveSpeed: 10
+  WaitTime: 2
+  currentPos: {x: 0, y: 0}
 --- !u!114 &8395075013845601892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,7 +321,7 @@ Animator:
   m_GameObject: {fileID: 8395075013845601891}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0534b762b46a24a9ea582f0e90a303fb, type: 2}
+  m_Controller: {fileID: 9100000, guid: 34c9678e207d04bbab84d6bddcb0f796, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
