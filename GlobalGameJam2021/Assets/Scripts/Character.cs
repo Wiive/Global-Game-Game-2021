@@ -40,7 +40,7 @@ public class Character : MonoBehaviour
 
     protected virtual void Move()
     {
-        moveController.Move(direction * speed * Time.deltaTime);
+        moveController.Move(direction * speed);
     }
 
     protected virtual void GotKilled()
