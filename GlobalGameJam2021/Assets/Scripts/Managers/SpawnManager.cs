@@ -12,7 +12,10 @@ public class SpawnManager : MonoBehaviour
 
     public GameObject[] hunterPrefab;
     public GameObject playerPrefab;
-    public GameObject[] relicPrefab;
+
+    public Relic[] relicPrefab;
+    public RelicData[] relicsData;
+
 
     private void OnEnable()
     {
@@ -76,11 +79,11 @@ public class SpawnManager : MonoBehaviour
     {
         for (int i = 0; i < amount; i++)
         {
-
             int randomSpawnIndex = Random.Range(0, relicSpawners.Count);
             //int randomHunterIndex = Random.Range(0, relicPrefab.Length);
-            GameObject newRelic = Instantiate(relicPrefab[0], relicSpawners[randomSpawnIndex].parent.transform.position, transform.rotation, transform.parent);
-            relicPointers[i].target = newRelic.GetComponent<Relic>();
+            Relic relic = Instantiate(relicPrefab[0], relicSpawners[randomSpawnIndex].parent.transform.position, transform.rotation, transform.parent);
+            relic.SetData(relicsData[i]);
+            relicPointers[i].SetRelic(relic);
 
         }
     }
