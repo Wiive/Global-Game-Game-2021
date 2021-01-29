@@ -487,6 +487,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Score
       objectReference: {fileID: 0}
+    - target: {fileID: 1400329157822575516, guid: 25662f7abb16a57458104e9b3a49e687, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6144801613751014625, guid: 3023f21377afd404aa087ea427f8f6a2, type: 2}
+    - target: {fileID: 1400329157822575516, guid: 25662f7abb16a57458104e9b3a49e687, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1400329157822575517, guid: 25662f7abb16a57458104e9b3a49e687, type: 3}
       propertyPath: m_Pivot.x
       value: -0.000000011175871
@@ -1317,6 +1325,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 869986143}
     m_Modifications:
+    - target: {fileID: 1872086737849701176, guid: 1f4e258bd8a332a49b7fe9789e3676f0, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6144801613751014625, guid: 3023f21377afd404aa087ea427f8f6a2, type: 2}
+    - target: {fileID: 1872086737849701176, guid: 1f4e258bd8a332a49b7fe9789e3676f0, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1872086737849701182, guid: 1f4e258bd8a332a49b7fe9789e3676f0, type: 3}
       propertyPath: m_Name
       value: Time
@@ -1588,9 +1604,33 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 25900908904625590, guid: 227e57179ce7dd74b81372dafc973a72, type: 3}
+      propertyPath: relicsData.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 25900908904625590, guid: 227e57179ce7dd74b81372dafc973a72, type: 3}
       propertyPath: relicPointers.Array.size
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 25900908904625590, guid: 227e57179ce7dd74b81372dafc973a72, type: 3}
+      propertyPath: relicsData.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8e540a57f1285554b91a506b9325a719, type: 2}
+    - target: {fileID: 25900908904625590, guid: 227e57179ce7dd74b81372dafc973a72, type: 3}
+      propertyPath: relicsData.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 086e3f9a84dd2ed4682044993cd1efce, type: 2}
+    - target: {fileID: 25900908904625590, guid: 227e57179ce7dd74b81372dafc973a72, type: 3}
+      propertyPath: relicsData.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 5b2f157ffacc73b4eb94568fd30cf61f, type: 2}
+    - target: {fileID: 25900908904625590, guid: 227e57179ce7dd74b81372dafc973a72, type: 3}
+      propertyPath: relicsData.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 60ee77196ae43714d90fbad7bf99685e, type: 2}
+    - target: {fileID: 25900908904625590, guid: 227e57179ce7dd74b81372dafc973a72, type: 3}
+      propertyPath: relicPrefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 5552137708123889252, guid: cea5fbadfe71d455d88f3a872e1a8392, type: 3}
     - target: {fileID: 25900908904625590, guid: 227e57179ce7dd74b81372dafc973a72, type: 3}
       propertyPath: relicPointers.Array.data[0]
       value: 
