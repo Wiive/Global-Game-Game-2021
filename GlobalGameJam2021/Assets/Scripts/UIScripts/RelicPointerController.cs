@@ -85,4 +85,10 @@ public class RelicPointerController : MonoBehaviour
 
         transform.position = new Vector3(x, y, 0);
     }
+
+    public void SetRelic(Relic relic)
+    {
+        target = relic;
+        targetSymbol.sprite = relic.data.relicIcon;
+    }
 }

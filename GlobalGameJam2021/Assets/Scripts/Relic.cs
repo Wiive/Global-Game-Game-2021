@@ -1,3 +1,4 @@
+using Microsoft.Unity.VisualStudio.Editor;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -5,17 +6,22 @@ using UnityEngine;
 
 public class Relic : MonoBehaviour
 {
+    public RelicData data;
+
+    SpriteRenderer spriteRenderer;
+
     private Vector2 startPosition;
 
     private void Awake()
     {
         startPosition = transform.position;
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     // TODO REMOVE! TEMP!!!
     private void Start()
-    {
-        SetRandomPosition();
+    {       
+        //SetRandomPosition();
     }
 
     public void ReturnToStartPosition()
@@ -46,5 +52,11 @@ public class Relic : MonoBehaviour
         float y = (UnityEngine.Random.Range(0, screenGridWidth) * tileSize);
 
         transform.position = new Vector2(x, y);
+    }
+
+    public void SetData(RelicData data)
+    {
+        this.data = data;
+        spriteRenderer.sprite = data.sprite;
     }
 }
