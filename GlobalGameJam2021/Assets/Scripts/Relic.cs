@@ -9,6 +9,12 @@ public class Relic : MonoBehaviour
     public RelicData data;
 
     SpriteRenderer spriteRenderer;
+    MazeNode spawnPoint;
+    public MazeNode SpawnPoint
+    {
+        get { return spawnPoint; }
+        set { spawnPoint = value; }
+    }
 
     private Vector2 startPosition;
 
@@ -26,7 +32,8 @@ public class Relic : MonoBehaviour
 
     public void ReturnToStartPosition()
     {
-        transform.position = startPosition;
+        transform.position = spawnPoint.transform.position;
+        spawnPoint.hasRelic = true;
     }
 
     private void Update()
