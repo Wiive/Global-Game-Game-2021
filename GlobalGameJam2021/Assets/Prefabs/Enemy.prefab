@@ -49,8 +49,11 @@ MonoBehaviour:
   maxIntensity: 1.2
   intensityStepModifier: 0.3
   maxRadius: 26
-  beforeTurnRadius: 12
-  radiusStepModifier: 0.6
+  minRadius: 0
+  radiusStepModifier: 4
+  reduceTime: 15
+  increaseTime: 25
+  increaseRadius: 0
 --- !u!114 &1767484851470536482
 MonoBehaviour:
   m_ObjectHideFlags: 0
