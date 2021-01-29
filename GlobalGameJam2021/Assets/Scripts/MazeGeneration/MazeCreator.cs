@@ -37,7 +37,7 @@ public class MazeCreator : MonoBehaviour
         {
             for (int x = 0; x < gridSize.x; x++)
             {
-                float xPos = transform.position.x + (x * TileSize);
+                float xPos = transform.position.x + (x * TileSize -8);
                 float yPos = transform.position.y + (y * TileSize);
 
                 MazeNode mazeNode = Instantiate(node, new Vector3(xPos, yPos, 0), transform.rotation, transform);
@@ -164,7 +164,10 @@ public class MazeCreator : MonoBehaviour
         do
             node = mazeModell[Random.Range(1, mazeModell.GetLength(0) - 1), Random.Range(1, mazeModell.GetLength(1) - 1)];
         while (node.isWall);
-        return node.transform.position;
+
+        Vector3 position = new Vector3(node.transform.position.x - TileSize / 2, node.transform.position.y, 0);
+
+        return position;
     }
 }
 
