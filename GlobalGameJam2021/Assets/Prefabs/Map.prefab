@@ -160,7 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridSize: {x: 40, y: 22}
   generateGrid: 0
-  wayPoint: {fileID: 3287882493945825587, guid: cb92405dd4009134998c21cc93d60857, type: 3}
+  node: {fileID: 926474476350963570, guid: 95ff4a50b02d68a46aee0cddaf860fd8, type: 3}
   TileSize: 16
   nodeParent: {fileID: 1984634139}
   gridRenderer: {fileID: 1633213245}
