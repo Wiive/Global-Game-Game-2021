@@ -22,6 +22,6 @@ public class UIScore : MonoBehaviour
 
     private void UpdateScore(int score)
     {      
-        scoreText.text = score.ToString();
+        scoreText.text = "Score: " + score.ToString();
     }
 }
