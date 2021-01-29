@@ -4,16 +4,16 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 8803583439897174731
-    second: wall spritesheet_0
+    second: Wall_Right
   - first:
       213: -1422879033022387748
-    second: wall spritesheet_1
+    second: Wall_Left-Right
   - first:
       213: -3992155358565052650
-    second: wall spritesheet_2
+    second: Wall_Left
   - first:
       213: 6118284399238856145
-    second: wall spritesheet_3
+    second: Wall_Down
   - first:
       213: -2565047285485736438
     second: wall spritesheet_4
@@ -22,16 +22,16 @@ TextureImporter:
     second: wall spritesheet_5
   - first:
       213: -5652325458044009910
-    second: wall spritesheet_6
+    second: Wall_Left-Right-Down
   - first:
       213: -4265303467342316478
-    second: wall spritesheet_7
+    second: Wall_Right-Down
   - first:
       213: 2082342332269785250
-    second: wall spritesheet_8
+    second: Wall_Left-Down
   - first:
       213: 7229898917978379352
-    second: wall spritesheet_9
+    second: Wall_Up-Down
   - first:
       213: -3951132410687246018
     second: wall spritesheet_10
@@ -40,16 +40,16 @@ TextureImporter:
     second: wall spritesheet_11
   - first:
       213: -5600134882355746593
-    second: wall spritesheet_12
+    second: Wall_4-Dir
   - first:
       213: -2254220501737630683
-    second: wall spritesheet_13
+    second: Wall_Right-Up
   - first:
       213: 7034139000449342102
-    second: wall spritesheet_14
+    second: Wall_Left-Up
   - first:
       213: -5522735498161566347
-    second: wall spritesheet_15
+    second: Wall_Up
   - first:
       213: 5786511715286383738
     second: wall spritesheet_16
@@ -58,16 +58,16 @@ TextureImporter:
     second: wall spritesheet_17
   - first:
       213: -8148573881953700269
-    second: wall spritesheet_18
+    second: Wall_Left-Right-Up
   - first:
       213: 1925527513563103777
     second: wall spritesheet_19
   - first:
       213: -4166333780797013789
-    second: wall spritesheet_20
+    second: Wall_1x1
   - first:
       213: 3941044587090282130
-    second: wall spritesheet_21
+    second: Wall_Big_UpStop
   - first:
       213: -4989976962965715897
     second: wall spritesheet_22
@@ -76,31 +76,31 @@ TextureImporter:
     second: wall spritesheet_23
   - first:
       213: -6076575599686494540
-    second: wall spritesheet_24
+    second: Wall_BIG_RightDown
   - first:
       213: 2336910943610204738
-    second: wall spritesheet_25
+    second: Wall_BIG_UpExit
   - first:
       213: -1934042785196833869
-    second: wall spritesheet_26
+    second: Wall_BIG_LeftDown
   - first:
       213: 8370953709060816310
-    second: wall spritesheet_27
+    second: Wall_Big_DownStop
   - first:
       213: -3718122177727838178
-    second: wall spritesheet_28
+    second: Wall_Big_LeftStop
   - first:
       213: -5468718585289892197
-    second: wall spritesheet_29
+    second: Wall_Big_RightStop
   - first:
       213: 4372695273461910676
-    second: wall spritesheet_30
+    second: Wall_BIG_LeftExit
   - first:
       213: -2726654511233716200
-    second: wall spritesheet_31
+    second: Wall_BIG_Fill
   - first:
       213: -6394699126962170357
-    second: wall spritesheet_32
+    second: Wall_BIG_RightExit
   - first:
       213: -4131115787117811426
     second: wall spritesheet_33
@@ -109,19 +109,25 @@ TextureImporter:
     second: wall spritesheet_34
   - first:
       213: -9093917254926478408
-    second: wall spritesheet_35
+    second: Wall_BIG_RightUp
   - first:
       213: -6685712981134479363
-    second: wall spritesheet_36
+    second: Wall_BIG_DownExit
   - first:
       213: -2237380414248051733
-    second: wall spritesheet_37
+    second: Wall_BIG_LeftUp
   - first:
       213: -7424028218101804023
     second: wall spritesheet_38
   - first:
       213: -31363204332441316
     second: wall spritesheet_39
+  - first:
+      213: 6744255565467273300
+    second: Wall-Right-Up-Down
+  - first:
+      213: -6308300129429427701
+    second: Wall-Left-Up-Down
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -223,7 +229,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wall spritesheet_0
+      name: Wall_Right
       rect:
         serializedVersion: 2
         x: 0
@@ -231,7 +237,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,7 +250,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall spritesheet_1
+      name: Wall_Left-Right
       rect:
         serializedVersion: 2
         x: 16
@@ -252,7 +258,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -265,7 +271,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall spritesheet_2
+      name: Wall_Left
       rect:
         serializedVersion: 2
         x: 32
@@ -273,7 +279,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,7 +292,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall spritesheet_3
+      name: Wall_Down
       rect:
         serializedVersion: 2
         x: 48
@@ -294,7 +300,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -315,7 +321,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -336,7 +342,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -349,7 +355,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall spritesheet_6
+      name: Wall_Left-Right-Down
       rect:
         serializedVersion: 2
         x: 0
@@ -357,7 +363,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -370,7 +376,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall spritesheet_7
+      name: Wall_Right-Down
       rect:
         serializedVersion: 2
         x: 16
@@ -378,7 +384,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -391,7 +397,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall spritesheet_8
+      name: Wall_Left-Down
       rect:
         serializedVersion: 2
         x: 32
@@ -399,7 +405,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -412,7 +418,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall spritesheet_9
+      name: Wall_Up-Down
       rect:
         serializedVersion: 2
         x: 48
@@ -420,7 +426,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -441,7 +447,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -462,7 +468,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -475,7 +481,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall spritesheet_12
+      name: Wall_4-Dir
       rect:
         serializedVersion: 2
         x: 0
@@ -483,7 +489,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -496,7 +502,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall spritesheet_13
+      name: Wall_Right-Up
       rect:
         serializedVersion: 2
         x: 16
@@ -504,7 +510,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -517,7 +523,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall spritesheet_14
+      name: Wall_Left-Up
       rect:
         serializedVersion: 2
         x: 32
@@ -525,7 +531,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -538,7 +544,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall spritesheet_15
+      name: Wall_Up
       rect:
         serializedVersion: 2
         x: 48
@@ -546,7 +552,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -567,7 +573,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -588,7 +594,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -601,7 +607,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall spritesheet_18
+      name: Wall_Left-Right-Up
       rect:
         serializedVersion: 2
         x: 0
@@ -609,7 +615,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -630,7 +636,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -643,7 +649,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall spritesheet_20
+      name: Wall_1x1
       rect:
         serializedVersion: 2
         x: 32
@@ -651,7 +657,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -664,7 +670,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall spritesheet_21
+      name: Wall_Big_UpStop
       rect:
         serializedVersion: 2
         x: 48
@@ -672,7 +678,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -693,7 +699,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -714,7 +720,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -727,7 +733,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall spritesheet_24
+      name: Wall_BIG_RightDown
       rect:
         serializedVersion: 2
         x: 0
@@ -735,7 +741,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -748,7 +754,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall spritesheet_25
+      name: Wall_BIG_UpExit
       rect:
         serializedVersion: 2
         x: 16
@@ -756,7 +762,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -769,7 +775,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall spritesheet_26
+      name: Wall_BIG_LeftDown
       rect:
         serializedVersion: 2
         x: 32
@@ -777,7 +783,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -790,7 +796,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall spritesheet_27
+      name: Wall_Big_DownStop
       rect:
         serializedVersion: 2
         x: 48
@@ -798,7 +804,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -811,7 +817,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall spritesheet_28
+      name: Wall_Big_LeftStop
       rect:
         serializedVersion: 2
         x: 64
@@ -819,7 +825,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -832,7 +838,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall spritesheet_29
+      name: Wall_Big_RightStop
       rect:
         serializedVersion: 2
         x: 80
@@ -840,7 +846,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -853,7 +859,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall spritesheet_30
+      name: Wall_BIG_LeftExit
       rect:
         serializedVersion: 2
         x: 0
@@ -861,7 +867,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -874,7 +880,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall spritesheet_31
+      name: Wall_BIG_Fill
       rect:
         serializedVersion: 2
         x: 16
@@ -882,7 +888,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -895,7 +901,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall spritesheet_32
+      name: Wall_BIG_RightExit
       rect:
         serializedVersion: 2
         x: 32
@@ -903,7 +909,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -924,7 +930,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -945,7 +951,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -958,7 +964,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall spritesheet_35
+      name: Wall_BIG_RightUp
       rect:
         serializedVersion: 2
         x: 0
@@ -966,7 +972,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -979,7 +985,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall spritesheet_36
+      name: Wall_BIG_DownExit
       rect:
         serializedVersion: 2
         x: 16
@@ -987,7 +993,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1000,7 +1006,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall spritesheet_37
+      name: Wall_BIG_LeftUp
       rect:
         serializedVersion: 2
         x: 32
@@ -1008,7 +1014,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1029,7 +1035,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1050,7 +1056,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1058,6 +1064,48 @@ TextureImporter:
       bones: []
       spriteID: c113fb2f453909ff0800000000000000
       internalID: -31363204332441316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall-Right-Up-Down
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458c02644b8689d50800000000000000
+      internalID: 6744255565467273300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall-Left-Up-Down
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0aeec0847a6478a0800000000000000
+      internalID: -6308300129429427701
       vertices: []
       indices: 
       edges: []
