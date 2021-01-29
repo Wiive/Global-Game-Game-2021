@@ -79,9 +79,10 @@ public class SpawnManager : MonoBehaviour
     {
         for (int i = 0; i < amount; i++)
         {
-            int randomSpawnIndex = Random.Range(0, relicSpawners.Count);
-            //int randomHunterIndex = Random.Range(0, relicPrefab.Length);
-            Relic relic = Instantiate(relicPrefab[0], relicSpawners[randomSpawnIndex].parent.transform.position, transform.rotation, transform.parent);
+            Vector3 relicPos = relicSpawners[i].parent.transform.position;
+            Relic relic = Instantiate(relicPrefab[0], relicPos, transform.rotation, transform.parent);
+
+            relic.SpawnPoint = relicSpawners[i].parent.GetComponent<MazeNode>();
             relic.SetData(relicsData[i]);
             relicPointers[i].SetRelic(relic);
 

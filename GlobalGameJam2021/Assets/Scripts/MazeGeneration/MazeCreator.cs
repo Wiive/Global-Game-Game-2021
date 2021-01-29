@@ -19,7 +19,7 @@ public class MazeCreator : MonoBehaviour
 
     MazeNode[,] mazeModell;
 
-    [SerializeField] List<MazeNode> frontier = new List<MazeNode>();
+    [SerializeField] Queue<MazeNode> frontier = new Queue<MazeNode>();
     [SerializeField] List<MazeNode> neighbours = new List<MazeNode>();
     [SerializeField] List<MazeNode> spawnedRelics = new List<MazeNode>();
 
@@ -135,7 +135,8 @@ public class MazeCreator : MonoBehaviour
         {
             int random = Random.Range(0, frontier.Count);
 
-            MazeNode node = frontier[random];
+            //MazeNode node = frontier[random];
+            MazeNode node = frontier.Dequeue();
 
             //yield return new WaitForSeconds(0);
 
@@ -150,15 +151,17 @@ public class MazeCreator : MonoBehaviour
 
             AddFrontierCells(node);
 
-            frontier.Remove(node);
-            frontier.RemoveAll(node => node == null);
+  /*          frontier.Remove(node);
+            frontier.RemoveAll(node => node == null);*/
             if (frontier.Count <= 0)
                 break;
         }
 
         yield return new WaitForSeconds(0);
         SetRelicPosition();
+        yield return new WaitForSeconds(0);
         SetPlayerSpawn();
+        yield return new WaitForSeconds(0);
         SetEnemySpawn();
         
     }
@@ -201,7 +204,8 @@ public class MazeCreator : MonoBehaviour
             {
                 if (!mazeModell[Cords.x, Cords.y].partOfMaze && !frontier.Contains(mazeModell[Cords.x,Cords.y]))
                 {
-                    frontier.Add(mazeModell[Cords.x, Cords.y]);
+                    //frontier.Add(mazeModell[Cords.x, Cords.y]);'
+                    frontier.Enqueue(mazeModell[Cords.x, Cords.y]);
                 }
             }
         }
@@ -268,22 +272,19 @@ public class MazeCreator : MonoBehaviour
         MazeNode relicSpot;
         int x;
         int y;
+        int indexTry = 0;
+
         do
         {
             int random = Random.Range(0,squareNodes[index].Count);
-            Debug.Log(random);
 
             relicSpot = squareNodes[index][random];
 
-            Debug.Log(relicSpot.GridPos);
-
             x = relicSpot.GridPos.x;
-            Debug.Log(x);
             y = relicSpot.GridPos.y;
-            Debug.Log(y);
-
+            indexTry++;
         }
-        while (x < bottomX || x > topX || y < bottomY || y > topY);
+        while (indexTry < 10 && (x < bottomX || x > topX || y < bottomY || y > topY));
 
         relicSpot.hasRelic = true;
         relicSpot.isWall = false;

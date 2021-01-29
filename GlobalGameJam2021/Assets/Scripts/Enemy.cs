@@ -133,7 +133,7 @@ public class Enemy : Character
 
         currentPos = path[pathIndexPosition].GridPos;
         direction = path[pathIndexPosition + 1].GridPos - currentPos;
-        Debug.Log(direction);
+        //Debug.Log(direction);
         moveController.SetTargetPosition(direction);
         pathIndexPosition++;
     }
@@ -183,6 +183,7 @@ public class Enemy : Character
 
                 int maxX = Mathf.Clamp(currentPos.x + range, 0, gridSize.x) + 1;
                 int maxY = Mathf.Clamp(currentPos.y + range, 0, gridSize.y) + 1;
+
                 int x = Random.Range(minX, maxX);
                 int y = Random.Range(minY, maxY);
                 Vector2Int wayPointKey = new Vector2Int(x, y);
