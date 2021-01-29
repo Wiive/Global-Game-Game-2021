@@ -16,8 +16,11 @@ public class Flashlight : MonoBehaviour
     public float intensityStepModifier = 0.9f;
 
     public float maxRadius;
-    public float beforeTurnRadius;
+    public float minRadius;
     public float radiusStepModifier;
+    public float reduceTime;
+    public float increaseTime;
+    [SerializeField] bool increaseRadius;
     
     private float currentIntensity;
     private bool intensityDirection;
@@ -62,13 +65,15 @@ public class Flashlight : MonoBehaviour
         }
         
         flashlight.intensity = currentIntensity;
+
+        UpdateRadius();
     }
 
     public void UpdateDirection(Vector2 direction)
     {
         if (lastDirection != direction)
         {
-            StartCoroutine(ChangeRadius());
+            increaseRadius = true;
         }
 
         if (direction == Vector2.down)
@@ -86,39 +91,29 @@ public class Flashlight : MonoBehaviour
         lastDirection = direction;
     }
 
-    IEnumerator ChangeRadius()
+    public void EnemyStopped()
     {
-        bool reduce = true;
-        
-        while (reduce == true)
-        {
-            if (flashlight.pointLightOuterRadius > beforeTurnRadius)
-            {
-                flashlight.pointLightOuterRadius -= radiusStepModifier;
-            }
-            else
-            {
-                reduce = false;
-            }
+        increaseRadius = false;
+    }
 
-            yield return new WaitForSeconds(0.05f);
-        }
-        
-        while (reduce == false)
+
+    
+    private void UpdateRadius()
+    {
+        if (increaseRadius)
         {
             if (flashlight.pointLightOuterRadius < maxRadius)
             {
-                flashlight.pointLightOuterRadius += radiusStepModifier;
+                flashlight.pointLightOuterRadius += increaseTime * Time.deltaTime;
             }
-            else
-            {
-                reduce = true;
-            }
-            
-            yield return new WaitForSeconds(0.05f);
         }
-
-        yield return null;
+        else
+        {
+            if (flashlight.pointLightOuterRadius > minRadius)
+            {
+                flashlight.pointLightOuterRadius -= reduceTime * Time.deltaTime;
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

@@ -8,6 +8,11 @@ public class MazeCreator : MonoBehaviour
     [SerializeField] MazeNode node = null;
     [SerializeField] int TileSize = 16;
 
+    [SerializeField] int roomSize = 1;
+    [SerializeField] int relicsToPlace = 4;
+    [SerializeField] int safeZone = 10;
+    [SerializeField] int borderZone = 5;
+
     MazeNode[,] mazeModell;
 
     [SerializeField] List<MazeNode> frontier = new List<MazeNode>();
@@ -21,6 +26,18 @@ public class MazeCreator : MonoBehaviour
         new Vector2Int(-2, 0)
     };
 
+    Vector2Int[] roomCreation =
+    {
+        new Vector2Int(0, -1),
+        new Vector2Int(0, 1),
+        new Vector2Int(1, 0),
+        new Vector2Int(-1, 0),
+        new Vector2Int(1, 1),
+        new Vector2Int(-1, -1),
+        new Vector2Int(1, -1),
+        new Vector2Int(-1, 1)
+    };
+
 
     private void Awake()
     {
@@ -29,10 +46,7 @@ public class MazeCreator : MonoBehaviour
 
     private void GenerateGrid()
     {
-        DestroyPrevious();
-
         mazeModell = new MazeNode[gridSize.x, gridSize.y];
-
         for (int y = 0; y < gridSize.y; y++)
         {
             for (int x = 0; x < gridSize.x; x++)
@@ -55,17 +69,6 @@ public class MazeCreator : MonoBehaviour
         }
     }
 
-    private void DestroyPrevious()
-    {
-        MazeNode[] children = GetComponentsInChildren<MazeNode>();
-        foreach (var child in children)
-        {
-            DestroyImmediate(child.transform.gameObject);
-        }
-    }
-
-
-
     public IEnumerator GenerateMaze()
     {
         int x = Random.Range(1, mazeModell.GetLength(0) - 2);
@@ -75,16 +78,13 @@ public class MazeCreator : MonoBehaviour
 
         while (frontier.Count > 0)
         {
-
-            yield return new WaitForSeconds(0);
             int random = Random.Range(0, frontier.Count);
 
             MazeNode node = frontier[random];
-            //MazeNode node = frontier.Dequeue();
+
             node.isWall = true;
             node.partOfMaze = true;
 
-            yield return new WaitForSeconds(0);
             MazeNode nodeNeighbour = GetRandomNeighbour(node);
             if (nodeNeighbour != null)
                 ConnectNodes(node, nodeNeighbour);
@@ -94,9 +94,12 @@ public class MazeCreator : MonoBehaviour
             frontier.Remove(node);
             frontier.RemoveAll(node => node == null);
         }
+
+        Debug.Log("Done with maze soon creating rooms");
+        yield return new WaitForSeconds(1f);
+        SetRelicPosition();
         Debug.Log("Maze Done");
     }
-
     private MazeNode GetRandomNeighbour(MazeNode frontier)
     {
         neighbours = new List<MazeNode>();
@@ -108,7 +111,6 @@ public class MazeCreator : MonoBehaviour
             {
                 neighbours.Add(mazeModell[Cords.x, Cords.y]);
                 mazeModell[Cords.x, Cords.y].exploredDirection = direction;
-                //mazeModell[Cords.x, Cords.y].hasRelic = true;
             }
         }
 
@@ -122,14 +124,11 @@ public class MazeCreator : MonoBehaviour
 
         return neighbours[random];
     }
-
     private void ConnectNodes (MazeNode frontier, MazeNode neighbour)
     {
-        //neighbour.isWall = false;
             Vector2Int inbetweenPos = frontier.GridPos + (neighbour.exploredDirection / 2);
             mazeModell[inbetweenPos.x, inbetweenPos.y].isWall = true;
     }
-
     private void AddFrontierCells(MazeNode node)
     {
         foreach (var direction in directions)
@@ -141,12 +140,10 @@ public class MazeCreator : MonoBehaviour
                 if (!mazeModell[Cords.x, Cords.y].partOfMaze && !frontier.Contains(mazeModell[Cords.x,Cords.y]))
                 {
                     frontier.Add(mazeModell[Cords.x, Cords.y]);
-                    //frontier.Enqueue(mazeModell[Cords.x,Cords.y]);
                 }
             }
         }
     }
-
     private bool IsValidFrontier(int x, int y)
     {
 
@@ -158,6 +155,52 @@ public class MazeCreator : MonoBehaviour
     }
 
 
+    private void SetRelicPosition()
+    {
+        for (int i = 0; i < relicsToPlace; i++)
+        {
+            MazeNode relicSpot = GetRelicSpot();
+            CreateRoom(relicSpot);
+        }
+    }
+
+    private MazeNode GetRelicSpot()
+    {
+        int x;
+        int y;
+
+        do
+        {
+            x = Random.Range(borderZone, mazeModell.GetLength(0) - borderZone);
+            y = Random.Range(borderZone, mazeModell.GetLength(1) - borderZone);
+        }
+        while (false);
+
+        MazeNode relicSpot = mazeModell[x, y];
+        relicSpot.hasRelic = true;
+        relicSpot.isWall = false;
+        return relicSpot;
+    }
+
+    private void FindValidSpawnPos()
+    {
+
+    }
+
+    private void CreateRoom(MazeNode relicSpot)
+    {
+        foreach (var direction in roomCreation)
+        {
+            Vector2Int nodePos = new Vector2Int(relicSpot.GridPos.x + direction.x, relicSpot.GridPos.y + direction.y);
+            mazeModell[nodePos.x, nodePos.y].isWall = false;
+        }
+    }
+
+    private void SetExits()
+    {
+
+    }
+
     public Vector3 startingPos()
     {
         MazeNode node;
@@ -165,7 +208,7 @@ public class MazeCreator : MonoBehaviour
             node = mazeModell[Random.Range(1, mazeModell.GetLength(0) - 1), Random.Range(1, mazeModell.GetLength(1) - 1)];
         while (node.isWall);
 
-        Vector3 position = new Vector3(node.transform.position.x - TileSize / 2, node.transform.position.y, 0);
+        Vector3 position = new Vector3(node.transform.position.x , node.transform.position.y, 0);
 
         return position;
     }

@@ -124,7 +124,10 @@ public class Enemy : Character
             Debug.Log("I Enemy: " + name + " have now exited the labyrinth with a relic");
             Destroy(gameObject);
         }
-        yield return new WaitForSeconds(WaitTime);
+        
+        yield return new WaitForSeconds(WaitTime/2);
+        flashlight.EnemyStopped();
+        yield return new WaitForSeconds(WaitTime/2);
         GetNewPath();
         gettingNewPath = false;
     }
