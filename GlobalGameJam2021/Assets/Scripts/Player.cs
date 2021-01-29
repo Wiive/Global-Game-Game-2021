@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : Character
 {
     [SerializeField] private bool moveConstant = false;
-    Dictionary<Vector2Int, WayPoint> grid = new Dictionary<Vector2Int, WayPoint>();
+    Dictionary<Vector2Int, MazeNode> grid = new Dictionary<Vector2Int, MazeNode>();
 
     protected override void Awake()
     {
@@ -47,8 +47,9 @@ public class Player : Character
     bool IsValidInput()
     {
         Vector2Int inputTry = new Vector2Int((int)direction.x, (int)direction.y) + currentPos;
-        if (grid.ContainsKey(inputTry) && !grid[inputTry].isBlocked )
+        if (grid.ContainsKey(inputTry) && !grid[inputTry].isWall )
             return true;
+        Debug.Log("non valid movement");
         return false;
     }
 
@@ -75,24 +76,24 @@ public class Player : Character
     
     private void LoadBlocks()
     {
-        grid = new Dictionary<Vector2Int, WayPoint>();
-        WayPoint[] waypoints = FindObjectsOfType<WayPoint>();
+        grid = new Dictionary<Vector2Int, MazeNode>();
+        MazeNode[] nodes = FindObjectsOfType<MazeNode>();
 
-        foreach (WayPoint waypoint in waypoints)
+        foreach (MazeNode node in nodes)
         {
-            AddToGrid(waypoint);
+            AddToGrid(node);
         }
     }
-    private void AddToGrid(WayPoint waypoint)
+    private void AddToGrid(MazeNode nodeToAdd)
     {
-        var gridPos = waypoint.GridPos;
+        var gridPos = nodeToAdd.GridPos;
         if (grid.ContainsKey(gridPos))
         {
             return;
         }
         else
         {
-            grid.Add(gridPos, waypoint);
+            grid.Add(gridPos, nodeToAdd);
         }
     }
     

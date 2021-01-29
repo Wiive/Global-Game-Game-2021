@@ -17,6 +17,7 @@ public class MazeCreator : MonoBehaviour
 
     [SerializeField] List<MazeNode> frontier = new List<MazeNode>();
     [SerializeField] List<MazeNode> neighbours = new List<MazeNode>();
+    [SerializeField] List<MazeNode> spawnedRelics = new List<MazeNode>();
 
     Vector2Int[] directions =
     {
@@ -51,7 +52,7 @@ public class MazeCreator : MonoBehaviour
         {
             for (int x = 0; x < gridSize.x; x++)
             {
-                float xPos = transform.position.x + (x * TileSize -8);
+                float xPos = transform.position.x + (x * TileSize);
                 float yPos = transform.position.y + (y * TileSize);
 
                 MazeNode mazeNode = Instantiate(node, new Vector3(xPos, yPos, 0), transform.rotation, transform);
@@ -82,12 +83,16 @@ public class MazeCreator : MonoBehaviour
 
             MazeNode node = frontier[random];
 
+            yield return new WaitForSeconds(0);
+
             node.isWall = true;
             node.partOfMaze = true;
 
             MazeNode nodeNeighbour = GetRandomNeighbour(node);
             if (nodeNeighbour != null)
                 ConnectNodes(node, nodeNeighbour);
+
+            yield return new WaitForSeconds(0);
 
             AddFrontierCells(node);
 
@@ -98,6 +103,9 @@ public class MazeCreator : MonoBehaviour
         Debug.Log("Done with maze soon creating rooms");
         yield return new WaitForSeconds(1f);
         SetRelicPosition();
+        SetPlayerSpawn();
+        SetEnemySpawn();
+        
         Debug.Log("Maze Done");
     }
     private MazeNode GetRandomNeighbour(MazeNode frontier)
@@ -157,6 +165,8 @@ public class MazeCreator : MonoBehaviour
 
     private void SetRelicPosition()
     {
+        Debug.Log("Spawning Relics");
+
         for (int i = 0; i < relicsToPlace; i++)
         {
             MazeNode relicSpot = GetRelicSpot();
@@ -174,17 +184,19 @@ public class MazeCreator : MonoBehaviour
             x = Random.Range(borderZone, mazeModell.GetLength(0) - borderZone);
             y = Random.Range(borderZone, mazeModell.GetLength(1) - borderZone);
         }
-        while (false);
+        while (mazeModell[x, y].hasRelic || mazeModell[x, y].isPlayerSpawner || mazeModell[x, y].isWall || mazeModell[x, y].isEnemySpawner);
 
         MazeNode relicSpot = mazeModell[x, y];
         relicSpot.hasRelic = true;
         relicSpot.isWall = false;
+        relicSpot.SetNodeState();
         return relicSpot;
     }
 
-    private void FindValidSpawnPos()
+    private bool FindValidSpawnPos(int x, int y)
     {
-
+        // check so that its not to close to other relics
+        return false;
     }
 
     private void CreateRoom(MazeNode relicSpot)
@@ -198,11 +210,50 @@ public class MazeCreator : MonoBehaviour
 
     private void SetExits()
     {
+        // set a exit point on each side, depending on where the relics are.
+    }
 
+    private void SetPlayerSpawn()
+    {
+        Debug.Log("Spawning Players");
+
+        int x;
+        int y;
+
+        do
+        {
+            x = Random.Range(borderZone, mazeModell.GetLength(0) - borderZone);
+            y = Random.Range(borderZone, mazeModell.GetLength(1) - borderZone);
+        }
+        while (mazeModell[x,y].hasRelic || mazeModell[x,y].isEnemySpawner || mazeModell[x,y].isWall);
+
+        mazeModell[x, y].isPlayerSpawner = true;
+        mazeModell[x, y].SetNodeState();
+    }
+
+    private void SetEnemySpawn()
+    {
+        Debug.Log("Spawning enemies");
+        for (int i = 0; i < 5; i++)
+        {
+            int x;
+            int y;
+
+            do
+            {
+                x = Random.Range(borderZone, mazeModell.GetLength(0) - borderZone);
+                y = Random.Range(borderZone, mazeModell.GetLength(1) - borderZone);
+            }
+            while (mazeModell[x, y].hasRelic || mazeModell[x, y].isPlayerSpawner || mazeModell[x, y].isWall || mazeModell[x, y].isEnemySpawner);
+
+            mazeModell[x, y].isEnemySpawner = true;
+            mazeModell[x, y].SetNodeState();
+        }
     }
 
     public Vector3 startingPos()
     {
+        // make this more fancy so that it wont spawn hunters on relics or to close.
         MazeNode node;
         do
             node = mazeModell[Random.Range(1, mazeModell.GetLength(0) - 1), Random.Range(1, mazeModell.GetLength(1) - 1)];

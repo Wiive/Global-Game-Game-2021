@@ -52,6 +52,8 @@ MonoBehaviour:
   exploredFrom: {fileID: 0}
   hasRelic: 0
   isExit: 0
+  isEnemySpawner: 0
+  isPlayerSpawner: 0
   gridPos: {x: 0, y: 0}
   blocked:
     serializedVersion: 2
@@ -65,6 +67,9 @@ MonoBehaviour:
   relicPlaced:
     serializedVersion: 2
     rgba: 4278255610
+  playerSpawn: {fileID: 165210129545631363, guid: 288a8c7dea221e349aef98f1859fc636, type: 3}
+  relicSpawn: {fileID: 2780227082036038779, guid: 87576d4b0b8a32a4a9100db088d5c328, type: 3}
+  enemySpawn: {fileID: 2903901943189228574, guid: d67edfce4914c16428966e05413488dd, type: 3}
 --- !u!212 &-5971191508864158246
 SpriteRenderer:
   m_ObjectHideFlags: 0

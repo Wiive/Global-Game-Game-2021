@@ -32,7 +32,7 @@ public class SpawnManager : MonoBehaviour
             Destroy(this);
     }
 
-    private void Start()
+    public void SpawnEntities()
     {
         foreach (var spawnPoint in GameObject.FindGameObjectsWithTag("HunterSpawner"))
         {
@@ -43,11 +43,15 @@ public class SpawnManager : MonoBehaviour
         {
             playerSpawners.Add(spawnPoint.transform);
         }
-
+        Debug.Log(playerSpawners.Count);
         foreach (var spawnPoint in GameObject.FindGameObjectsWithTag("RelicSpawner"))
         {
             relicSpawners.Add(spawnPoint.transform);
         }
+
+        SpawnHunter(huntSpawners.Count);
+        SpawnPlayer();
+        SpawnRelic(relicSpawners.Count);
     }
 
     public void SpawnHunter(int amount)
@@ -55,16 +59,16 @@ public class SpawnManager : MonoBehaviour
         for (int i = 0; i < amount; i++)
         {
             int randomSpawnIndex = Random.Range(0, huntSpawners.Count);
-            int randomHunterIndex = Random.Range(0, hunterPrefab.Length);
-            Instantiate(hunterPrefab[randomSpawnIndex], huntSpawners[randomSpawnIndex]);
+            //int randomHunterIndex = Random.Range(0, hunterPrefab.Length);
+            Instantiate(hunterPrefab[0], huntSpawners[randomSpawnIndex].parent.transform.position, transform.rotation,transform.parent);
         }
     }
 
     public void SpawnPlayer()
     {
-        int randomSpawnIndex = Random.Range(0, huntSpawners.Count);
-        int randomHunterIndex = Random.Range(0, hunterPrefab.Length);
-        Instantiate(hunterPrefab[randomSpawnIndex], huntSpawners[randomSpawnIndex]);
+        int randomSpawnIndex = Random.Range(0, playerSpawners.Count);
+        //int randomHunterIndex = Random.Range(0, hunterPrefab.Length);
+        Instantiate(playerPrefab, playerSpawners[randomSpawnIndex].parent.transform.position, transform.rotation, transform.parent);
     }
 
     public void SpawnRelic(int amount)
@@ -72,8 +76,8 @@ public class SpawnManager : MonoBehaviour
         for (int i = 0; i < amount; i++)
         {
             int randomSpawnIndex = Random.Range(0, relicSpawners.Count);
-            int randomHunterIndex = Random.Range(0, relicPrefab.Length);
-            Instantiate(hunterPrefab[randomSpawnIndex], relicSpawners[randomSpawnIndex]);
+            //int randomHunterIndex = Random.Range(0, relicPrefab.Length);
+            Instantiate(relicPrefab[0], relicSpawners[randomSpawnIndex].parent.transform.position, transform.rotation, transform.parent);
         }
     }
 
@@ -83,9 +87,9 @@ public class SpawnManager : MonoBehaviour
         {
             if (GameStateManager.instance.PreviousGameState == GameStateManager.GameState.MainMenu)
             {
-                SpawnPlayer();
+/*                SpawnPlayer();
                 SpawnHunter(5);
-                SpawnRelic(4);
+                SpawnRelic(4);*/
             }
         }
     }
