@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : Character
 {
-    [SerializeField] List<WayPoint> path = new List<WayPoint>();
+    [SerializeField] List<MazeNode> path = new List<MazeNode>();
     [SerializeField] Vector2Int destination = new Vector2Int(0, 0);
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float WaitTime = 2f;    
@@ -142,12 +142,12 @@ public class Enemy : Character
         {
             destination = pathFinder.SearchForRelic(range, currentPos);
         }
-        else
+        else if(isCarryingRelic)
         {
             destination = pathFinder.SearchForExit(range, currentPos);
         }
 
-        WayPoint wayPointDestination = pathFinder.GetWayPoint(destination);
+        MazeNode wayPointDestination = pathFinder.GetWayPoint(destination);
 
         if (destination.x == 0 && destination.y == 0)
         {
@@ -163,12 +163,14 @@ public class Enemy : Character
                 Vector2Int wayPointKey = new Vector2Int(x, y);
                 wayPointDestination = pathFinder.GetWayPoint(wayPointKey);
             }
-            while (wayPointDestination == null || wayPointDestination.isBlocked || wayPointDestination.GridPos == currentPos);
+            while (wayPointDestination == null || wayPointDestination.isWall || wayPointDestination.GridPos == currentPos);
         }
         else
         {
             isCarryingRelic = true;
         }
+
+        Debug.Log("Got Path");
 
         return wayPointDestination.GridPos;
     }

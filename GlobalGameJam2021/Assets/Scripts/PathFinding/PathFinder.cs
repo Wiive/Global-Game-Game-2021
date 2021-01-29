@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class PathFinder : MonoBehaviour
 {
-    [SerializeField] WayPoint startWaypoint, endWaypoint;
+    [SerializeField] MazeNode startWaypoint, endWaypoint;
     [SerializeField] Vector2Int gridSize = new Vector2Int(0,0); // make this get set after the grid creator.
     public Vector2Int GridSize { get { return gridSize; } set { gridSize = value; } }
-    Dictionary<Vector2Int, WayPoint> grid = new Dictionary<Vector2Int, WayPoint>();
-    Queue<WayPoint> waypointQueue = new Queue<WayPoint>();
-    List<WayPoint> path = new List<WayPoint>();
+    Dictionary<Vector2Int, MazeNode> grid = new Dictionary<Vector2Int, MazeNode>();
+    Queue<MazeNode> waypointQueue = new Queue<MazeNode>();
+    List<MazeNode> path = new List<MazeNode>();
 
-    WayPoint startSearchPoint;
-    Queue<WayPoint> searchPoints = new Queue<WayPoint>();
+    MazeNode startSearchPoint;
+    Queue<MazeNode> searchPoints = new Queue<MazeNode>();
 
 
     bool searchForPath = false;
 
-    WayPoint searchCenter;
-    WayPoint[] waypoints;
+    MazeNode searchCenter;
+    MazeNode[] mazePoints;
 
     Vector2Int[] directions =
     {
@@ -35,30 +35,30 @@ public class PathFinder : MonoBehaviour
     }
     private void LoadBlocks()
     {
-        grid = new Dictionary<Vector2Int, WayPoint>();
-        waypoints = FindObjectsOfType<WayPoint>();
+        grid = new Dictionary<Vector2Int, MazeNode>();
+        mazePoints = FindObjectsOfType<MazeNode>();
 
-        foreach (WayPoint waypoint in waypoints)
+        foreach (MazeNode mazePoint in mazePoints)
         {
-            AddToGrid(waypoint);
+            AddToGrid(mazePoint);
         }
     }
-    private void AddToGrid(WayPoint waypoint)
+    private void AddToGrid(MazeNode mazeNode)
     {
-        waypoint.isExplored = false;
-        var gridPos = waypoint.GridPos;
+        mazeNode.isExplored = false;
+        var gridPos = mazeNode.GridPos;
         if (grid.ContainsKey(gridPos))
         {
             return;
         }
         else
         {
-            grid.Add(gridPos, waypoint);
+            grid.Add(gridPos, mazeNode);
         }
     }
 
 
-    public List<WayPoint> SearchForPath(Vector2Int startPoint, Vector2Int endPoint)
+    public List<MazeNode> SearchForPath(Vector2Int startPoint, Vector2Int endPoint)
     {
         startWaypoint = GetWayPoint(startPoint);
         endWaypoint = GetWayPoint(endPoint);
@@ -78,7 +78,7 @@ public class PathFinder : MonoBehaviour
     }
     private void ResetWaypoints()
     {
-        foreach (var waypoint in waypoints)
+        foreach (var waypoint in mazePoints)
         {
             waypoint.isExplored = false;
             waypoint.exploredFrom = null;
@@ -112,8 +112,8 @@ public class PathFinder : MonoBehaviour
 
     private void QueueNewWaypoints(Vector2Int nearbyCoordinates)
     {
-        WayPoint nearbyWaypoint = grid[nearbyCoordinates];
-        if (nearbyWaypoint.isExplored || waypointQueue.Contains(nearbyWaypoint) || nearbyWaypoint.isBlocked) { return; }
+        MazeNode nearbyWaypoint = grid[nearbyCoordinates];
+        if (nearbyWaypoint.isExplored || waypointQueue.Contains(nearbyWaypoint) || nearbyWaypoint.isWall) { return; }
         else
         {
             waypointQueue.Enqueue(nearbyWaypoint);
@@ -125,7 +125,7 @@ public class PathFinder : MonoBehaviour
     {
         path.Clear();
         path.Add(endWaypoint);
-        WayPoint previous = endWaypoint.exploredFrom;
+        MazeNode previous = endWaypoint.exploredFrom;
         while (previous != startWaypoint)
         {
             path.Add(previous);
@@ -208,7 +208,7 @@ public class PathFinder : MonoBehaviour
     }
     private void AddSearchPoint(Vector2Int nearbyCoordinates)
     {
-        WayPoint nearbyWaypoint = grid[nearbyCoordinates];
+        MazeNode nearbyWaypoint = grid[nearbyCoordinates];
         if (searchPoints.Contains(nearbyWaypoint) || nearbyWaypoint.isExplored) { return; }
         else
         {
@@ -218,12 +218,12 @@ public class PathFinder : MonoBehaviour
 
 
 
-    public WayPoint GetWayPoint(Vector2Int positionKey)
+    public MazeNode GetWayPoint(Vector2Int positionKey)
     {
         try
         {
-            WayPoint wayPoint = grid[positionKey];
-            return wayPoint;
+            MazeNode mazeNode = grid[positionKey];
+            return mazeNode;
         }
         catch
         {
