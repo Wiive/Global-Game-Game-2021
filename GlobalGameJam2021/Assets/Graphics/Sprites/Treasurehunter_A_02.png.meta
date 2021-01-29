@@ -1,0 +1,492 @@
+fileFormatVersion: 2
+guid: b2fa1081a31cfb24d9884dc732d15bf7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1931044862979074020
+    second: Treasurehunter_A_02_0
+  - first:
+      213: 1638627708492516552
+    second: Treasurehunter_A_02_1
+  - first:
+      213: -535670994281435162
+    second: Treasurehunter_A_02_2
+  - first:
+      213: 5204347717149299836
+    second: Treasurehunter_A_02_3
+  - first:
+      213: -7668935643376289763
+    second: Treasurehunter_A_02_4
+  - first:
+      213: -8204106064592327607
+    second: Treasurehunter_A_02_5
+  - first:
+      213: 4251474379455968655
+    second: Treasurehunter_A_02_6
+  - first:
+      213: -8180919383609021834
+    second: Treasurehunter_A_02_7
+  - first:
+      213: 1830927585964257974
+    second: Treasurehunter_A_02_8
+  - first:
+      213: 1450259648976863028
+    second: Treasurehunter_A_02_9
+  - first:
+      213: -4455649267263481396
+    second: Treasurehunter_A_02_10
+  - first:
+      213: 6023984434735820682
+    second: Treasurehunter_A_02_11
+  - first:
+      213: 2865781237310920620
+    second: Treasurehunter_A_02_12
+  - first:
+      213: -7244607644339477045
+    second: Treasurehunter_A_02_13
+  - first:
+      213: -8876718423932281921
+    second: Treasurehunter_A_02_14
+  - first:
+      213: -9061845324005547513
+    second: Treasurehunter_A_02_15
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Treasurehunter_A_02_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 51
+        width: 12
+        height: 16
+      alignment: 9
+      pivot: {x: 0.54063004, y: 0.00000023841858}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c181ac0adec8335e0800000000000000
+      internalID: -1931044862979074020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasurehunter_A_02_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 51
+        width: 15
+        height: 15
+      alignment: 9
+      pivot: {x: 0.43499196, y: 0.00000025431316}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc0fc318339db610800000000000000
+      internalID: 1638627708492516552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasurehunter_A_02_2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 51
+        width: 12
+        height: 16
+      alignment: 9
+      pivot: {x: 0.54933643, y: 0.00000023841858}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6efef5d911ae098f0800000000000000
+      internalID: -535670994281435162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasurehunter_A_02_3
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 51
+        width: 13
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c749c48ccae893840800000000000000
+      internalID: 5204347717149299836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasurehunter_A_02_4
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 34
+        width: 12
+        height: 16
+      alignment: 9
+      pivot: {x: 0.45646778, y: 0.00000023841858}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1879330aa7729590800000000000000
+      internalID: -7668935643376289763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasurehunter_A_02_5
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 34
+        width: 15
+        height: 15
+      alignment: 9
+      pivot: {x: 0.56500804, y: 0.00000025431316}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94ca8506009252e80800000000000000
+      internalID: -8204106064592327607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasurehunter_A_02_6
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 34
+        width: 12
+        height: 16
+      alignment: 9
+      pivot: {x: 0.45356593, y: 0.0021767616}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f85b52f3c65400b30800000000000000
+      internalID: 4251474379455968655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasurehunter_A_02_7
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 34
+        width: 13
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a60eb3a29877e80800000000000000
+      internalID: -8180919383609021834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasurehunter_A_02_8
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 17
+        width: 11
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b2fcd250f2c86910800000000000000
+      internalID: 1830927585964257974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasurehunter_A_02_9
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 17
+        width: 12
+        height: 15
+      alignment: 9
+      pivot: {x: 0.46227217, y: 0.00000012715658}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f3959877b502410800000000000000
+      internalID: 1450259648976863028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasurehunter_A_02_10
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 17
+        width: 11
+        height: 16
+      alignment: 9
+      pivot: {x: 0.41135266, y: 0.00000011920929}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc9d705399a5a22c0800000000000000
+      internalID: -4455649267263481396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasurehunter_A_02_11
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 17
+        width: 13
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f29ec4ded799350800000000000000
+      internalID: 6023984434735820682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasurehunter_A_02_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 0
+        width: 11
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca795ed0adc45c720800000000000000
+      internalID: 2865781237310920620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasurehunter_A_02_13
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 0
+        width: 12
+        height: 15
+      alignment: 9
+      pivot: {x: 0.4574488, y: 0.00000004379496}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc5e0162bbbf57b90800000000000000
+      internalID: -7244607644339477045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasurehunter_A_02_14
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 0
+        width: 11
+        height: 16
+      alignment: 9
+      pivot: {x: 0.41262195, y: 0.0018772981}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbbd952df9f8fc480800000000000000
+      internalID: -8876718423932281921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasurehunter_A_02_15
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 0
+        width: 12
+        height: 15
+      alignment: 9
+      pivot: {x: 0.45494556, y: 0.00000004379496}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7026d1580bbdd3280800000000000000
+      internalID: -9061845324005547513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
