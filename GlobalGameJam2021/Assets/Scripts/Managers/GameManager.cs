@@ -43,9 +43,7 @@ public class GameManager : MonoBehaviour
     IEnumerator StartGame()
     {
         yield return mazeCreator.GenerateMaze();
-        Debug.Log("Maze done now spawning entities");
         spawner.SpawnEntities();
-        Debug.Log("SpawnedEntities");
         GameStateManager.instance.ChangeGameState(GameStateManager.GameState.GameLoop);
     }
 

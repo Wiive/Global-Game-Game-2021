@@ -43,7 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6134080d5118d74f85c3fa705b1d5d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relicPointers: []
+  relicPointers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   huntSpawners: []
   playerSpawners: []
   relicSpawners: []
@@ -51,4 +55,9 @@ MonoBehaviour:
   - {fileID: 8395075013845601891, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
   playerPrefab: {fileID: 8395075013845601891, guid: 0e1f151f707c8430fbdf6b57bc171c04, type: 3}
   relicPrefab:
-  - {fileID: 5552137708123889255, guid: cea5fbadfe71d455d88f3a872e1a8392, type: 3}
+  - {fileID: 5552137708123889252, guid: cea5fbadfe71d455d88f3a872e1a8392, type: 3}
+  relicsData:
+  - {fileID: 11400000, guid: 8e540a57f1285554b91a506b9325a719, type: 2}
+  - {fileID: 11400000, guid: 086e3f9a84dd2ed4682044993cd1efce, type: 2}
+  - {fileID: 11400000, guid: 5b2f157ffacc73b4eb94568fd30cf61f, type: 2}
+  - {fileID: 11400000, guid: 60ee77196ae43714d90fbad7bf99685e, type: 2}

@@ -154,7 +154,7 @@ public class PathFinder : MonoBehaviour
 
             if(searchCenter.hasRelic)
             {
-                Debug.Log("Found Relic"); // remove
+               // Debug.Log("Found Relic"); // remove
                 searchCenter.hasRelic = false;
                 return searchCenter.GridPos;            
             }

@@ -11,7 +11,7 @@ public class MazeCreator : MonoBehaviour
     [SerializeField] int roomSize = 1;
     [SerializeField] int relicsToPlace = 4;
     [SerializeField] int safeZone = 10;
-    [SerializeField] int borderZone = 5;
+    [SerializeField] int borderZone = 4;
 
 
     [SerializeField] private SpriteRenderer gridRenderer;
@@ -22,6 +22,14 @@ public class MazeCreator : MonoBehaviour
     [SerializeField] List<MazeNode> frontier = new List<MazeNode>();
     [SerializeField] List<MazeNode> neighbours = new List<MazeNode>();
     [SerializeField] List<MazeNode> spawnedRelics = new List<MazeNode>();
+
+    List<MazeNode>[] squareNodes = new List<MazeNode>[]
+    {
+        new List<MazeNode>(),
+        new List<MazeNode>(),
+        new List<MazeNode>(),
+        new List<MazeNode>()
+    };
 
     Vector2Int[] directions =
     {
@@ -69,6 +77,40 @@ public class MazeCreator : MonoBehaviour
 
                 MazeNode mazeNode = Instantiate(node, new Vector3(xPos, yPos, 0), transform.rotation, transform);
 
+                // check if we are on the left side of the maze
+                if(x < gridSize.x/2 )
+                {
+                    // check if we are below the halfwaypoint on Y
+                    if(y < gridSize.y/2)
+                    {
+                        // add to squareNodes 0 (left down corner)
+                        squareNodes[0].Add(mazeNode);
+                    }
+                    // else we are above the halfwaypoint on Y
+                    else
+                    {
+                        // add to squareNodes 1 (left upper corner)
+                        squareNodes[1].Add(mazeNode);
+                    }
+                }
+                // else we are on the right side
+                else
+                {
+                    // check if we are below the halfwaypoint on Y
+                    if (y < gridSize.y / 2)
+                    {
+                        // add to squareNodes 2 (right down corner)
+                        squareNodes[2].Add(mazeNode);
+                    }
+                    // else we are above the halfwaypoint on Y
+                    else
+                    {
+                        // add to squareNodes 3 (right upper corner)
+                        squareNodes[3].Add(mazeNode);
+                    }
+                }
+
+
                 mazeNode.isWall = false;
                 if (y == gridSize.y - 1 || y == 0)
                     mazeNode.isWall = true;
@@ -110,15 +152,15 @@ public class MazeCreator : MonoBehaviour
 
             frontier.Remove(node);
             frontier.RemoveAll(node => node == null);
+            if (frontier.Count <= 0)
+                break;
         }
 
-        Debug.Log("Done with maze soon creating rooms");
         yield return new WaitForSeconds(0);
         SetRelicPosition();
         SetPlayerSpawn();
         SetEnemySpawn();
         
-        Debug.Log("Maze Done");
     }
     private MazeNode GetRandomNeighbour(MazeNode frontier)
     {
@@ -177,38 +219,77 @@ public class MazeCreator : MonoBehaviour
 
     private void SetRelicPosition()
     {
-        Debug.Log("Spawning Relics");
-
+        // make this spawn a relic in each corner 
+        //(split the map in four and then random in that section)
         for (int i = 0; i < relicsToPlace; i++)
         {
-            MazeNode relicSpot = GetRelicSpot();
+            MazeNode relicSpot = GetRelicSpot(i);
             CreateRoom(relicSpot);
         }
     }
 
-    private MazeNode GetRelicSpot()
+    private MazeNode GetRelicSpot(int index)
     {
+        int bottomX;
+        int topX;
+        int bottomY;
+        int topY;
+        switch (index)
+        {
+            case 0:
+                bottomX = borderZone;
+                topX = gridSize.x / 2 - borderZone;
+                bottomY = borderZone;
+                topY = gridSize.y / 2 - borderZone;
+                break;
+            case 1:
+                bottomX = borderZone;
+                topX = gridSize.x / 2 - borderZone;
+                bottomY = gridSize.y / 2 + borderZone;
+                topY = gridSize.y - borderZone;
+                break;
+            case 2:
+                bottomX = gridSize.x / 2 + borderZone;
+                topX = gridSize.x - borderZone;
+                bottomY = borderZone;
+                topY = gridSize.y / 2 - borderZone;
+                break;
+            default:
+                bottomX = gridSize.x / 2 + borderZone;
+                topX = gridSize.x - borderZone;
+                bottomY = gridSize.y / 2 + borderZone;
+                topY = gridSize.y - borderZone;
+                break;
+        }
+
+
+
+        // divide the maze into 4 sections
+        MazeNode relicSpot;
         int x;
         int y;
-
         do
         {
-            x = Random.Range(borderZone, mazeModell.GetLength(0) - borderZone);
-            y = Random.Range(borderZone, mazeModell.GetLength(1) - borderZone);
-        }
-        while (mazeModell[x, y].hasRelic || mazeModell[x, y].isPlayerSpawner || mazeModell[x, y].isWall || mazeModell[x, y].isEnemySpawner);
+            int random = Random.Range(0,squareNodes[index].Count);
+            Debug.Log(random);
 
-        MazeNode relicSpot = mazeModell[x, y];
+            relicSpot = squareNodes[index][random];
+
+            Debug.Log(relicSpot.GridPos);
+
+            x = relicSpot.GridPos.x;
+            Debug.Log(x);
+            y = relicSpot.GridPos.y;
+            Debug.Log(y);
+
+        }
+        while (x < bottomX || x > topX || y < bottomY || y > topY);
+
         relicSpot.hasRelic = true;
         relicSpot.isWall = false;
         relicSpot.SetNodeState();
+        spawnedRelics.Add(relicSpot);
         return relicSpot;
-    }
-
-    private bool FindValidSpawnPos(int x, int y)
-    {
-        // check so that its not to close to other relics
-        return false;
     }
 
     private void CreateRoom(MazeNode relicSpot)
@@ -220,32 +301,26 @@ public class MazeCreator : MonoBehaviour
         }
     }
 
+
+    private void SetPlayerSpawn()
+    {
+        int nodeIndex = Random.Range(0, spawnedRelics.Count);
+        int roomIndex = Random.Range(0, roomCreation.Length);
+        Vector2Int pos = spawnedRelics[nodeIndex].GridPos + roomCreation[roomIndex];
+        mazeModell[pos.x, pos.y].isPlayerSpawner = true;
+        mazeModell[pos.x, pos.y].SetNodeState();
+    }
+    
+
     private void SetExits()
     {
         // set a exit point on each side, depending on where the relics are.
     }
 
-    private void SetPlayerSpawn()
-    {
-        Debug.Log("Spawning Players");
-
-        int x;
-        int y;
-
-        do
-        {
-            x = Random.Range(borderZone, mazeModell.GetLength(0) - borderZone);
-            y = Random.Range(borderZone, mazeModell.GetLength(1) - borderZone);
-        }
-        while (mazeModell[x,y].hasRelic || mazeModell[x,y].isEnemySpawner || mazeModell[x,y].isWall);
-
-        mazeModell[x, y].isPlayerSpawner = true;
-        mazeModell[x, y].SetNodeState();
-    }
-
     private void SetEnemySpawn()
     {
-        Debug.Log("Spawning enemies");
+        // make enemies spawn along the borders close to exit?
+
         for (int i = 0; i < 5; i++)
         {
             int x;

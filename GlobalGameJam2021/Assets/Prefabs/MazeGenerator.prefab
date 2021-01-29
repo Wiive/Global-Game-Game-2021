@@ -131,9 +131,9 @@ MonoBehaviour:
   TileSize: 16
   roomSize: 1
   relicsToPlace: 4
-  safeZone: 10
+  safeZone: 5
   borderZone: 5
-  gridRenderer: {fileID: 0}
+  gridRenderer: {fileID: 2983522704075480436}
   frontier: []
   neighbours: []
   spawnedRelics: []

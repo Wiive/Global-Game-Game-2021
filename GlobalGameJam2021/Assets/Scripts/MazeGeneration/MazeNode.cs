@@ -25,7 +25,6 @@ public class MazeNode : MonoBehaviour
     [SerializeField] Color32 exit = new Color32();
     [SerializeField] Color32 relicPlaced = new Color32();
 
-
     [SerializeField] GameObject playerSpawn = null;
     [SerializeField] GameObject relicSpawn = null;
     [SerializeField] GameObject enemySpawn = null;

@@ -19,10 +19,5 @@ public class EnemySpawner : MonoBehaviour
     {
         yield return mazeCreator.GenerateMaze();
         Debug.Log("Job done");
-
-        Instantiate(enemy, mazeCreator.startingPos(), transform.rotation);
-        Instantiate(enemy, mazeCreator.startingPos(), transform.rotation);
-        Instantiate(enemy, mazeCreator.startingPos(), transform.rotation);
-        Instantiate(enemy, mazeCreator.startingPos(), transform.rotation);
     }
 }

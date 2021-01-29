@@ -46,7 +46,7 @@ public class SpawnManager : MonoBehaviour
         {
             playerSpawners.Add(spawnPoint.transform);
         }
-        Debug.Log(playerSpawners.Count);
+        //Debug.Log(playerSpawners.Count);
         foreach (var spawnPoint in GameObject.FindGameObjectsWithTag("RelicSpawner"))
         {
             relicSpawners.Add(spawnPoint.transform);
