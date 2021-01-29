@@ -9,6 +9,7 @@ public class Enemy : Character
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float WaitTime = 2f;    
     [SerializeField]int range = 4;
+    private Vector2 faceDirection;
     private Flashlight flashlight;
 
     Vector2Int gridSize = new Vector2Int(0,0);
@@ -56,6 +57,16 @@ public class Enemy : Character
         gridSize = pathFinder.GridSize;
         destination = TryToGetDestination();
         path = pathFinder.SearchForPath(currentPos, destination);
+    }
+    
+    protected override void UpdateAnimations()
+    {
+        if (direction != Vector2.zero)
+        {
+            animator.SetFloat("DirectionX", direction.x);
+            animator.SetFloat("DirectionY", direction.y);
+        }
+        animator.SetBool("IsMoving", moveController.IsMoving);
     }
 
     protected override void Pickup(Relic relic)

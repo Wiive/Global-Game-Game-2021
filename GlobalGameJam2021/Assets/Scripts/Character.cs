@@ -88,7 +88,7 @@ public class Character : MonoBehaviour
         Debug.Log($"{name} Pickups Relic \"{relic.name}\"!");
     }
 
-    private void UpdateAnimations()
+    protected virtual void UpdateAnimations()
     {
         if (direction != Vector2.zero)
         {
