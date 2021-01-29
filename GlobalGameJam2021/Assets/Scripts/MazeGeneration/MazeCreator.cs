@@ -95,7 +95,7 @@ public class MazeCreator : MonoBehaviour
 
             MazeNode node = frontier[random];
 
-            yield return new WaitForSeconds(0);
+            //yield return new WaitForSeconds(0);
 
             node.isWall = true;
             node.partOfMaze = true;
@@ -104,7 +104,7 @@ public class MazeCreator : MonoBehaviour
             if (nodeNeighbour != null)
                 ConnectNodes(node, nodeNeighbour);
 
-            yield return new WaitForSeconds(0);
+            //yield return new WaitForSeconds(0);
 
             AddFrontierCells(node);
 
@@ -113,7 +113,7 @@ public class MazeCreator : MonoBehaviour
         }
 
         Debug.Log("Done with maze soon creating rooms");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0);
         SetRelicPosition();
         SetPlayerSpawn();
         SetEnemySpawn();

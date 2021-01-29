@@ -64,7 +64,7 @@ public class Player : Character
         base.Attack(character);
     }
     
-    protected override void GotKilled()
+    public override void GotKilled()
     {
         base.GotKilled();
     }
@@ -100,9 +100,9 @@ public class Player : Character
     protected override void OnTriggerEnter2D(Collider2D other)
     {
         base.OnTriggerEnter2D(other);
-        
+
         if (other.CompareTag("Enemy"))
-            Attack(other.GetComponent<Enemy>());
+            other.GetComponent<Enemy>().GotKilled();
     }
 
     // TODO REMOVE LATER (DEBUG ONLY)

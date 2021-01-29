@@ -72,15 +72,15 @@ public class Character : MonoBehaviour
         
     }
 
-    protected virtual void GotKilled()
+    public virtual void GotKilled()
     {
-        //Debug.Log($"{name} got Killed!");
+        Debug.Log($"{name} got Killed!");
         isAlive = false;
     }
     
     protected virtual void Attack(Character character)
     {
-        //Debug.Log($"{name} Attacks {character.name}!");
+        Debug.Log($"{name} Attacks {character.name}!");
     }
     
     protected virtual void Pickup(Relic relic)

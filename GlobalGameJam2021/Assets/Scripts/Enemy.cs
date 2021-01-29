@@ -11,7 +11,10 @@ public class Enemy : Character
     [SerializeField]int range = 4;
     private Vector2 faceDirection;
     private Flashlight flashlight;
-
+    
+    [SerializeField] private Material dissolveMaterial;
+    private Material baseMaterial;
+    
     Vector2Int gridSize = new Vector2Int(0,0);
 
     bool gettingNewPath = false;
@@ -20,13 +23,30 @@ public class Enemy : Character
     int pathIndexPosition = 0;
     PathFinder pathFinder;
     
+    float fade = 1;
+    
     protected override void Start()
     {
         base.Start();
+        baseMaterial = spriteRenderer.material;
     }
 
     protected override void Update()
     {
+        if (!isAlive)
+        {
+            
+            Debug.Log("DISSOLVE: " + fade);
+            spriteRenderer.material.SetFloat("_Fade", fade); //material.SetFloat("Fade",fade);
+
+            fade -= 1f * Time.deltaTime;
+            
+            if(fade <= 0)
+                Destroy(this.gameObject);
+            
+            return;
+        }
+        
         base.Update();
         
         if (pathIndexPosition <= path.Count -2)
@@ -79,11 +99,13 @@ public class Enemy : Character
         base.Attack(character);
     }
     
-    protected override void GotKilled()
+    public override void GotKilled()
     {
         base.GotKilled();
-    }
 
+        spriteRenderer.material = dissolveMaterial;
+    }
+    
     private void UpdateFlashlightDirection()
     {
         flashlight.UpdateDirection(direction);
