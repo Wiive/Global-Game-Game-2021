@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   relicKind: Crown
   sprite: {fileID: 8352832123834819458, guid: 75ce21dd12b763b4d84f2c7d49016ccf, type: 3}
-  relicIcon: {fileID: 8352832123834819458, guid: 75ce21dd12b763b4d84f2c7d49016ccf, type: 3}
+  relicIcon: {fileID: 2217716090123704598, guid: 3c2827cb3ee8e474f9fcfc4541c98670, type: 3}

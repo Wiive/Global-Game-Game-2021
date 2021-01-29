@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   relicKind: Trident
   sprite: {fileID: -2918954177755711910, guid: 75ce21dd12b763b4d84f2c7d49016ccf, type: 3}
-  relicIcon: {fileID: -2918954177755711910, guid: 75ce21dd12b763b4d84f2c7d49016ccf, type: 3}
+  relicIcon: {fileID: 2974189665367513265, guid: 3c2827cb3ee8e474f9fcfc4541c98670, type: 3}

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   relicKind: Shield
   sprite: {fileID: -1123822235780311010, guid: 75ce21dd12b763b4d84f2c7d49016ccf, type: 3}
-  relicIcon: {fileID: -1123822235780311010, guid: 75ce21dd12b763b4d84f2c7d49016ccf, type: 3}
+  relicIcon: {fileID: -6955484626404693363, guid: 3c2827cb3ee8e474f9fcfc4541c98670, type: 3}
