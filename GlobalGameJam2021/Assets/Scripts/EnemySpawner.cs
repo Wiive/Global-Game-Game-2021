@@ -21,5 +21,8 @@ public class EnemySpawner : MonoBehaviour
         Debug.Log("Job done");
 
         Instantiate(enemy, mazeCreator.startingPos(), transform.rotation);
+        Instantiate(enemy, mazeCreator.startingPos(), transform.rotation);
+        Instantiate(enemy, mazeCreator.startingPos(), transform.rotation);
+        Instantiate(enemy, mazeCreator.startingPos(), transform.rotation);
     }
 }
