@@ -173,8 +173,6 @@ public class Enemy : Character
             isCarryingRelic = true;
         }
 
-        Debug.Log("Got Path");
-
         return wayPointDestination.GridPos;
     }
 }

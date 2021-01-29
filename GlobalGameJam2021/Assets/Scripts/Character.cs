@@ -13,7 +13,7 @@ public class Character : MonoBehaviour
     protected SpriteRenderer spriteRenderer;
     private Transform gfxTransform;
     
-    protected Vector2Int currentPos = new Vector2Int(0, 0); // set this to get the value of player spawnPos
+    public Vector2Int currentPos = new Vector2Int(0, 0); // set this to get the value of player spawnPos
     [SerializeField] protected Vector2 direction;
     public bool isAlive = true;
     

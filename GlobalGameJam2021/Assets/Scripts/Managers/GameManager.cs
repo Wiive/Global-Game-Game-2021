@@ -8,10 +8,14 @@ using Random = UnityEngine.Random;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    [SerializeField] MazeCreator mazeCreator = null;
+    [SerializeField] SpawnManager spawner = null;
 
     private int gameScore;
     private float gameTime;
     private bool countTime;
+
+
 
     private void OnEnable()
     {
@@ -34,6 +38,15 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         GameStateManager.instance.ChangeGameState(GameStateManager.GameState.GameLoop);
+        StartCoroutine(StartGame());
+    }
+
+    IEnumerator StartGame()
+    {
+        yield return mazeCreator.GenerateMaze();
+        Debug.Log("Maze done now spawning entities");
+        spawner.SpawnEntities();
+        Debug.Log("SpawnedEntities");
     }
 
     private void Update()

@@ -14,6 +14,9 @@ public class MazeNode : MonoBehaviour
     public bool hasRelic = false;
     public bool isExit = false;
 
+    public bool isEnemySpawner = false;
+    public bool isPlayerSpawner = false;
+
     [SerializeField] Vector2Int gridPos = new Vector2Int();
     public Vector2Int GridPos { get { return gridPos; } set { gridPos = value; } }
 
@@ -22,6 +25,10 @@ public class MazeNode : MonoBehaviour
     [SerializeField] Color32 exit = new Color32();
     [SerializeField] Color32 relicPlaced = new Color32();
 
+
+    [SerializeField] GameObject playerSpawn = null;
+    [SerializeField] GameObject relicSpawn = null;
+    [SerializeField] GameObject enemySpawn = null;
 
 
     private void FixedUpdate()
@@ -42,5 +49,22 @@ public class MazeNode : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().color = relicPlaced;
         }
+    }
+
+    public void SetNodeState()
+    {
+        if(hasRelic)
+        {
+            Instantiate(relicSpawn, transform.position, transform.rotation, transform);
+        }
+        if (isEnemySpawner)
+        {
+            Instantiate(enemySpawn, transform.position, transform.rotation, transform);
+        }
+        if (isPlayerSpawner)
+        {
+            Instantiate(playerSpawn, transform.position, transform.rotation, transform);
+        }
+
     }
 }
