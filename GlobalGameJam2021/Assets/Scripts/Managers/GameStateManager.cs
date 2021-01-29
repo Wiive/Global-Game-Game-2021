@@ -17,7 +17,7 @@ public class GameStateManager : MonoBehaviour
         Victory
     }
 
-    private GameState currentGameState;
+    [SerializeField]private GameState currentGameState;
     private GameState previousGameState;
 
     public GameState CurrentGameState => currentGameState;
