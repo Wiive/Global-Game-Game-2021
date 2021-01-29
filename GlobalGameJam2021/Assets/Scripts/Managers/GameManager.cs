@@ -37,7 +37,6 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        GameStateManager.instance.ChangeGameState(GameStateManager.GameState.GameLoop);
         StartCoroutine(StartGame());
     }
 
@@ -47,6 +46,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Maze done now spawning entities");
         spawner.SpawnEntities();
         Debug.Log("SpawnedEntities");
+        GameStateManager.instance.ChangeGameState(GameStateManager.GameState.GameLoop);
     }
 
     private void Update()

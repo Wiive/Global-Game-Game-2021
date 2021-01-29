@@ -13,6 +13,10 @@ public class MazeCreator : MonoBehaviour
     [SerializeField] int safeZone = 10;
     [SerializeField] int borderZone = 5;
 
+
+    [SerializeField] private SpriteRenderer gridRenderer;
+
+
     MazeNode[,] mazeModell;
 
     [SerializeField] List<MazeNode> frontier = new List<MazeNode>();
@@ -39,14 +43,22 @@ public class MazeCreator : MonoBehaviour
         new Vector2Int(-1, 1)
     };
 
+    private BoxCollider2D mapBorder;
+
 
     private void Awake()
     {
+        mapBorder = GetComponent<BoxCollider2D>();
         GenerateGrid();
     }
 
     private void GenerateGrid()
     {
+        mapBorder.size = new Vector2(gridSize.x * TileSize, gridSize.y * TileSize);
+        mapBorder.offset = new Vector2(mapBorder.size.x / 2, mapBorder.size.y / 2);
+
+        gridRenderer.size = mapBorder.size;
+
         mazeModell = new MazeNode[gridSize.x, gridSize.y];
         for (int y = 0; y < gridSize.y; y++)
         {

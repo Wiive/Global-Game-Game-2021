@@ -20,6 +20,8 @@ public class RelicPointerController : MonoBehaviour
 
     private void Update()
     {
+        if(target == null) return;
+
         if(isActive == true && !IsRelicVisibleOnScreen())
         {
             SetRelicPointerVisable(true);

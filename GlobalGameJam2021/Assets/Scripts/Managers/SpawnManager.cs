@@ -5,14 +5,14 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public static SpawnManager instance;
-
+    [SerializeField] List<RelicPointerController> relicPointers = new List<RelicPointerController>();
     [SerializeField] private List<Transform> huntSpawners = new List<Transform>();
     [SerializeField] private List<Transform> playerSpawners = new List<Transform>();
     [SerializeField] private List<Transform> relicSpawners = new List<Transform>();
 
     public GameObject[] hunterPrefab;
     public GameObject playerPrefab;
-    public GameObject[] relicPrefab;
+    public Relic[] relicPrefab;
 
     private void OnEnable()
     {
@@ -52,6 +52,7 @@ public class SpawnManager : MonoBehaviour
         SpawnHunter(huntSpawners.Count);
         SpawnPlayer();
         SpawnRelic(relicSpawners.Count);
+
     }
 
     public void SpawnHunter(int amount)
@@ -75,9 +76,11 @@ public class SpawnManager : MonoBehaviour
     {
         for (int i = 0; i < amount; i++)
         {
+
             int randomSpawnIndex = Random.Range(0, relicSpawners.Count);
             //int randomHunterIndex = Random.Range(0, relicPrefab.Length);
-            Instantiate(relicPrefab[0], relicSpawners[randomSpawnIndex].parent.transform.position, transform.rotation, transform.parent);
+            relicPointers[i].target = Instantiate(relicPrefab[0], relicSpawners[randomSpawnIndex].parent.transform.position, transform.rotation, transform.parent);
+
         }
     }
 
@@ -87,9 +90,7 @@ public class SpawnManager : MonoBehaviour
         {
             if (GameStateManager.instance.PreviousGameState == GameStateManager.GameState.MainMenu)
             {
-/*                SpawnPlayer();
-                SpawnHunter(5);
-                SpawnRelic(4);*/
+   
             }
         }
     }
