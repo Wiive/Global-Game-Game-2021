@@ -24,12 +24,19 @@ public class Player : Character
     {
         base.Update();
 
-        if (moveController.IsMoving) return;
+        if (GameStateManager.instance.CurrentGameState == GameStateManager.GameState.GameLoop)
+        {
+            ReadInput();
+        }
+    }
 
+    private void ReadInput()
+    {
         // TODO: REMOVE LATER (DEBUG ONLY)
         DebugInput();
-        
-        Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));       
+        if (moveController.IsMoving) return;
+
+        Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         if (moveConstant)
         {
             if ((input.x != 0 && input.y == 0 || input.x == 0 && input.y != 0) && input != Vector2.zero)
@@ -42,7 +49,7 @@ public class Player : Character
             else
                 direction = input;
         }
-        
+
         if (!moveController.IsMoving && direction != Vector2.zero && IsValidInput())
         {
             CurrentPos += new Vector2Int((int)direction.x, (int)direction.y);

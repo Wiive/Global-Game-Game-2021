@@ -36,12 +36,15 @@ public class Character : MonoBehaviour
     
     protected virtual void Update()
     {
-        UpdateAnimations();
+            UpdateAnimations();
     }
     
     protected virtual void FixedUpdate()
     {
-        Move();
+        if (GameStateManager.instance.CurrentGameState == GameStateManager.GameState.GameLoop)
+        {
+            Move();
+        }    
     }
 
     protected void LateUpdate()
