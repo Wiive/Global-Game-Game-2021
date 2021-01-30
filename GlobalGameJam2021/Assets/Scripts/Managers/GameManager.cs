@@ -14,9 +14,7 @@ public class GameManager : MonoBehaviour
     private int gameScore;
     private float gameTime;
     private bool countTime;
-
-
-
+    
     private void OnEnable()
     {
         GameStateManager.instance.onChangeGameState += OnGameStateChange;
@@ -38,6 +36,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         StartCoroutine(StartGame());
+        ResetScore();
     }
 
     IEnumerator StartGame()
@@ -63,6 +62,12 @@ public class GameManager : MonoBehaviour
     public void AddToScore(int amount)
     {
         gameScore += amount;
+        EventManager.instance.BroadcastOnScoreUpdate(gameScore);
+    }
+
+    private void ResetScore()
+    {
+        gameScore = 0;
         EventManager.instance.BroadcastOnScoreUpdate(gameScore);
     }
 

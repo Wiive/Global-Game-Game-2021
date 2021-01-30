@@ -41,9 +41,12 @@ public class Enemy : Character
             spriteRenderer.material.SetFloat("_Fade", fade); //material.SetFloat("Fade",fade);
 
             fade -= 1f * Time.deltaTime;
-            
-            if(fade <= 0)
+
+            if (fade <= 0)
+            {
+                GameManager.instance.AddToScore(100);
                 Destroy(this.gameObject);
+            }
             
             return;
         }
