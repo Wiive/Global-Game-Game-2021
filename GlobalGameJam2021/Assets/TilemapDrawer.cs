@@ -10,16 +10,13 @@ public class TilemapDrawer : MonoBehaviour
     Vector2Int mapSize = new Vector2Int(0, 0);
     
     [SerializeField] private Tilemap wallLayer;
+    [SerializeField] private Tilemap floorLayer;
     [SerializeField] private TileBase wallTile;
+    [SerializeField] private TileBase floorTile;
 
     private void Awake()
     {
         GetAllComponents();
-    }
-
-    private void Start()
-    {
-        // ClearMap();
     }
 
     private void GetAllComponents()
@@ -31,36 +28,15 @@ public class TilemapDrawer : MonoBehaviour
 
     public void PaintMap()
     {
-        // Debug.Log($"mapSize: {wallLayer.size}");
-
-        // for (int y = 0; y < wallLayer.size.y; y++)
-        // {
-        //     for (int x = 0; x < wallLayer.size.x; x++)
-        //     {
-        //         Vector3Int tilePos = new Vector3Int(x, y, 0);
-        //         TileBase tile = wallLayer.GetTile(tilePos);
-        //         
-        //         Debug.Log($"map[{y}][{x}]: {tile}");
-        //     }
-        // }
-        
         wallLayer.ClearAllTiles();
+        floorLayer.ClearAllTiles();
 
-        Vector3Int tilePos = new Vector3Int(0, 0, 0);
-        // Tile tile = wallTile;
-        // RuleTile rTile;
-        // wallLayer.SetTile(tilePos, wallTile);
-        // wallLayer.RefreshAllTiles();
-        
         foreach (var node in map)
         {
-            // if (node.Value.isWall) continue;
-            // node.Value.
+            floorLayer.SetTile(node.Value.GridPos3, floorTile);
+            
             if (node.Value.isWall)
-            {
-                // Debug.Log($"map[{node.Value.GridPos.y}][{node.Value.GridPos.x}]: isWall!");
                 wallLayer.SetTile(node.Value.GridPos3, wallTile);
-            }
         }
         
         wallLayer.RefreshAllTiles();

@@ -311,7 +311,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallLayer: {fileID: 4543394808973985456}
+  floorLayer: {fileID: 4678024584494850305}
   wallTile: {fileID: 11400000, guid: 39b09bda535cf49f5b0ad445a603b244, type: 2}
+  floorTile: {fileID: 11400000, guid: 27978394b868f4cd894aff32991792b7, type: 2}
 --- !u!1 &4543394808973985469
 GameObject:
   m_ObjectHideFlags: 0
