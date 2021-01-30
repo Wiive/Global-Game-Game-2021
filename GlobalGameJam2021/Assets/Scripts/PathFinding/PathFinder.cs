@@ -195,7 +195,7 @@ public class PathFinder : MonoBehaviour
         }
         catch
         {
-            Debug.Log("Returning null");
+            // Debug.LogWarning("Returning null");
             return null;
         }
     }

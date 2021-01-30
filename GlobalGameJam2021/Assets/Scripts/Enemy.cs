@@ -10,7 +10,7 @@ public class Enemy : Character
     [SerializeField]int range = 4;
     private Vector2 faceDirection;
     private Flashlight flashlight;
-    
+
     [SerializeField] private Material dissolveMaterial;
     private Material baseMaterial;
     
