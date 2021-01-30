@@ -89,6 +89,11 @@ public class Player : Character
     {
         base.OnTriggerEnter2D(other);
 
+        if(other.CompareTag("Flashlight"))
+        {
+            GotKilled();
+        }
+
         if (other.CompareTag("Enemy"))
         {           
             Attack(other.GetComponent<Enemy>());
