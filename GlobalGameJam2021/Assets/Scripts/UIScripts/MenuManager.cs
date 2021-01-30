@@ -16,9 +16,7 @@ public class MenuManager : MonoBehaviour
         {
             GameStateManager.instance.ChangeGameState(GameStateManager.GameState.IngameMenu);
             ShowPauseMenus();
-        }
-        
-
+        }       
     }
 
 

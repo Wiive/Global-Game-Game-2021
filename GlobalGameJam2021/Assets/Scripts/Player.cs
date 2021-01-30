@@ -73,6 +73,13 @@ public class Player : Character
     public override void GotKilled()
     {
         base.GotKilled();
+        MenuManager menuManager;
+        if ((menuManager = FindObjectOfType<MenuManager>()) != null)
+        {
+            menuManager.ShowGameOverMenu();
+        }
+        else
+            Debug.LogError("Missing MenuManager Prefab in Scene");
     }
 
     protected override void UpdateTimers()
