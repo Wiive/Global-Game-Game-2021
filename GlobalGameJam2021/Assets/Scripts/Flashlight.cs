@@ -6,6 +6,7 @@ using Random = UnityEngine.Random;
 
 public class Flashlight : MonoBehaviour
 {
+    [SerializeField] private Animator taserAnimator;
     private SpriteRenderer spriteRenderer;
     private const int Offset = 8;
 
@@ -119,6 +120,9 @@ public class Flashlight : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
+        {
+            taserAnimator.SetTrigger("Attack");
             Debug.Log($"{name} Found and wants to kill player!");
+        }
     }
 }
