@@ -6,11 +6,18 @@ public class Player : Character
 {
     [SerializeField] private bool moveConstant = false;
     Dictionary<Vector2Int, MazeNode> grid = new Dictionary<Vector2Int, MazeNode>();
+    PlayerSound playerSound;
 
     protected override void Awake()
     {
         base.Awake();
         grid = FindObjectOfType<MazeCreator>().Grid;
+    }
+
+    protected override void Start()
+    {
+        base.Start();
+        playerSound = GetComponent<PlayerSound>();
     }
 
     protected override void Update()
@@ -57,7 +64,7 @@ public class Player : Character
         Debug.Log($"{name} Pickups Relic!");
         relic.ReturnToStartPosition();
     }
-    
+   
     protected override void Attack(Character character)
     {
         base.Attack(character);
@@ -78,7 +85,10 @@ public class Player : Character
         base.OnTriggerEnter2D(other);
 
         if (other.CompareTag("Enemy"))
-            other.GetComponent<Enemy>().GotKilled();
+        {           
+            Attack(other.GetComponent<Enemy>());
+            playerSound.PlayAttackSound();
+        }
     }
 
     // TODO REMOVE LATER (DEBUG ONLY)
