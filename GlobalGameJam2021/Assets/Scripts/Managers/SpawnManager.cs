@@ -10,7 +10,16 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private List<Transform> playerSpawners = new List<Transform>();
     [SerializeField] private List<Transform> relicSpawners = new List<Transform>();
 
-    [SerializeField] int hunterSpawnAmount = 4;
+    [SerializeField] int hunterInitialSpawn = 4;
+    [SerializeField] int maxHunters = 10;
+    [SerializeField] float timeInbetweenSpawns = 2;
+
+    [SerializeField] int currentlySpawned = 0;
+    [SerializeField] float currentTime = 0;
+
+    [SerializeField] List<Enemy> spawnedHunters = new List<Enemy>();
+
+
 
     public Enemy[] hunterPrefab;
     public Player playerPrefab;
@@ -23,7 +32,6 @@ public class SpawnManager : MonoBehaviour
     {
         GameStateManager.instance.onChangeGameState += OnGameStateChange;
     }
-
     private void OnDisable()
     {
         GameStateManager.instance.onChangeGameState -= OnGameStateChange;
@@ -37,13 +45,29 @@ public class SpawnManager : MonoBehaviour
             Destroy(this);
     }
 
+    private void Update()
+    {
+        if (currentlySpawned >= maxHunters) return;
+        currentTime += Time.deltaTime;
+        if (currentTime < timeInbetweenSpawns) return;
+        currentTime = 0;
+        SpawnHunter(1);
+    }
+
     public void SpawnEntities()
+    {
+        FindSpawners();
+        SpawnHunter(hunterInitialSpawn);
+        SpawnPlayer();
+        SpawnRelic(relicSpawners.Count);
+
+    }
+    private void FindSpawners()
     {
         foreach (var spawnPoint in GameObject.FindGameObjectsWithTag("HunterSpawner"))
         {
             huntSpawners.Add(spawnPoint.transform);
         }
-
         foreach (var spawnPoint in GameObject.FindGameObjectsWithTag("PlayerSpawner"))
         {
             playerSpawners.Add(spawnPoint.transform);
@@ -52,25 +76,20 @@ public class SpawnManager : MonoBehaviour
         {
             relicSpawners.Add(spawnPoint.transform);
         }
-
-        SpawnHunter(hunterSpawnAmount);
-        SpawnPlayer();
-        SpawnRelic(relicSpawners.Count);
-
     }
-
     public void SpawnHunter(int amount)
     {
         for (int i = 0; i < amount; i++)
         {
+            currentlySpawned++;
             int spawnIndex = Random.Range(0, huntSpawners.Count);
             //int prefabIndex = Random.Range(0, hunterPrefab.Length);
             Enemy enemy = Instantiate(hunterPrefab[0], huntSpawners[spawnIndex].parent.transform.position, transform.rotation,transform.parent);
             enemy.TileSize = huntSpawners[spawnIndex].GetComponentInParent<MazeNode>().TileSize;
             enemy.CurrentPos = huntSpawners[spawnIndex].GetComponentInParent<MazeNode>().GridPos;
+            spawnedHunters.Add(enemy);
         }
     }
-
     public void SpawnPlayer()
     {
         //int prefabIndex = Random.Range(0, playerPrefab.Length);
@@ -78,7 +97,6 @@ public class SpawnManager : MonoBehaviour
         player.TileSize = playerSpawners[0].GetComponentInParent<MazeNode>().TileSize;
         player.CurrentPos = playerSpawners[0].GetComponentInParent<MazeNode>().GridPos;
     }
-
     public void SpawnRelic(int amount)
     {
         for (int i = 0; i < amount; i++)

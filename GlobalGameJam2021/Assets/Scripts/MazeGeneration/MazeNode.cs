@@ -25,11 +25,6 @@ public class MazeNode : MonoBehaviour
     private int tileSize = 0;
     public int TileSize { get { return tileSize; } set { tileSize = value; } }
 
-    [SerializeField] Color32 blocked = new Color32();
-    [SerializeField] Color32 nonBlocked = new Color32();
-    [SerializeField] Color32 exit = new Color32();
-    [SerializeField] Color32 relicPlaced = new Color32();
-
     [SerializeField] GameObject playerSpawn = null;
     [SerializeField] GameObject relicSpawn = null;
     [SerializeField] GameObject enemySpawn = null;
@@ -38,27 +33,9 @@ public class MazeNode : MonoBehaviour
 
     public void SetShadowCaster()
     {
-        GetComponent<ShadowCaster2D>().enabled = isWall;
-    }
-
-
-    private void FixedUpdate()
-    {
         if(!isWall)
         {
-            GetComponent<SpriteRenderer>().color = nonBlocked;
-        }
-        if (isWall)
-        {
-            GetComponent<SpriteRenderer>().color = blocked;
-        }
-        else if (isExit)
-        {
-            GetComponent<SpriteRenderer>().color = exit;
-        }
-        else if (hasRelic)
-        {
-            GetComponent<SpriteRenderer>().color = relicPlaced;
+            Destroy(GetComponent<ShadowCaster2D>());
         }
     }
 
