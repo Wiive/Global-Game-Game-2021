@@ -8,6 +8,7 @@ public class MusicManager : MonoBehaviour
     public static MusicManager instance;
 
     AudioSource audioSource;
+    public AudioClip menuMusic;
     public AudioClip levelMusic;
     
     private void Awake()
@@ -24,42 +25,29 @@ public class MusicManager : MonoBehaviour
     }
     private void OnEnable()
     {
-        GameStateManager.instance.onChangeGameState += OnGameStateChange;
+        GameStateManager.instance.onChangeGameState += ChangeMusicBasedOnState;
     }
 
     private void OnDisable()
     {
-        GameStateManager.instance.onChangeGameState -= OnGameStateChange;
+        GameStateManager.instance.onChangeGameState -= ChangeMusicBasedOnState;
     }
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        switch (GameStateManager.instance.CurrentGameState)
-        {
-            case GameStateManager.GameState.MainMenu:
-                break;
-            case GameStateManager.GameState.IngameMenu:
-                break;
-            case GameStateManager.GameState.GameLoop:
-                PlayLevelMusic();
-                break;
-            case GameStateManager.GameState.GameOver:
-                break;
-            case GameStateManager.GameState.Victory:
-                break;
-            default:
-                break;
-        }
+
+        ChangeMusicBasedOnState(GameStateManager.instance.CurrentGameState);
 
     }
 
-    void OnGameStateChange(GameStateManager.GameState newState)
+    void ChangeMusicBasedOnState(GameStateManager.GameState newState)
     {
         switch (newState)
         {
             case GameStateManager.GameState.MainMenu:
                 audioSource.Stop();
+                PlayMenuMusic();
                 break;
             case GameStateManager.GameState.IngameMenu:
                 break;
@@ -80,6 +68,12 @@ public class MusicManager : MonoBehaviour
     public void PlayLevelMusic()
     {
         audioSource.clip = levelMusic;
+        audioSource.Play();
+    }
+    public void PlayMenuMusic()
+    {
+
+        audioSource.clip = menuMusic;
         audioSource.Play();
     }
 
