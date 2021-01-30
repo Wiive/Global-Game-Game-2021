@@ -49,18 +49,21 @@ public class Enemy : Character
         }
         
         base.Update();
-        
-        if (pathIndexPosition <= path.Count -2)
-        {
-            MoveEnemyAlongPath();
-        }
-        else if (!gettingNewPath)
-        {
-            gettingNewPath = true;
-            StartCoroutine(HandleNewPath());
-        }
 
-        UpdateFlashlightDirection();
+        if (GameStateManager.instance.CurrentGameState == GameStateManager.GameState.GameLoop)
+        {
+            if (pathIndexPosition <= path.Count - 2)
+            {
+                MoveEnemyAlongPath();
+            }
+            else if (!gettingNewPath)
+            {
+                gettingNewPath = true;
+                StartCoroutine(HandleNewPath());
+            }
+            UpdateFlashlightDirection();
+        }
+     
     }
 
     protected override void GetAllComponents()
