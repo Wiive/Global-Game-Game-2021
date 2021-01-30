@@ -78,6 +78,9 @@ public class Player : Character
     public override void GotKilled()
     {
         base.GotKilled();
+
+        animator.SetBool("IsDead", true);
+
         MenuManager menuManager;
         if ((menuManager = FindObjectOfType<MenuManager>()) != null)
         {
@@ -98,7 +101,8 @@ public class Player : Character
 
         if(other.CompareTag("Flashlight"))
         {
-            GotKilled();
+            if(other.transform.parent.GetComponent<Enemy>().isAlive)
+                GotKilled();
         }
 
         if (other.CompareTag("Enemy"))

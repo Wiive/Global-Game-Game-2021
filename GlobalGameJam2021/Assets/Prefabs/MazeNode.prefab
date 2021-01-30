@@ -140,10 +140,10 @@ MonoBehaviour:
   m_SelfShadows: 0
   m_ApplyToSortingLayers: 00000000bb642e0ed51122008d54600bc58533a5032d4a0cc12827fc
   m_ShapePath:
-  - {x: 0, y: 0, z: 0}
-  - {x: 16, y: 0, z: 0}
-  - {x: 16, y: 16, z: 0}
-  - {x: 0, y: 16, z: 0}
-  m_ShapePathHash: 0
+  - {x: -7.940674, y: -7.9221115, z: 0}
+  - {x: 7.9479904, y: -7.885, z: 0}
+  - {x: 8.022217, y: 8.003669, z: 0}
+  - {x: -8.014893, y: 8.003668, z: 0}
+  m_ShapePathHash: -1309738583
   m_Mesh: {fileID: 0}
-  m_InstanceId: -789558
+  m_InstanceId: 33390
