@@ -25,8 +25,11 @@ public class Flashlight : MonoBehaviour
     
     private float currentIntensity;
     private bool intensityDirection;
+    private float startIntensity;
 
     private Vector2 lastDirection;
+
+    private bool flashLightActive;
     
     private void Awake()
     {
@@ -38,6 +41,9 @@ public class Flashlight : MonoBehaviour
         flashlight = GetComponent<Light2D>();
         
         currentIntensity = Random.Range(minIntensity, maxIntensity);
+        startIntensity = currentIntensity;
+        
+        ResetFlashLight();
     }
 
     private void GetAllComponents()
@@ -64,9 +70,12 @@ public class Flashlight : MonoBehaviour
         {
             currentIntensity -= intensityStepModifier * Time.deltaTime;
         }
-        
-        flashlight.intensity = currentIntensity;
 
+        if (flashLightActive)
+            flashlight.intensity = currentIntensity;
+        else
+            flashlight.intensity = 0f;
+        
         UpdateRadius();
     }
 
@@ -97,8 +106,16 @@ public class Flashlight : MonoBehaviour
         increaseRadius = false;
     }
 
+    public void TurnOfLight()
+    {
+        flashLightActive = false;
+    }
 
-    
+    public void ResetFlashLight()
+    {
+        flashLightActive = true;
+    }
+
     private void UpdateRadius()
     {
         if (increaseRadius)
