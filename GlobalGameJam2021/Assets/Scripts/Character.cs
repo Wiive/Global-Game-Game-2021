@@ -81,6 +81,7 @@ public class Character : MonoBehaviour
     protected virtual void Attack(Character character)
     {
         Debug.Log($"{name} Attacks {character.name}!");
+        character.GotKilled();
     }
     
     protected virtual void Pickup(Relic relic)
