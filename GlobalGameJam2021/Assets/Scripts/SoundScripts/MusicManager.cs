@@ -52,8 +52,12 @@ public class MusicManager : MonoBehaviour
             case GameStateManager.GameState.IngameMenu:
                 break;
             case GameStateManager.GameState.GameLoop:
-                audioSource.Stop();
-                PlayLevelMusic();
+                if (GameStateManager.instance.PreviousGameState == GameStateManager.GameState.MainMenu)
+                {
+                    audioSource.Stop();
+                    PlayLevelMusic();
+                }
+                
                 break;
             case GameStateManager.GameState.GameOver:
                 audioSource.Stop();
