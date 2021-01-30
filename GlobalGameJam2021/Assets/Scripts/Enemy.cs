@@ -72,8 +72,8 @@ public class Enemy : Character
     protected override void Init()
     {
         base.Init();
-        
-        gridSize = pathFinder.GridSize;
+
+        gridSize = FindObjectOfType<MazeCreator>().GridSize;
         destination = TryToGetDestination();
         path = pathFinder.SearchForPath(CurrentPos, destination);
     }

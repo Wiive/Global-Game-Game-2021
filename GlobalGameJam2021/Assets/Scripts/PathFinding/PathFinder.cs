@@ -5,8 +5,6 @@ using UnityEngine;
 public class PathFinder : MonoBehaviour
 {
     [SerializeField] MazeNode startWaypoint, endWaypoint;
-    [SerializeField] Vector2Int gridSize = new Vector2Int(0,0); // make this get set after the grid creator.
-    public Vector2Int GridSize { get { return gridSize; } set { gridSize = value; } }
     Dictionary<Vector2Int, MazeNode> grid = new Dictionary<Vector2Int, MazeNode>();
     Queue<MazeNode> waypointQueue = new Queue<MazeNode>();
     List<MazeNode> path = new List<MazeNode>();
@@ -18,7 +16,6 @@ public class PathFinder : MonoBehaviour
     bool searchForPath = false;
 
     MazeNode searchCenter;
-    MazeNode[] mazePoints;
 
     Vector2Int[] directions =
     {
@@ -31,32 +28,8 @@ public class PathFinder : MonoBehaviour
 
     private void Awake()
     {
-        LoadBlocks();
+        grid = FindObjectOfType<MazeCreator>().Grid;
     }
-    private void LoadBlocks()
-    {
-        grid = new Dictionary<Vector2Int, MazeNode>();
-        mazePoints = FindObjectsOfType<MazeNode>();
-
-        foreach (MazeNode mazePoint in mazePoints)
-        {
-            AddToGrid(mazePoint);
-        }
-    }
-    private void AddToGrid(MazeNode mazeNode)
-    {
-        mazeNode.isExplored = false;
-        var gridPos = mazeNode.GridPos;
-        if (grid.ContainsKey(gridPos))
-        {
-            return;
-        }
-        else
-        {
-            grid.Add(gridPos, mazeNode);
-        }
-    }
-
 
     public List<MazeNode> SearchForPath(Vector2Int startPoint, Vector2Int endPoint)
     {
@@ -78,10 +51,10 @@ public class PathFinder : MonoBehaviour
     }
     private void ResetWaypoints()
     {
-        foreach (var waypoint in mazePoints)
+        foreach (var item in grid)
         {
-            waypoint.isExplored = false;
-            waypoint.exploredFrom = null;
+            item.Value.isExplored = false;
+            item.Value.exploredFrom = null;
         }
     }
     private void EndNodeFound()
@@ -136,8 +109,6 @@ public class PathFinder : MonoBehaviour
     }
 
 
-
-
     // refactor this more nicely! this takes care of the searching for relic
     // and exit in the vicinity (range decides how far it looks) 
     public Vector2Int SearchForRelic(int range, Vector2Int startPoint)
@@ -154,7 +125,6 @@ public class PathFinder : MonoBehaviour
 
             if(searchCenter.hasRelic)
             {
-               // Debug.Log("Found Relic"); // remove
                 searchCenter.hasRelic = false;
                 return searchCenter.GridPos;            
             }
@@ -179,7 +149,6 @@ public class PathFinder : MonoBehaviour
 
             if (searchCenter.isExit)
             {
-                Debug.Log("Found Exit"); // remove
                 return searchCenter.GridPos;
             }
             else
@@ -215,7 +184,6 @@ public class PathFinder : MonoBehaviour
             searchPoints.Enqueue(nearbyWaypoint);
         }
     }
-
 
 
     public MazeNode GetWayPoint(Vector2Int positionKey)

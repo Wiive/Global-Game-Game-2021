@@ -10,8 +10,7 @@ public class Player : Character
     protected override void Awake()
     {
         base.Awake();
-        
-        LoadBlocks();
+        grid = FindObjectOfType<MazeCreator>().Grid;
     }
 
     protected override void Update()
@@ -72,30 +71,7 @@ public class Player : Character
     protected override void UpdateTimers()
     {
         base.UpdateTimers();
-    }
-    
-    private void LoadBlocks()
-    {
-        grid = new Dictionary<Vector2Int, MazeNode>();
-        MazeNode[] nodes = FindObjectsOfType<MazeNode>();
-
-        foreach (MazeNode node in nodes)
-        {
-            AddToGrid(node);
-        }
-    }
-    private void AddToGrid(MazeNode nodeToAdd)
-    {
-        var gridPos = nodeToAdd.GridPos;
-        if (grid.ContainsKey(gridPos))
-        {
-            return;
-        }
-        else
-        {
-            grid.Add(gridPos, nodeToAdd);
-        }
-    }
+    }   
     
     protected override void OnTriggerEnter2D(Collider2D other)
     {

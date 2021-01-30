@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class MazeCreator : MonoBehaviour
 {
+    Dictionary<Vector2Int, MazeNode> grid = new Dictionary<Vector2Int, MazeNode>();
+    public Dictionary<Vector2Int,MazeNode> Grid { get { return grid; } }
+
     [SerializeField] Vector2Int gridSize = new Vector2Int(0, 0);
+    public Vector2Int GridSize { get { return gridSize; } }
     [SerializeField] MazeNode node = null;
     [SerializeField] int tileSize = 16;
 
@@ -120,6 +124,8 @@ public class MazeCreator : MonoBehaviour
                 mazeNode.TileSize = tileSize;
                 mazeNode.SetShadowCaster();
                 mazeModell[x, y] = mazeNode;
+
+                grid.Add(new Vector2Int(x, y), mazeNode);
             }
         }
     }
