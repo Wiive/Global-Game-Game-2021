@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4543394808001267725}
   - component: {fileID: 4543394808001267724}
+  - component: {fileID: 967284468}
   m_Layer: 0
-  m_Name: Grid
+  m_Name: Map [Grid]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,6 +45,21 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!114 &967284468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4543394808001267727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751fe36f59b6b44bd985d7289150b435, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallLayer: {fileID: 0}
+  wallLayerRenderer: {fileID: 0}
+  wallTile: {fileID: 11400000, guid: 39b09bda535cf49f5b0ad445a603b244, type: 2}
 --- !u!1 &4543394808973985469
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,7 +72,7 @@ GameObject:
   - component: {fileID: 4543394808973985456}
   - component: {fileID: 4543394808973985459}
   m_Layer: 0
-  m_Name: Tilemap
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2369,7 +2385,7 @@ Tilemap:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -22, y: -8, z: 0}
   m_Size: {x: 60, y: 41, z: 1}
-  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileAnchor: {x: 0, y: 0, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
     e00: 1

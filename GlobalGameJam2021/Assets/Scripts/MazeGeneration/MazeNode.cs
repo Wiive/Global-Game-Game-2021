@@ -20,6 +20,7 @@ public class MazeNode : MonoBehaviour
 
     [SerializeField] Vector2Int gridPos = new Vector2Int();
     public Vector2Int GridPos { get { return gridPos; } set { gridPos = value; } }
+    public Vector3Int GridPos3 { get { return new Vector3Int(gridPos.x, gridPos.y, 0); } }
 
     private int tileSize = 0;
     public int TileSize { get { return tileSize; } set { tileSize = value; } }

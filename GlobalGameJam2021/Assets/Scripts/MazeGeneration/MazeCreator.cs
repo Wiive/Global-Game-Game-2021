@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class MazeCreator : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class MazeCreator : MonoBehaviour
 
 
 	[SerializeField] private SpriteRenderer gridRenderer;
+	[SerializeField] private TilemapDrawer tilemapDrawer;
 
 
 	MazeNode[,] mazeModell;
@@ -172,6 +174,7 @@ public class MazeCreator : MonoBehaviour
 		SetPlayerSpawn();
 		SetEnemySpawn();
 		
+		tilemapDrawer.PaintMap();
 	}
 	private MazeNode GetRandomNeighbour(MazeNode frontier)
 	{
