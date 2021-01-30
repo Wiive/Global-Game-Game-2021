@@ -39,14 +39,14 @@ public class Player : Character
         
         if (!moveController.IsMoving && direction != Vector2.zero && IsValidInput())
         {
-            currentPos += new Vector2Int((int)direction.x, (int)direction.y);
+            CurrentPos += new Vector2Int((int)direction.x, (int)direction.y);
             moveController.SetTargetPosition(direction);
         }
     }
     
     bool IsValidInput()
     {
-        Vector2Int inputTry = new Vector2Int((int)direction.x, (int)direction.y) + currentPos;
+        Vector2Int inputTry = new Vector2Int((int)direction.x, (int)direction.y) + CurrentPos;
         if (grid.ContainsKey(inputTry) && !grid[inputTry].isWall )
             return true;
         Debug.Log("non valid movement");

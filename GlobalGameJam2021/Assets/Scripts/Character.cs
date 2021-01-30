@@ -12,12 +12,15 @@ public class Character : MonoBehaviour
 
     protected SpriteRenderer spriteRenderer;
     private Transform gfxTransform;
-    
-    public Vector2Int currentPos = new Vector2Int(0, 0); // set this to get the value of player spawnPos
+
+    private Vector2Int currentPos = new Vector2Int(0,0);
+    public Vector2Int CurrentPos { get { return currentPos; } set { currentPos = value; } }
+
     [SerializeField] protected Vector2 direction;
     public bool isAlive = true;
     
-    private const int TileSize = 16;
+    private int tileSize = 0;
+    public int TileSize { get { return tileSize; } set { tileSize = value; } }
 
     protected virtual void Awake()
     {
@@ -57,9 +60,6 @@ public class Character : MonoBehaviour
         animator.SetBool("IsMoving", false);
         animator.SetFloat("DirectionX", 0);
         animator.SetFloat("DirectionY", -1);
-
-        currentPos = new Vector2Int(Mathf.RoundToInt(transform.position.x / TileSize),
-                                    Mathf.RoundToInt(transform.position.y / TileSize));
     }
 
     protected virtual void Move()

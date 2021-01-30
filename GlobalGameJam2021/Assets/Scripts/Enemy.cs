@@ -6,7 +6,6 @@ public class Enemy : Character
 {
     [SerializeField] List<MazeNode> path = new List<MazeNode>();
     [SerializeField] Vector2Int destination = new Vector2Int(0, 0);
-    [SerializeField] float moveSpeed = 10f;
     [SerializeField] float WaitTime = 2f;    
     [SerializeField]int range = 4;
     private Vector2 faceDirection;
@@ -76,7 +75,7 @@ public class Enemy : Character
         
         gridSize = pathFinder.GridSize;
         destination = TryToGetDestination();
-        path = pathFinder.SearchForPath(currentPos, destination);
+        path = pathFinder.SearchForPath(CurrentPos, destination);
     }
     
     protected override void UpdateAnimations()
@@ -131,17 +130,22 @@ public class Enemy : Character
         if (moveController.IsMoving)
             return;
 
-        currentPos = path[pathIndexPosition].GridPos;
-        direction = path[pathIndexPosition + 1].GridPos - currentPos;
-        //Debug.Log(direction);
+        CurrentPos = path[pathIndexPosition].GridPos;
+        direction = path[pathIndexPosition + 1].GridPos - CurrentPos;
         moveController.SetTargetPosition(direction);
         pathIndexPosition++;
     }
 
     IEnumerator HandleNewPath()
     {
-        currentPos = path[pathIndexPosition].GridPos;
-        if (pathFinder.GetWayPoint(currentPos).isExit && isCarryingRelic)
+        if(path.Count > 0)
+            CurrentPos = path[pathIndexPosition].GridPos;
+        else
+            CurrentPos = new Vector2Int(Mathf.RoundToInt(transform.position.x / TileSize),
+                                        Mathf.RoundToInt(transform.position.y / TileSize));
+
+
+        if (pathFinder.GetWayPoint(CurrentPos).isExit && isCarryingRelic)
         {
             Debug.Log("I Enemy: " + name + " have now exited the labyrinth with a relic");
             Destroy(gameObject);
@@ -158,18 +162,18 @@ public class Enemy : Character
     {
         destination = TryToGetDestination();
         pathIndexPosition = 0;
-        path = pathFinder.SearchForPath(currentPos, destination);
+        path = pathFinder.SearchForPath(CurrentPos, destination);
     }
 
     private Vector2Int TryToGetDestination()
     {
         if (!isCarryingRelic)
         {
-            destination = pathFinder.SearchForRelic(range, currentPos);
+            destination = pathFinder.SearchForRelic(range, CurrentPos);
         }
         else if(isCarryingRelic)
         {
-            destination = pathFinder.SearchForExit(range, currentPos);
+            destination = pathFinder.SearchForExit(range, CurrentPos);
         }
 
         MazeNode wayPointDestination = pathFinder.GetWayPoint(destination);
@@ -178,18 +182,18 @@ public class Enemy : Character
         {
             do
             {
-                int minX = Mathf.Clamp(currentPos.x - range, 0, 100);
-                int minY = Mathf.Clamp(currentPos.y - range, 0, 100);
+                int minX = Mathf.Clamp(CurrentPos.x - range, 0, 100);
+                int minY = Mathf.Clamp(CurrentPos.y - range, 0, 100);
 
-                int maxX = Mathf.Clamp(currentPos.x + range, 0, gridSize.x) + 1;
-                int maxY = Mathf.Clamp(currentPos.y + range, 0, gridSize.y) + 1;
+                int maxX = Mathf.Clamp(CurrentPos.x + range, 0, gridSize.x) + 1;
+                int maxY = Mathf.Clamp(CurrentPos.y + range, 0, gridSize.y) + 1;
 
                 int x = Random.Range(minX, maxX);
                 int y = Random.Range(minY, maxY);
                 Vector2Int wayPointKey = new Vector2Int(x, y);
                 wayPointDestination = pathFinder.GetWayPoint(wayPointKey);
             }
-            while (wayPointDestination == null || wayPointDestination.isWall || wayPointDestination.GridPos == currentPos);
+            while (wayPointDestination == null || wayPointDestination.isWall || wayPointDestination.GridPos == CurrentPos);
         }
         else
         {

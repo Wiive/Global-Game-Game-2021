@@ -10,8 +10,8 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private List<Transform> playerSpawners = new List<Transform>();
     [SerializeField] private List<Transform> relicSpawners = new List<Transform>();
 
-    public GameObject[] hunterPrefab;
-    public GameObject playerPrefab;
+    public Enemy[] hunterPrefab;
+    public Player playerPrefab;
 
     public Relic[] relicPrefab;
     public RelicData[] relicsData;
@@ -46,7 +46,6 @@ public class SpawnManager : MonoBehaviour
         {
             playerSpawners.Add(spawnPoint.transform);
         }
-        //Debug.Log(playerSpawners.Count);
         foreach (var spawnPoint in GameObject.FindGameObjectsWithTag("RelicSpawner"))
         {
             relicSpawners.Add(spawnPoint.transform);
@@ -62,17 +61,19 @@ public class SpawnManager : MonoBehaviour
     {
         for (int i = 0; i < amount; i++)
         {
-            int randomSpawnIndex = Random.Range(0, huntSpawners.Count);
-            //int randomHunterIndex = Random.Range(0, hunterPrefab.Length);
-            Instantiate(hunterPrefab[0], huntSpawners[randomSpawnIndex].parent.transform.position, transform.rotation,transform.parent);
+            //int prefabIndex = Random.Range(0, hunterPrefab.Length);
+            Enemy enemy = Instantiate(hunterPrefab[0], huntSpawners[i].parent.transform.position, transform.rotation,transform.parent);
+            enemy.TileSize = huntSpawners[i].GetComponentInParent<MazeNode>().TileSize;
+            enemy.CurrentPos = huntSpawners[i].GetComponentInParent<MazeNode>().GridPos;
         }
     }
 
     public void SpawnPlayer()
     {
-        int randomSpawnIndex = Random.Range(0, playerSpawners.Count);
-        //int randomHunterIndex = Random.Range(0, hunterPrefab.Length);
-        Instantiate(playerPrefab, playerSpawners[randomSpawnIndex].parent.transform.position, transform.rotation, transform.parent);
+        //int prefabIndex = Random.Range(0, playerPrefab.Length);
+        Player player = Instantiate(playerPrefab, playerSpawners[0].parent.transform.position, transform.rotation, transform.parent);
+        player.TileSize = playerSpawners[0].GetComponentInParent<MazeNode>().TileSize;
+        player.CurrentPos = playerSpawners[0].GetComponentInParent<MazeNode>().GridPos;
     }
 
     public void SpawnRelic(int amount)

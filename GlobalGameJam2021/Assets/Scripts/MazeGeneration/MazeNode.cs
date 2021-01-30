@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class MazeNode : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class MazeNode : MonoBehaviour
     [SerializeField] Vector2Int gridPos = new Vector2Int();
     public Vector2Int GridPos { get { return gridPos; } set { gridPos = value; } }
 
+    private int tileSize = 0;
+    public int TileSize { get { return tileSize; } set { tileSize = value; } }
+
     [SerializeField] Color32 blocked = new Color32();
     [SerializeField] Color32 nonBlocked = new Color32();
     [SerializeField] Color32 exit = new Color32();
@@ -28,6 +32,13 @@ public class MazeNode : MonoBehaviour
     [SerializeField] GameObject playerSpawn = null;
     [SerializeField] GameObject relicSpawn = null;
     [SerializeField] GameObject enemySpawn = null;
+
+    
+
+    public void SetShadowCaster()
+    {
+        GetComponent<ShadowCaster2D>().enabled = isWall;
+    }
 
 
     private void FixedUpdate()

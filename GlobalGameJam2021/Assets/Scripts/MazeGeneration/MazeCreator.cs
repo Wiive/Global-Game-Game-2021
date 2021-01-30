@@ -6,11 +6,9 @@ public class MazeCreator : MonoBehaviour
 {
     [SerializeField] Vector2Int gridSize = new Vector2Int(0, 0);
     [SerializeField] MazeNode node = null;
-    [SerializeField] int TileSize = 16;
+    [SerializeField] int tileSize = 16;
 
-    [SerializeField] int roomSize = 1;
     [SerializeField] int relicsToPlace = 4;
-    [SerializeField] int safeZone = 10;
     [SerializeField] int borderZone = 4;
 
 
@@ -62,7 +60,7 @@ public class MazeCreator : MonoBehaviour
 
     private void GenerateGrid()
     {
-        mapBorder.size = new Vector2(gridSize.x * TileSize, gridSize.y * TileSize);
+        mapBorder.size = new Vector2(gridSize.x * tileSize, gridSize.y * tileSize);
         mapBorder.offset = new Vector2(mapBorder.size.x / 2, mapBorder.size.y / 2);
 
         gridRenderer.size = mapBorder.size;
@@ -72,8 +70,8 @@ public class MazeCreator : MonoBehaviour
         {
             for (int x = 0; x < gridSize.x; x++)
             {
-                float xPos = transform.position.x + (x * TileSize);
-                float yPos = transform.position.y + (y * TileSize);
+                float xPos = transform.position.x + (x * tileSize);
+                float yPos = transform.position.y + (y * tileSize);
 
                 MazeNode mazeNode = Instantiate(node, new Vector3(xPos, yPos, 0), transform.rotation, transform);
 
@@ -119,6 +117,8 @@ public class MazeCreator : MonoBehaviour
 
                 mazeNode.GridPos = new Vector2Int(x, y);
                 mazeNode.name = x + " , " + y;
+                mazeNode.TileSize = tileSize;
+                mazeNode.SetShadowCaster();
                 mazeModell[x, y] = mazeNode;
             }
         }
@@ -141,6 +141,7 @@ public class MazeCreator : MonoBehaviour
             //yield return new WaitForSeconds(0);
 
             node.isWall = true;
+            node.SetShadowCaster();
             node.partOfMaze = true;
 
             MazeNode nodeNeighbour = GetRandomNeighbour(node);
@@ -189,10 +190,11 @@ public class MazeCreator : MonoBehaviour
 
         return neighbours[random];
     }
-    private void ConnectNodes (MazeNode frontier, MazeNode neighbour)
+    private void ConnectNodes(MazeNode frontier, MazeNode neighbour)
     {
-            Vector2Int inbetweenPos = frontier.GridPos + (neighbour.exploredDirection / 2);
-            mazeModell[inbetweenPos.x, inbetweenPos.y].isWall = true;
+        Vector2Int inbetweenPos = frontier.GridPos + (neighbour.exploredDirection / 2);
+        mazeModell[inbetweenPos.x, inbetweenPos.y].isWall = true;
+        mazeModell[inbetweenPos.x, inbetweenPos.y].SetShadowCaster();
     }
     private void AddFrontierCells(MazeNode node)
     {
@@ -284,10 +286,11 @@ public class MazeCreator : MonoBehaviour
             y = relicSpot.GridPos.y;
             indexTry++;
         }
-        while (indexTry < 10 && (x < bottomX || x > topX || y < bottomY || y > topY));
+        while (indexTry < 5 && (x < bottomX || x > topX || y < bottomY || y > topY));
 
         relicSpot.hasRelic = true;
         relicSpot.isWall = false;
+        relicSpot.SetShadowCaster();
         relicSpot.SetNodeState();
         spawnedRelics.Add(relicSpot);
         return relicSpot;
@@ -297,6 +300,7 @@ public class MazeCreator : MonoBehaviour
     {
         foreach (var direction in roomCreation)
         {
+            // add a check to se if the node next to it is valid
             Vector2Int nodePos = new Vector2Int(relicSpot.GridPos.x + direction.x, relicSpot.GridPos.y + direction.y);
             mazeModell[nodePos.x, nodePos.y].isWall = false;
         }
