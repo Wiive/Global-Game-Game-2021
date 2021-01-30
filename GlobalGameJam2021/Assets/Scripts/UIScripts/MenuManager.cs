@@ -47,6 +47,9 @@ public class MenuManager : MonoBehaviour
         pauseMenu.SetActive(false);
         highscoreMenu.SetActive(false);
         GameStateManager.instance.ChangeGameState(GameStateManager.GameState.GameOver);
+
+        HighScoreManager scoreManager = GetComponent<HighScoreManager>();
+        scoreManager.SetHighScore();
     }
 
     public void ShowPauseMenus()

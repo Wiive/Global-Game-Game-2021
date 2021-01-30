@@ -52,8 +52,7 @@ public class HighScoreManager : MonoBehaviour
 
             for (int i = 0; i < valueList.Count; i++)
             {
-                Debug.Log("valueList[i]");
-                //PlayerPrefs.SetInt("score-1", valueList[i]);
+                PlayerPrefs.SetInt("score-" + (valueList.Count - i).ToString(), valueList[i]);
             }
         }
     }
