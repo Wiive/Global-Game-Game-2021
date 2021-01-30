@@ -10,7 +10,6 @@ public class TilemapDrawer : MonoBehaviour
     Vector2Int mapSize = new Vector2Int(0, 0);
     
     [SerializeField] private Tilemap wallLayer;
-    [SerializeField] private TilemapRenderer wallLayerRenderer;
     [SerializeField] private TileBase wallTile;
 
     private void Awake()
@@ -25,9 +24,6 @@ public class TilemapDrawer : MonoBehaviour
 
     private void GetAllComponents()
     {
-        wallLayer = GetComponentInChildren<Tilemap>();
-        wallLayerRenderer = GetComponentInChildren<TilemapRenderer>();
-        
         MazeCreator maze = FindObjectOfType<MazeCreator>();
         map = maze.Grid;
         mapSize = maze.GridSize;
