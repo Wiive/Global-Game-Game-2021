@@ -8,8 +8,10 @@ public class UiSound : MonoBehaviour
     public static UiSound instance;
 
     AudioSource soundPlayer;
+    public AudioClip enemyRelicPickUp;
+    
 
-    void Start()
+    private void Awake()
     {
         if (instance != null)
         {
@@ -18,8 +20,40 @@ public class UiSound : MonoBehaviour
         else
             Destroy(gameObject);
 
-        soundPlayer = GetComponent<AudioSource>();
     }
+
+    void Start()
+    {
+        soundPlayer = GetComponent<AudioSource>();
+        EventManager.instance.onPickedUpItem += OnRelicPickUp;
+    }
+
+    private void OnEnable()
+    {
+        EventManager.instance.onPickedUpItem += OnRelicPickUp;
+    }
+
+    private void OnDisable()
+    {
+        EventManager.instance.onPickedUpItem -= OnRelicPickUp;
+    }
+
+    void OnRelicPickUp(PickerItemWrapper pickUpEvent)
+    {
+        if (pickUpEvent.picker.CompareTag("Enemy"))
+        {
+            PlayPickupWarningSound();
+
+        }
+    }
+
+    void PlayPickupWarningSound()
+    {
+        soundPlayer.PlayOneShot(enemyRelicPickUp);
+        Debug.Log("Sound_PickUp");
+    }
+
+
 
 
 
