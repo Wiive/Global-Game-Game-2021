@@ -8,6 +8,7 @@ public class MenuManager : MonoBehaviour
     public GameObject audioMenu;
     public GameObject gameOverMenu;
     public GameObject pauseMenu;
+    public GameObject highscoreMenu;
 
 
     private void Update()
@@ -25,6 +26,7 @@ public class MenuManager : MonoBehaviour
         audioMenu.SetActive(false);
         gameOverMenu.SetActive(false);
         pauseMenu.SetActive(false);
+        highscoreMenu.SetActive(false);
         GameStateManager.instance.ChangeGameState(GameStateManager.GameState.MainMenu);
     }
 
@@ -34,6 +36,7 @@ public class MenuManager : MonoBehaviour
         audioMenu.SetActive(true);
         gameOverMenu.SetActive(false);
         pauseMenu.SetActive(false);
+        highscoreMenu.SetActive(false);
     }
 
     public void ShowGameOverMenu()
@@ -42,6 +45,7 @@ public class MenuManager : MonoBehaviour
         audioMenu.SetActive(false);
         gameOverMenu.SetActive(true);
         pauseMenu.SetActive(false);
+        highscoreMenu.SetActive(false);
         GameStateManager.instance.ChangeGameState(GameStateManager.GameState.GameOver);
     }
 
@@ -51,7 +55,17 @@ public class MenuManager : MonoBehaviour
         audioMenu.SetActive(false);
         gameOverMenu.SetActive(false);
         pauseMenu.SetActive(true);
+        highscoreMenu.SetActive(false);
         GameStateManager.instance.ChangeGameState(GameStateManager.GameState.IngameMenu);
+    }
+
+    public void ShowHighscoreMenu()
+    {
+        mainMenu.SetActive(false);
+        audioMenu.SetActive(false);
+        gameOverMenu.SetActive(false);
+        pauseMenu.SetActive(false);
+        highscoreMenu.SetActive(true);
     }
 
     public void CloseAllMenus()
@@ -60,6 +74,7 @@ public class MenuManager : MonoBehaviour
         audioMenu.SetActive(false);
         gameOverMenu.SetActive(false);
         pauseMenu.SetActive(false);
+        highscoreMenu.SetActive(false);
         GameStateManager.instance.ChangeGameState(GameStateManager.GameState.GameLoop);
     }
 }
