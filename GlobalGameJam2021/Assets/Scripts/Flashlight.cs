@@ -1,8 +1,5 @@
-using System;
-using System.Collections;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
-using Random = UnityEngine.Random;
 
 public class Flashlight : MonoBehaviour
 {
@@ -30,6 +27,8 @@ public class Flashlight : MonoBehaviour
     private Vector2 lastDirection;
 
     private bool flashLightActive;
+
+    PolygonCollider2D polyCollider;
     
     private void Awake()
     {
@@ -39,7 +38,8 @@ public class Flashlight : MonoBehaviour
     private void Start()
     {
         flashlight = GetComponent<Light2D>();
-        
+        polyCollider = GetComponent<PolygonCollider2D>();
+
         currentIntensity = Random.Range(minIntensity, maxIntensity);
         startIntensity = currentIntensity;
         
@@ -108,11 +108,13 @@ public class Flashlight : MonoBehaviour
 
     public void TurnOfLight()
     {
+        polyCollider.enabled = false;
         flashLightActive = false;
     }
 
     public void ResetFlashLight()
     {
+        polyCollider.enabled = true;
         flashLightActive = true;
     }
 

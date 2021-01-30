@@ -11,11 +11,10 @@ public class Enemy : Character
     private Vector2 faceDirection;
     private Flashlight flashlight;
 
-
     [SerializeField] float respawnTime = 5f;
     [SerializeField] private MazeNode spawnPoint;
-    public MazeNode SpawnPoint { set { spawnPoint = value; } }
 
+    public MazeNode SpawnPoint { set { spawnPoint = value; } }
 
     [SerializeField] private Material dissolveMaterial;
     private Material baseMaterial;
@@ -51,7 +50,6 @@ public class Enemy : Character
             
             if (fade <= 0)
             {
-                GameManager.instance.AddToScore(100);
                 if(!respawning)
                 {
                     respawning = true;
@@ -123,6 +121,7 @@ public class Enemy : Character
     
     public override void GotKilled()
     {
+        GameManager.instance.AddToScore(100);
         flashlight.TurnOfLight();
         stolenRelic = null;
         base.GotKilled();
@@ -235,5 +234,4 @@ public class Enemy : Character
         Respawn();
         respawning = false;
     }
-
 }
