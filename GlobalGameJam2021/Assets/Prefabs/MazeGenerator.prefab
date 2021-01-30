@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9197449523978482174}
   - component: {fileID: 2983522704075480436}
   m_Layer: 0
-  m_Name: Grid [Sprite] (1)
+  m_Name: Grid [Sprite]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,6 +132,6 @@ MonoBehaviour:
   relicsToPlace: 4
   borderZone: 4
   spawnOnEachSide: 2
-  gridRenderer: {fileID: 2983522704075480436}
+  gridRenderer: {fileID: 0}
   neighbours: []
   spawnedRelics: []
