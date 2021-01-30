@@ -10,6 +10,8 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private List<Transform> playerSpawners = new List<Transform>();
     [SerializeField] private List<Transform> relicSpawners = new List<Transform>();
 
+    [SerializeField] int hunterSpawnAmount = 4;
+
     public Enemy[] hunterPrefab;
     public Player playerPrefab;
 
@@ -51,7 +53,7 @@ public class SpawnManager : MonoBehaviour
             relicSpawners.Add(spawnPoint.transform);
         }
 
-        SpawnHunter(huntSpawners.Count);
+        SpawnHunter(hunterSpawnAmount);
         SpawnPlayer();
         SpawnRelic(relicSpawners.Count);
 
@@ -61,10 +63,11 @@ public class SpawnManager : MonoBehaviour
     {
         for (int i = 0; i < amount; i++)
         {
+            int spawnIndex = Random.Range(0, huntSpawners.Count);
             //int prefabIndex = Random.Range(0, hunterPrefab.Length);
-            Enemy enemy = Instantiate(hunterPrefab[0], huntSpawners[i].parent.transform.position, transform.rotation,transform.parent);
-            enemy.TileSize = huntSpawners[i].GetComponentInParent<MazeNode>().TileSize;
-            enemy.CurrentPos = huntSpawners[i].GetComponentInParent<MazeNode>().GridPos;
+            Enemy enemy = Instantiate(hunterPrefab[0], huntSpawners[spawnIndex].parent.transform.position, transform.rotation,transform.parent);
+            enemy.TileSize = huntSpawners[spawnIndex].GetComponentInParent<MazeNode>().TileSize;
+            enemy.CurrentPos = huntSpawners[spawnIndex].GetComponentInParent<MazeNode>().GridPos;
         }
     }
 
