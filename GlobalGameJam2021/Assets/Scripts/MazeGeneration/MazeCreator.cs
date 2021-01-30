@@ -76,7 +76,7 @@ public class MazeCreator : MonoBehaviour
 	private void GenerateGrid()
 	{
 		mapBorder.size = new Vector2(gridSize.x * tileSize, gridSize.y * tileSize);
-		mapBorder.offset = new Vector2(mapBorder.size.x / 2, mapBorder.size.y / 2);
+		mapBorder.offset = new Vector2(mapBorder.size.x / 2, mapBorder.size.y / 2) - Vector2.one * 8f;
 
 		gridRenderer.size = mapBorder.size;
 
