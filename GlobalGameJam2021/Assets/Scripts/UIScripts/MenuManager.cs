@@ -60,5 +60,6 @@ public class MenuManager : MonoBehaviour
         audioMenu.SetActive(false);
         gameOverMenu.SetActive(false);
         pauseMenu.SetActive(false);
+        GameStateManager.instance.ChangeGameState(GameStateManager.GameState.GameLoop);
     }
 }
