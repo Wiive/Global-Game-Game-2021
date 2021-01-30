@@ -91,7 +91,8 @@ public class Player : Character
 
         if(other.CompareTag("Flashlight"))
         {
-            GotKilled();
+            if(other.transform.parent.GetComponent<Enemy>().isAlive)
+                GotKilled();
         }
 
         if (other.CompareTag("Enemy"))
