@@ -23,6 +23,8 @@ public class Enemy : Character
     PathFinder pathFinder;
     
     float fade = 1;
+
+    private EnemySound enemySound;
     
     protected override void Start()
     {
@@ -62,7 +64,7 @@ public class Enemy : Character
     protected override void GetAllComponents()
     {
         base.GetAllComponents();
-        
+        enemySound = GetComponentInChildren<EnemySound>();
         pathFinder = GetComponent<PathFinder>();
         flashlight = GetComponentInChildren<Flashlight>();
     }
@@ -89,11 +91,13 @@ public class Enemy : Character
     protected override void Pickup(Relic relic)
     {
         Debug.Log($"{name} Pickups Relic!");
+        enemySound.PlayPickUpSound();
     }
 
     protected override void Attack(Character character)
     {
         base.Attack(character);
+        enemySound.PlayAttackSound();
     }
     
     public override void GotKilled()
@@ -101,6 +105,7 @@ public class Enemy : Character
         base.GotKilled();
 
         spriteRenderer.material = dissolveMaterial;
+        enemySound.PlayDeathSound();
     }
     
     private void UpdateFlashlightDirection()

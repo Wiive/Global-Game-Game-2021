@@ -22,6 +22,8 @@ public class Character : MonoBehaviour
     private int tileSize = 0;
     public int TileSize { get { return tileSize; } set { tileSize = value; } }
 
+    private BoxCollider2D selfCollider;
+
     protected virtual void Awake()
     {
         GetAllComponents();
@@ -53,6 +55,7 @@ public class Character : MonoBehaviour
         moveController = GetComponent<MovementController>();
         gfxTransform = transform.Find("GFX");
         spriteRenderer = gfxTransform.Find("Sprite").GetComponent<SpriteRenderer>();
+        selfCollider = GetComponent<BoxCollider2D>();
     }
 
     protected virtual void Init()
@@ -69,12 +72,13 @@ public class Character : MonoBehaviour
 
     protected virtual void Respawn()
     {
-        
+        selfCollider.enabled = true;
     }
 
     public virtual void GotKilled()
     {
         Debug.Log($"{name} got Killed!");
+        GetComponent<BoxCollider2D>().enabled = false;
         isAlive = false;
     }
     

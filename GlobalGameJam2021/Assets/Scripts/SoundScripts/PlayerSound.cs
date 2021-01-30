@@ -45,11 +45,11 @@ public class PlayerSound : MonoBehaviour
 
     public void PlayAttackSound()
     {
-        audioSource.PlayOneShot(AttackSound);
+        PlaySound(AttackSound);
     }
     public void PlaySpawnSound()
-    {
-        PlaySound(SpawnSound);
+    {       
+        audioSource.PlayOneShot(SpawnSound);
     }
 
 

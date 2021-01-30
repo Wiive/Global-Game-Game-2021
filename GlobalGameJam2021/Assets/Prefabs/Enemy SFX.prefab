@@ -162,5 +162,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 91ffc42fd44a90b42af496cc61447993, type: 3}
   deathSounds:
   - {fileID: 8300000, guid: 77bc89d227f05d447829c6825eabafb9, type: 3}
+  - {fileID: 8300000, guid: 084c55d4e2ff7114d87b7b7d13b16302, type: 3}
   spawnSound: {fileID: 8300000, guid: 27b34c415a4bc2b4d8762aa2ffef008a, type: 3}
-  relicPickup: {fileID: 8300000, guid: 8cc8cc9b29e8ddb47b82830e36fdaf8c, type: 3}
+  relicPickup: {fileID: 8300000, guid: eb5aca5ad6576ed419f397fb83ed5b55, type: 3}
