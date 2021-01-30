@@ -86,6 +86,7 @@ public class SpawnManager : MonoBehaviour
             enemy.SetData(enemiesData[amount == enemiesData.Length ? i : UnityEngine.Random.Range(0, enemiesData.Length-1)]);
             enemy.TileSize = huntSpawners[spawnIndex].GetComponentInParent<MazeNode>().TileSize;
             enemy.CurrentPos = huntSpawners[spawnIndex].GetComponentInParent<MazeNode>().GridPos;
+            enemy.SpawnPoint = huntSpawners[spawnIndex].GetComponentInParent<MazeNode>();
             spawnedHunters.Add(enemy);
         }
     }

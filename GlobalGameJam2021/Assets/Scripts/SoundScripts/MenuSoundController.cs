@@ -5,9 +5,6 @@ using UnityEngine.UI;
 using UnityEngine.Audio;
 using TMPro;
 
-
-
-
 public class MenuSoundController : MonoBehaviour
 {
     AudioSource audioSource;
@@ -17,21 +14,19 @@ public class MenuSoundController : MonoBehaviour
     public TextMeshProUGUI soundText;
     public TextMeshProUGUI musicText;
 
-
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-    }
-
-    private void OnEnable()
-    {
-        if (PlayerPrefs.HasKey("musicVolume"))
+        if (PlayerPrefs.HasKey("MusicVolume"))
         {
-            musicSlider.value = PlayerPrefs.GetFloat("musicVolume");
+            float volume = Mathf.Log10(PlayerPrefs.GetFloat("MusicVolume")) * 20;
+            mixer.SetFloat("MusicVolume", volume);
         }
-        if (PlayerPrefs.HasKey("soundVolume"))
+        if (PlayerPrefs.HasKey("SoundVolume"))
         {
-            soundSlider.value = PlayerPrefs.GetFloat("soundVolume");
+            float volume = Mathf.Log10(PlayerPrefs.GetFloat("SoundVolume")) * 20;
+            mixer.SetFloat("SoundVolume", volume);
+
         }
     }
 

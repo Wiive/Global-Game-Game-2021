@@ -76,12 +76,13 @@ public class Character : MonoBehaviour
     protected virtual void Respawn()
     {
         selfCollider.enabled = true;
+        isAlive = true;
     }
 
     public virtual void GotKilled()
     {
         Debug.Log($"{name} got Killed!");
-        GetComponent<BoxCollider2D>().enabled = false;
+        selfCollider.enabled = false;
         isAlive = false;
     }
     

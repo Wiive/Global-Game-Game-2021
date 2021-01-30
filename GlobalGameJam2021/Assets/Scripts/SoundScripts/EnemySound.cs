@@ -49,5 +49,10 @@ public class EnemySound : MonoBehaviour
 
     }
 
+    public void PlaySpawnSound()
+    {
+        audioSource.PlayOneShot(spawnSound);
+    }
+
 
 }

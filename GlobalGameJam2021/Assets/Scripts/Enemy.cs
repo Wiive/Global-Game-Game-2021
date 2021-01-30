@@ -12,6 +12,11 @@ public class Enemy : Character
     private Flashlight flashlight;
     [SerializeField] private EnemyData data;
 
+    [SerializeField] float respawnTime = 5f;
+    [SerializeField] private MazeNode spawnPoint;
+
+    public MazeNode SpawnPoint { set { spawnPoint = value; } }
+
     [SerializeField] private Material dissolveMaterial;
     private Material baseMaterial;
     
@@ -19,6 +24,7 @@ public class Enemy : Character
 
     bool gettingNewPath = false;
     bool isCarryingRelic = false;
+    bool respawning = false;
 
     [SerializeField] Relic stolenRelic = null;
 
@@ -38,17 +44,19 @@ public class Enemy : Character
     protected override void Update()
     {
         if (!isAlive)
-        {           
+        {                      
             spriteRenderer.material.SetFloat("_Fade", fade); //material.SetFloat("Fade",fade);
 
             fade -= 1f * Time.deltaTime;
-
+            
             if (fade <= 0)
             {
-                GameManager.instance.AddToScore(100);
-                Destroy(this.gameObject);
+                if(!respawning)
+                {
+                    respawning = true;
+                    StartCoroutine(HandleRespawn());
+                }
             }
-            
             return;
         }
         
@@ -121,6 +129,8 @@ public class Enemy : Character
     
     public override void GotKilled()
     {
+        GameManager.instance.AddToScore(100);
+        flashlight.TurnOfLight();
         stolenRelic = null;
         base.GotKilled();
         spriteRenderer.material = dissolveMaterial;
@@ -161,16 +171,12 @@ public class Enemy : Character
     {
         if(path.Count > 0)
             CurrentPos = path[pathIndexPosition].GridPos;
-        else
-            CurrentPos = new Vector2Int(Mathf.RoundToInt(transform.position.x / TileSize),
-                                        Mathf.RoundToInt(transform.position.y / TileSize));
 
-
-        if (pathFinder.GetWayPoint(CurrentPos).isExit && isCarryingRelic)
+/*        if (pathFinder.GetWayPoint(CurrentPos).isExit && isCarryingRelic)
         {
             Debug.Log("I Enemy: " + name + " have now exited the labyrinth with a relic");
             Destroy(gameObject);
-        }
+        }*/
         
         yield return new WaitForSeconds(WaitTime/2);
         flashlight.EnemyStopped();
@@ -181,6 +187,7 @@ public class Enemy : Character
 
     private void GetNewPath()
     {
+        if (!isAlive) return;
         destination = TryToGetDestination();
         pathIndexPosition = 0;
         path = pathFinder.SearchForPath(CurrentPos, destination);
@@ -222,5 +229,18 @@ public class Enemy : Character
         }
 
         return wayPointDestination.GridPos;
+    }
+
+    IEnumerator HandleRespawn()
+    {
+        path.Clear();
+        yield return new WaitForSeconds(respawnTime);
+        spriteRenderer.material = baseMaterial;
+        CurrentPos = spawnPoint.GridPos;
+        transform.position = spawnPoint.transform.position;
+        flashlight.ResetFlashLight();
+        Respawn();
+        respawning = false;
+        enemySound.PlaySpawnSound();
     }
 }
