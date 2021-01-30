@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeOpacity: 0.56
   m_ApplyToSortingLayers: bb642e0e8d54600bc58533a5
-  m_LightCookieSprite: {fileID: 0}
+  m_LightCookieSprite: {fileID: 21300000, guid: 5ff2d01d570170e459bfc52b5dff5202, type: 3}
   m_UseNormalMap: 0
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
@@ -427,17 +427,17 @@ MonoBehaviour:
   m_SelfShadows: 0
   m_ApplyToSortingLayers: 00000000bb642e0ed51122008d54600bc58533a5032d4a0cc12827fc
   m_ShapePath:
-  - {x: -3.9191284, y: -1.0370331, z: 0}
-  - {x: -0.3182907, y: -2.656662, z: 0}
-  - {x: 3.2234497, y: -1.2357941, z: 0}
-  - {x: 4.5017776, y: 1.8155518, z: 0}
-  - {x: 3.223465, y: 4.7639008, z: 0}
-  - {x: -0.21891022, y: 5.6418, z: 0}
-  - {x: -3.597931, y: 4.797043, z: 0}
-  - {x: -5.012352, y: 1.9315033, z: 0}
-  m_ShapePathHash: -527702491
+  - {x: -2.4744332, y: 0.26319313, z: 0}
+  - {x: 0.3077439, y: 0.0882597, z: 0}
+  - {x: 3.560545, y: 0.2089014, z: 0}
+  - {x: 3.4904912, y: 1.189518, z: 0}
+  - {x: 3.3679347, y: 2.211605, z: 0}
+  - {x: 1.4184111, y: 2.463471, z: 0}
+  - {x: -0.51591444, y: 2.5818434, z: 0}
+  - {x: -2.5082133, y: 1.8351898, z: 0}
+  m_ShapePathHash: 757019231
   m_Mesh: {fileID: 0}
-  m_InstanceId: 122504
+  m_InstanceId: 60326
 --- !u!114 &495886572538984206
 MonoBehaviour:
   m_ObjectHideFlags: 0
