@@ -14,7 +14,6 @@ public class MenuManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
-            GameStateManager.instance.ChangeGameState(GameStateManager.GameState.IngameMenu);
             ShowPauseMenus();
         }       
     }
@@ -26,6 +25,7 @@ public class MenuManager : MonoBehaviour
         audioMenu.SetActive(false);
         gameOverMenu.SetActive(false);
         pauseMenu.SetActive(false);
+        GameStateManager.instance.ChangeGameState(GameStateManager.GameState.MainMenu);
     }
 
     public void ShowAdioMenu()
@@ -42,6 +42,7 @@ public class MenuManager : MonoBehaviour
         audioMenu.SetActive(false);
         gameOverMenu.SetActive(true);
         pauseMenu.SetActive(false);
+        GameStateManager.instance.ChangeGameState(GameStateManager.GameState.GameOver);
     }
 
     public void ShowPauseMenus()
@@ -50,6 +51,7 @@ public class MenuManager : MonoBehaviour
         audioMenu.SetActive(false);
         gameOverMenu.SetActive(false);
         pauseMenu.SetActive(true);
+        GameStateManager.instance.ChangeGameState(GameStateManager.GameState.IngameMenu);
     }
 
     public void CloseAllMenus()

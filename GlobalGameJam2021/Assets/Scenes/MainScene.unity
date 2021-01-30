@@ -919,6 +919,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3498102139792025144, guid: 4b60ef0a7b08d0c4092687180f48697f, type: 3}
+      propertyPath: m_text
+      value: A Relic was stolen!
+      objectReference: {fileID: 0}
     - target: {fileID: 3498102140133857945, guid: 4b60ef0a7b08d0c4092687180f48697f, type: 3}
       propertyPath: m_Name
       value: InGameCanvas
@@ -1010,6 +1014,10 @@ PrefabInstance:
     - target: {fileID: 3498102140133857949, guid: 4b60ef0a7b08d0c4092687180f48697f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8284404643666478078, guid: 4b60ef0a7b08d0c4092687180f48697f, type: 3}
+      propertyPath: target
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b60ef0a7b08d0c4092687180f48697f, type: 3}
