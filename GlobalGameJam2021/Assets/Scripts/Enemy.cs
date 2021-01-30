@@ -233,5 +233,6 @@ public class Enemy : Character
         flashlight.ResetFlashLight();
         Respawn();
         respawning = false;
+        enemySound.PlaySpawnSound();
     }
 }
