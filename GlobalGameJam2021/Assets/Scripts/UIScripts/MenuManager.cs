@@ -70,8 +70,7 @@ public class MenuManager : MonoBehaviour
         pauseMenu.SetActive(false);
         highscoreMenu.SetActive(true);
 
-        HighScoreManager scoreManager;
-        scoreManager = GetComponent<HighScoreManager>();
+        HighScoreManager scoreManager = GetComponent<HighScoreManager>();
         scoreManager.UpdateHighscoreUI();
     }
 
