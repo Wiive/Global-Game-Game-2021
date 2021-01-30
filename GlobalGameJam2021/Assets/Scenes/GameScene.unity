@@ -902,6 +902,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 767241779802955487, guid: de3a95981d5e69f4282317a328ded3df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2117145399}
+    - target: {fileID: 767241779802955487, guid: de3a95981d5e69f4282317a328ded3df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitGame
+      objectReference: {fileID: 0}
     - target: {fileID: 2058752231378333153, guid: de3a95981d5e69f4282317a328ded3df, type: 3}
       propertyPath: m_text
       value: Play Again
