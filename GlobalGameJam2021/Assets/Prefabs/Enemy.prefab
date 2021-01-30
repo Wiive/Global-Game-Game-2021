@@ -299,6 +299,7 @@ MonoBehaviour:
   destination: {x: 9, y: 9}
   WaitTime: 2
   range: 4
+  data: {fileID: 0}
   dissolveMaterial: {fileID: 2100000, guid: 919c27cd6a056d146a61bacf8261375a, type: 2}
   stolenRelic: {fileID: 0}
 --- !u!114 &8395075013845601892
@@ -615,6 +616,18 @@ PrefabInstance:
     - target: {fileID: 6191448776849451965, guid: 5a4be61274f44534b9829fc33a9b8581, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -184
+      objectReference: {fileID: 0}
+    - target: {fileID: 6191448776849451966, guid: 5a4be61274f44534b9829fc33a9b8581, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6191448776849451966, guid: 5a4be61274f44534b9829fc33a9b8581, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6191448776849451966, guid: 5a4be61274f44534b9829fc33a9b8581, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 2232789
       objectReference: {fileID: 0}
     - target: {fileID: 6191448776849451967, guid: 5a4be61274f44534b9829fc33a9b8581, type: 3}
       propertyPath: looping

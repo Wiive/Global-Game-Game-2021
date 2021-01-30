@@ -19,14 +19,12 @@ public class SpawnManager : MonoBehaviour
 
     [SerializeField] List<Enemy> spawnedHunters = new List<Enemy>();
 
-
-
-    public Enemy[] hunterPrefab;
+    public Enemy enemyPrefab;
+    public EnemyData[] enemiesData;
     public Player playerPrefab;
 
     public Relic[] relicPrefab;
     public RelicData[] relicsData;
-
 
     private void OnEnable()
     {
@@ -84,7 +82,8 @@ public class SpawnManager : MonoBehaviour
             currentlySpawned++;
             int spawnIndex = Random.Range(0, huntSpawners.Count);
             //int prefabIndex = Random.Range(0, hunterPrefab.Length);
-            Enemy enemy = Instantiate(hunterPrefab[0], huntSpawners[spawnIndex].parent.transform.position, transform.rotation,transform.parent);
+            Enemy enemy = Instantiate(enemyPrefab, huntSpawners[spawnIndex].parent.transform.position, transform.rotation,transform.parent);
+            enemy.SetData(enemiesData[amount == enemiesData.Length ? i : UnityEngine.Random.Range(0, enemiesData.Length-1)]);
             enemy.TileSize = huntSpawners[spawnIndex].GetComponentInParent<MazeNode>().TileSize;
             enemy.CurrentPos = huntSpawners[spawnIndex].GetComponentInParent<MazeNode>().GridPos;
             spawnedHunters.Add(enemy);

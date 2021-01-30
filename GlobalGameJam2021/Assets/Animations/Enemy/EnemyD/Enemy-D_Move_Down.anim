@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Enemy_Idle_Up
+  m_Name: Enemy-D_Move_Down
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -19,7 +19,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: 90}
+        value: {x: 0, y: 0, z: -90}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -36,7 +36,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 16, z: 0}
+        value: {x: 0, y: -8, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -52,12 +52,18 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 2865781237310920620, guid: b2fa1081a31cfb24d9884dc732d15bf7, type: 3}
+      value: {fileID: 2246101363211117322, guid: 96215ee6aabcdc0429587834cd49a43e, type: 3}
+    - time: 0.16666667
+      value: {fileID: -2784298009506015210, guid: 96215ee6aabcdc0429587834cd49a43e, type: 3}
+    - time: 0.33333334
+      value: {fileID: 4776286393826698096, guid: 96215ee6aabcdc0429587834cd49a43e, type: 3}
+    - time: 0.5
+      value: {fileID: 3324916245750517864, guid: 96215ee6aabcdc0429587834cd49a43e, type: 3}
     attribute: m_Sprite
     path: GFX/Sprite
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 60
+  m_SampleRate: 6
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -86,13 +92,16 @@ AnimationClip:
       customType: 4
       isPPtrCurve: 0
     pptrCurveMapping:
-    - {fileID: 2865781237310920620, guid: b2fa1081a31cfb24d9884dc732d15bf7, type: 3}
+    - {fileID: 2246101363211117322, guid: 96215ee6aabcdc0429587834cd49a43e, type: 3}
+    - {fileID: -2784298009506015210, guid: 96215ee6aabcdc0429587834cd49a43e, type: 3}
+    - {fileID: 4776286393826698096, guid: 96215ee6aabcdc0429587834cd49a43e, type: 3}
+    - {fileID: 3324916245750517864, guid: 96215ee6aabcdc0429587834cd49a43e, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.016666668
+    m_StopTime: 0.6666667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -132,7 +141,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 16
+        value: -8
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -208,7 +217,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 90
+        value: -90
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -255,4 +264,18 @@ AnimationClip:
     script: {fileID: 0}
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: EmitDustCLoud
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.33333334
+    functionName: EmitDustCLoud
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

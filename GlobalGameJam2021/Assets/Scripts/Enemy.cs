@@ -10,6 +10,7 @@ public class Enemy : Character
     [SerializeField]int range = 4;
     private Vector2 faceDirection;
     private Flashlight flashlight;
+    [SerializeField] private EnemyData data;
 
     [SerializeField] private Material dissolveMaterial;
     private Material baseMaterial;
@@ -84,6 +85,13 @@ public class Enemy : Character
         gridSize = FindObjectOfType<MazeCreator>().GridSize;
         destination = TryToGetDestination();
         path = pathFinder.SearchForPath(CurrentPos, destination);
+    }
+
+    public void SetData(EnemyData data)
+    {
+        this.data = data;
+
+        animator.runtimeAnimatorController = data.runtimeAnimatorController;
     }
     
     protected override void UpdateAnimations()

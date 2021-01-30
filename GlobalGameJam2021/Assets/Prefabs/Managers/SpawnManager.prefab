@@ -51,8 +51,18 @@ MonoBehaviour:
   huntSpawners: []
   playerSpawners: []
   relicSpawners: []
-  hunterPrefab:
-  - {fileID: 3877720369482156754, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+  hunterInitialSpawn: 4
+  maxHunters: 10
+  timeInbetweenSpawns: 2
+  currentlySpawned: 0
+  currentTime: 0
+  spawnedHunters: []
+  enemyPrefab: {fileID: 3877720369482156754, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
+  enemiesData:
+  - {fileID: 11400000, guid: b1896836610b84716a355774032c1387, type: 2}
+  - {fileID: 11400000, guid: e3bb1bc633b7c4877aba56a41e37dcd9, type: 2}
+  - {fileID: 11400000, guid: 66a905e3943224202894b95b137ef248, type: 2}
+  - {fileID: 11400000, guid: 66a3ad832942e4badba85101073e34e0, type: 2}
   playerPrefab: {fileID: 8395075013845601893, guid: 0e1f151f707c8430fbdf6b57bc171c04, type: 3}
   relicPrefab:
   - {fileID: 5552137708123889252, guid: cea5fbadfe71d455d88f3a872e1a8392, type: 3}

@@ -4,52 +4,52 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 7982689477886389527
-    second: Treasurehunter_D_01_0
+    second: EnemyD_Idle_Right
   - first:
       213: -6220290601851486479
-    second: Treasurehunter_D_01_1
+    second: EnemyD_Move_Right_1
   - first:
       213: 1403811263353899447
-    second: Treasurehunter_D_01_2
+    second: EnemyD_Move_Right_2
   - first:
       213: -1589984533456518915
-    second: Treasurehunter_D_01_3
+    second: EnemyD_Move_Right_3
   - first:
       213: -1026352295883550146
-    second: Treasurehunter_D_01_4
+    second: EnemyD_Idle_Left
   - first:
       213: 8056803745481511087
-    second: Treasurehunter_D_01_5
+    second: EnemyD_Move_Left_1
   - first:
       213: -6205693247489201648
-    second: Treasurehunter_D_01_6
+    second: EnemyD_Move_Left_2
   - first:
       213: -6803964903220231159
-    second: Treasurehunter_D_01_7
+    second: EnemyD_Move_Left_3
   - first:
       213: 3324916245750517864
-    second: Treasurehunter_D_01_8
+    second: EnemyD_Idle_Down
   - first:
       213: 2246101363211117322
-    second: Treasurehunter_D_01_9
+    second: EnemyD_Move_Down_1
   - first:
       213: -2784298009506015210
-    second: Treasurehunter_D_01_10
+    second: EnemyD_Move_Down_2
   - first:
       213: 4776286393826698096
-    second: Treasurehunter_D_01_11
+    second: EnemyD_Move_Down_3
   - first:
       213: -1964239165842518628
-    second: Treasurehunter_D_01_12
+    second: EnemyD_Idle_Up
   - first:
       213: -8643697359979229846
-    second: Treasurehunter_D_01_13
+    second: EnemyD_Move_Up_1
   - first:
       213: -2209813646582715863
-    second: Treasurehunter_D_01_14
+    second: EnemyD_Move_Up_2
   - first:
       213: -2804742425901297738
-    second: Treasurehunter_D_01_15
+    second: EnemyD_Move_Up_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -151,7 +151,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Treasurehunter_D_01_0
+      name: EnemyD_Idle_Right
       rect:
         serializedVersion: 2
         x: 0
@@ -172,7 +172,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Treasurehunter_D_01_1
+      name: EnemyD_Move_Right_1
       rect:
         serializedVersion: 2
         x: 16
@@ -193,7 +193,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Treasurehunter_D_01_2
+      name: EnemyD_Move_Right_2
       rect:
         serializedVersion: 2
         x: 32
@@ -214,7 +214,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Treasurehunter_D_01_3
+      name: EnemyD_Move_Right_3
       rect:
         serializedVersion: 2
         x: 48
@@ -235,7 +235,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Treasurehunter_D_01_4
+      name: EnemyD_Idle_Left
       rect:
         serializedVersion: 2
         x: 0
@@ -256,7 +256,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Treasurehunter_D_01_5
+      name: EnemyD_Move_Left_1
       rect:
         serializedVersion: 2
         x: 16
@@ -277,7 +277,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Treasurehunter_D_01_6
+      name: EnemyD_Move_Left_2
       rect:
         serializedVersion: 2
         x: 32
@@ -298,7 +298,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Treasurehunter_D_01_7
+      name: EnemyD_Move_Left_3
       rect:
         serializedVersion: 2
         x: 48
@@ -319,7 +319,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Treasurehunter_D_01_8
+      name: EnemyD_Idle_Down
       rect:
         serializedVersion: 2
         x: 1
@@ -340,7 +340,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Treasurehunter_D_01_9
+      name: EnemyD_Move_Down_1
       rect:
         serializedVersion: 2
         x: 17
@@ -361,7 +361,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Treasurehunter_D_01_10
+      name: EnemyD_Move_Down_2
       rect:
         serializedVersion: 2
         x: 34
@@ -382,7 +382,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Treasurehunter_D_01_11
+      name: EnemyD_Move_Down_3
       rect:
         serializedVersion: 2
         x: 51
@@ -403,7 +403,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Treasurehunter_D_01_12
+      name: EnemyD_Idle_Up
       rect:
         serializedVersion: 2
         x: 2
@@ -424,7 +424,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Treasurehunter_D_01_13
+      name: EnemyD_Move_Up_1
       rect:
         serializedVersion: 2
         x: 17
@@ -445,7 +445,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Treasurehunter_D_01_14
+      name: EnemyD_Move_Up_2
       rect:
         serializedVersion: 2
         x: 34
@@ -466,7 +466,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Treasurehunter_D_01_15
+      name: EnemyD_Move_Up_3
       rect:
         serializedVersion: 2
         x: 51
