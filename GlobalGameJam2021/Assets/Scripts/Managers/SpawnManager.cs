@@ -90,6 +90,14 @@ public class SpawnManager : MonoBehaviour
             spawnedHunters.Add(enemy);
         }
     }
+
+    public MazeNode GetSpawnPos()
+    {
+        // get the furthest away from player.
+
+        return huntSpawners[0].GetComponentInParent<MazeNode>();
+    }
+
     public void SpawnPlayer()
     {
         //int prefabIndex = Random.Range(0, playerPrefab.Length);

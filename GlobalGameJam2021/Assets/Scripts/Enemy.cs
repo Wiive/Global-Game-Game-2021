@@ -19,6 +19,8 @@ public class Enemy : Character
 
     [SerializeField] private Material dissolveMaterial;
     private Material baseMaterial;
+
+    private SpawnManager spawnManager;
     
     Vector2Int gridSize = new Vector2Int(0,0);
 
@@ -81,6 +83,7 @@ public class Enemy : Character
     protected override void GetAllComponents()
     {
         base.GetAllComponents();
+        spawnManager = FindObjectOfType<SpawnManager>();
         enemySound = GetComponentInChildren<EnemySound>();
         pathFinder = GetComponent<PathFinder>();
         flashlight = GetComponentInChildren<Flashlight>();
@@ -131,6 +134,7 @@ public class Enemy : Character
     {
         GameManager.instance.AddToScore(100);
         flashlight.TurnOfLight();
+        stolenRelic.ReturnToStartPosition();
         stolenRelic = null;
         base.GotKilled();
         spriteRenderer.material = dissolveMaterial;
@@ -233,6 +237,7 @@ public class Enemy : Character
 
     IEnumerator HandleRespawn()
     {
+        spawnPoint = spawnManager.GetSpawnPos();
         path.Clear();
         yield return new WaitForSeconds(respawnTime);
         spriteRenderer.material = baseMaterial;
