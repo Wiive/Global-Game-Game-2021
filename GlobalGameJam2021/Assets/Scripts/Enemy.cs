@@ -19,6 +19,8 @@ public class Enemy : Character
     bool gettingNewPath = false;
     bool isCarryingRelic = false;
 
+    [SerializeField] Relic stolenRelic = null;
+
     int pathIndexPosition = 0;
     PathFinder pathFinder;
     
@@ -90,7 +92,10 @@ public class Enemy : Character
 
     protected override void Pickup(Relic relic)
     {
+        if (stolenRelic != null) return;
         Debug.Log($"{name} Pickups Relic!");
+        stolenRelic = relic;
+        relic.GetPickedUp(this);
         enemySound.PlayPickUpSound();
     }
 
@@ -102,8 +107,8 @@ public class Enemy : Character
     
     public override void GotKilled()
     {
+        stolenRelic = null;
         base.GotKilled();
-
         spriteRenderer.material = dissolveMaterial;
         enemySound.PlayDeathSound();
     }
@@ -123,7 +128,6 @@ public class Enemy : Character
         if (other.CompareTag("Relic"))
         {
             Pickup(other.GetComponent<Relic>());
-
             GameManager.instance.PickedUpObject(this.gameObject, other.gameObject);
         }
     }

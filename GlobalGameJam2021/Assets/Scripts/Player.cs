@@ -55,14 +55,12 @@ public class Player : Character
         Vector2Int inputTry = new Vector2Int((int)direction.x, (int)direction.y) + CurrentPos;
         if (grid.ContainsKey(inputTry) && !grid[inputTry].isWall )
             return true;
-        //Debug.Log("non valid movement");
         return false;
     }
 
     protected override void Pickup(Relic relic)
     {
         Debug.Log($"{name} Pickups Relic!");
-        relic.ReturnToStartPosition();
     }
    
     protected override void Attack(Character character)

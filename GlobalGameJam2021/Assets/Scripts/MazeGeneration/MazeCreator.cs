@@ -24,9 +24,9 @@ public class MazeCreator : MonoBehaviour
 
 	MazeNode[,] mazeModell;
 
-	[SerializeField] Queue<MazeNode> frontier = new Queue<MazeNode>();
-	[SerializeField] List<MazeNode> neighbours = new List<MazeNode>();
-	[SerializeField] List<MazeNode> spawnedRelics = new List<MazeNode>();
+	Queue<MazeNode> frontier = new Queue<MazeNode>();
+	List<MazeNode> neighbours = new List<MazeNode>();
+	List<MazeNode> spawnedRelics = new List<MazeNode>();
 
 	List<MazeNode>[] squareNodes = new List<MazeNode>[]
 	{
@@ -189,7 +189,6 @@ public class MazeCreator : MonoBehaviour
 
 		if (neighbours.Count < 1)
 		{
-			Debug.Log("To few neighbours");
 			return null;
 		}
 
@@ -260,8 +259,6 @@ public class MazeCreator : MonoBehaviour
 
 	private void SetRelicPosition()
 	{
-		// make this spawn a relic in each corner 
-		//(split the map in four and then random in that section)
 		for (int i = 0; i < relicsToPlace; i++)
 		{
 			MazeNode relicSpot = GetRelicSpot(i);
@@ -271,7 +268,6 @@ public class MazeCreator : MonoBehaviour
 
 	private MazeNode GetRelicSpot(int index)
 	{
-
 		Vector2Int bottomBounds;
 		Vector2Int topBounds;
 		switch (index)
@@ -295,7 +291,6 @@ public class MazeCreator : MonoBehaviour
 		}
 
 		MazeNode relicSpot;
-
 		int x;
 		int y;
 		int indexTry = 0;
@@ -340,7 +335,6 @@ public class MazeCreator : MonoBehaviour
 	{
 		foreach (var direction in roomCreation)
 		{
-			// add a check to se if the node next to it is valid
 			Vector2Int nodePos = new Vector2Int(roomCenter.GridPos.x + direction.x, roomCenter.GridPos.y + direction.y);
 			mazeModell[nodePos.x, nodePos.y].isWall = false;
 		}
@@ -388,18 +382,5 @@ public class MazeCreator : MonoBehaviour
             }
         }
     }
-
-	public Vector3 startingPos()
-	{
-		// make this more fancy so that it wont spawn hunters on relics or to close.
-		MazeNode node;
-		do
-			node = mazeModell[Random.Range(1, mazeModell.GetLength(0) - 1), Random.Range(1, mazeModell.GetLength(1) - 1)];
-		while (node.isWall);
-
-		Vector3 position = new Vector3(node.transform.position.x , node.transform.position.y, 0);
-
-		return position;
-	}
 }
 
