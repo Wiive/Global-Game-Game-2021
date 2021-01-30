@@ -44,11 +44,6 @@ public class MazeCreator : MonoBehaviour
 		new List<MazeNode>()  // west
 	};
 
-	[SerializeField] List<MazeNode> northBorder = new List<MazeNode>();
-	[SerializeField] List<MazeNode> eastBorder = new List<MazeNode>();
-	[SerializeField] List<MazeNode> southBorder = new List<MazeNode>();
-	[SerializeField] List<MazeNode> westBorder = new List<MazeNode>();
-
 	Vector2Int[] directions =
 	{
 		new Vector2Int(0, -2),
@@ -156,11 +151,7 @@ public class MazeCreator : MonoBehaviour
 		while (frontier.Count > 0)
 		{
 			int random = Random.Range(0, frontier.Count);
-
-			//MazeNode node = frontier[random];
 			MazeNode node = frontier.Dequeue();
-
-			//yield return new WaitForSeconds(0);
 
 			node.isWall = true;
 			node.SetShadowCaster();
@@ -170,21 +161,15 @@ public class MazeCreator : MonoBehaviour
 			if (nodeNeighbour != null)
 				ConnectNodes(node, nodeNeighbour);
 
-			//yield return new WaitForSeconds(0);
-
 			AddFrontierCells(node);
-
-  /*          frontier.Remove(node);
-			frontier.RemoveAll(node => node == null);*/
 			if (frontier.Count <= 0)
 				break;
 		}
 
 		yield return new WaitForSeconds(0);
+		CreateExtraRooms();
 		SetRelicPosition();
-		yield return new WaitForSeconds(0);
 		SetPlayerSpawn();
-		yield return new WaitForSeconds(0);
 		SetEnemySpawn();
 		
 	}
@@ -228,7 +213,6 @@ public class MazeCreator : MonoBehaviour
 			{
 				if (!mazeModell[Cords.x, Cords.y].partOfMaze && !frontier.Contains(mazeModell[Cords.x,Cords.y]))
 				{
-					//frontier.Add(mazeModell[Cords.x, Cords.y]);'
 					frontier.Enqueue(mazeModell[Cords.x, Cords.y]);
 				}
 			}
@@ -244,6 +228,35 @@ public class MazeCreator : MonoBehaviour
 		return true;
 	}
 
+	private void CreateExtraRooms()
+    {
+        foreach (var node in grid)
+        {
+			if (node.Value.isWall) continue;
+			int blockCount = CheckNeigbours(node.Value);
+			if(blockCount >= 4)
+            {
+				CreateRoom(node.Value);
+            }
+        }
+    }
+
+	private int CheckNeigbours(MazeNode node)
+    {
+		int blockedNeigbours = 0;
+		Vector2Int nodePos = node.GridPos;
+
+        foreach (var direction in directions)
+        {
+			Vector2Int neigbourPos = nodePos + (direction / 2);
+			if(grid.ContainsKey(neigbourPos))
+            {
+				if (grid[neigbourPos].isWall)
+					blockedNeigbours++;
+            }
+        }
+		return blockedNeigbours;
+    }
 
 	private void SetRelicPosition()
 	{
