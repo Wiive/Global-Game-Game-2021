@@ -340,6 +340,7 @@ public class MazeCreator : MonoBehaviour
 		{
 			Vector2Int nodePos = new Vector2Int(roomCenter.GridPos.x + direction.x, roomCenter.GridPos.y + direction.y);
 			mazeModell[nodePos.x, nodePos.y].isWall = false;
+			mazeModell[nodePos.x, nodePos.y].SetShadowCaster();
 		}
 	}
 
