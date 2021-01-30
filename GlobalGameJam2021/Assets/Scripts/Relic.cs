@@ -19,6 +19,7 @@ public class Relic : MonoBehaviour
     }
 
     BoxCollider2D boxCollider2D;
+    public bool isPickedUp;
 
     private Vector2 startPosition;
 
@@ -47,6 +48,7 @@ public class Relic : MonoBehaviour
         spawnPoint.hasRelic = true;
         spriteRenderer.enabled = true;
         boxCollider2D.enabled = true;
+        isPickedUp = false;
     }
 
     public void SetData(RelicData data)
@@ -60,5 +62,6 @@ public class Relic : MonoBehaviour
         boxCollider2D.enabled = false;
         spriteRenderer.enabled = false;
         this.carrier = carrier;
+        isPickedUp = true;
     }
 }
