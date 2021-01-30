@@ -11,6 +11,12 @@ public class Enemy : Character
     private Vector2 faceDirection;
     private Flashlight flashlight;
 
+
+    [SerializeField] float respawnTime = 5f;
+    [SerializeField] private MazeNode spawnPoint;
+    public MazeNode SpawnPoint { set { spawnPoint = value; } }
+
+
     [SerializeField] private Material dissolveMaterial;
     private Material baseMaterial;
     
@@ -18,6 +24,7 @@ public class Enemy : Character
 
     bool gettingNewPath = false;
     bool isCarryingRelic = false;
+    bool respawning = false;
 
     [SerializeField] Relic stolenRelic = null;
 
@@ -45,9 +52,12 @@ public class Enemy : Character
             if (fade <= 0)
             {
                 GameManager.instance.AddToScore(100);
-                Destroy(this.gameObject);
+                if(!respawning)
+                {
+                    respawning = true;
+                    StartCoroutine(HandleRespawn());
+                }
             }
-            
             return;
         }
         
@@ -153,16 +163,12 @@ public class Enemy : Character
     {
         if(path.Count > 0)
             CurrentPos = path[pathIndexPosition].GridPos;
-        else
-            CurrentPos = new Vector2Int(Mathf.RoundToInt(transform.position.x / TileSize),
-                                        Mathf.RoundToInt(transform.position.y / TileSize));
 
-
-        if (pathFinder.GetWayPoint(CurrentPos).isExit && isCarryingRelic)
+/*        if (pathFinder.GetWayPoint(CurrentPos).isExit && isCarryingRelic)
         {
             Debug.Log("I Enemy: " + name + " have now exited the labyrinth with a relic");
             Destroy(gameObject);
-        }
+        }*/
         
         yield return new WaitForSeconds(WaitTime/2);
         flashlight.EnemyStopped();
@@ -173,6 +179,7 @@ public class Enemy : Character
 
     private void GetNewPath()
     {
+        if (!isAlive) return;
         destination = TryToGetDestination();
         pathIndexPosition = 0;
         path = pathFinder.SearchForPath(CurrentPos, destination);
@@ -215,4 +222,16 @@ public class Enemy : Character
 
         return wayPointDestination.GridPos;
     }
+
+    IEnumerator HandleRespawn()
+    {
+        path.Clear();
+        yield return new WaitForSeconds(respawnTime);
+        spriteRenderer.material = baseMaterial;
+        CurrentPos = spawnPoint.GridPos;
+        transform.position = spawnPoint.transform.position;
+        Respawn();
+        respawning = false;
+    }
+
 }

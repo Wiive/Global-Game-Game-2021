@@ -87,6 +87,7 @@ public class SpawnManager : MonoBehaviour
             Enemy enemy = Instantiate(hunterPrefab[0], huntSpawners[spawnIndex].parent.transform.position, transform.rotation,transform.parent);
             enemy.TileSize = huntSpawners[spawnIndex].GetComponentInParent<MazeNode>().TileSize;
             enemy.CurrentPos = huntSpawners[spawnIndex].GetComponentInParent<MazeNode>().GridPos;
+            enemy.SpawnPoint = huntSpawners[spawnIndex].GetComponentInParent<MazeNode>();
             spawnedHunters.Add(enemy);
         }
     }
