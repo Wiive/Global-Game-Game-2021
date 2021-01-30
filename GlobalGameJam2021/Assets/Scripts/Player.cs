@@ -78,6 +78,9 @@ public class Player : Character
     public override void GotKilled()
     {
         base.GotKilled();
+
+        animator.SetBool("IsDead", true);
+
         MenuManager menuManager;
         if ((menuManager = FindObjectOfType<MenuManager>()) != null)
         {
