@@ -33,9 +33,7 @@ public class Enemy : Character
     protected override void Update()
     {
         if (!isAlive)
-        {
-            
-            Debug.Log("DISSOLVE: " + fade);
+        {           
             spriteRenderer.material.SetFloat("_Fade", fade); //material.SetFloat("Fade",fade);
 
             fade -= 1f * Time.deltaTime;
