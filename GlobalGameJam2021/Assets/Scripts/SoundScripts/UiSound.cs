@@ -13,7 +13,7 @@ public class UiSound : MonoBehaviour
 
     private void Awake()
     {
-        if (instance != null)
+        if (instance == null)
         {
             instance = this;
         }
@@ -25,7 +25,6 @@ public class UiSound : MonoBehaviour
     void Start()
     {
         soundPlayer = GetComponent<AudioSource>();
-        EventManager.instance.onPickedUpItem += OnRelicPickUp;
     }
 
     private void OnEnable()
@@ -40,6 +39,7 @@ public class UiSound : MonoBehaviour
 
     void OnRelicPickUp(PickerItemWrapper pickUpEvent)
     {
+
         if (pickUpEvent.picker.CompareTag("Enemy"))
         {
             PlayPickupWarningSound();
@@ -47,10 +47,9 @@ public class UiSound : MonoBehaviour
         }
     }
 
-    void PlayPickupWarningSound()
+    public void PlayPickupWarningSound()
     {
         soundPlayer.PlayOneShot(enemyRelicPickUp);
-        Debug.Log("Sound_PickUp");
     }
 
 

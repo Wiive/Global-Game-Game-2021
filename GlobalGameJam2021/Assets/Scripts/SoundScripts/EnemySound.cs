@@ -7,6 +7,7 @@ public class EnemySound : MonoBehaviour
 {
 
     AudioSource audioSource;
+    public bool test;
 
     public AudioClip[] attackSounds;
     public AudioClip[] deathSounds;
@@ -18,6 +19,23 @@ public class EnemySound : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
 
     }
+
+    void Update()
+    {
+        if (test)
+        {
+            SoundTest();
+
+        }
+    }
+
+    private void SoundTest()
+    {
+        if (Input.GetButtonDown("Jump"))
+            PlayPickUpSound();
+    }
+
+    
 
     void PlaySound(AudioClip soundToPlay)
     {
