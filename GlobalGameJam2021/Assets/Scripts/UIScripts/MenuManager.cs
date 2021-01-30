@@ -66,6 +66,10 @@ public class MenuManager : MonoBehaviour
         gameOverMenu.SetActive(false);
         pauseMenu.SetActive(false);
         highscoreMenu.SetActive(true);
+
+        HighScoreManager scoreManager;
+        scoreManager = GetComponent<HighScoreManager>();
+        scoreManager.UpdateHighscoreUI();
     }
 
     public void CloseAllMenus()
