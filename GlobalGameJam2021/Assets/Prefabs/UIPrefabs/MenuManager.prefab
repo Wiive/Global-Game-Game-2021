@@ -2864,6 +2864,7 @@ GameObject:
   - component: {fileID: 2568491145113677381}
   - component: {fileID: 2568491145113677386}
   - component: {fileID: 573762062}
+  - component: {fileID: -7138211926991330684}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -2924,6 +2925,22 @@ MonoBehaviour:
   musicSlider: {fileID: 2568491145847371537}
   soundText: {fileID: 1925377608}
   musicText: {fileID: 2568491144990028163}
+--- !u!114 &-7138211926991330684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2568491145113677387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f08500554ef825449af0b9df29838e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  number1: {fileID: 1166073871}
+  number2: {fileID: 1052063852}
+  number3: {fileID: 1206626362}
+  number4: {fileID: 131556707}
 --- !u!1 &2568491145177671946
 GameObject:
   m_ObjectHideFlags: 0
