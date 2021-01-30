@@ -1162,7 +1162,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6441904637537722431, guid: b1d0a4b14aae151478ab994db333a954, type: 3}
       propertyPath: borderZone
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6441904637537722431, guid: b1d0a4b14aae151478ab994db333a954, type: 3}
       propertyPath: gridSize.x

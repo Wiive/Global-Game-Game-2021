@@ -128,12 +128,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridSize: {x: 31, y: 31}
   node: {fileID: 3087470638013463273, guid: 95ff4a50b02d68a46aee0cddaf860fd8, type: 3}
-  TileSize: 16
-  roomSize: 1
+  tileSize: 16
   relicsToPlace: 4
-  safeZone: 5
-  borderZone: 5
+  borderZone: 4
+  spawnOnEachSide: 2
   gridRenderer: {fileID: 2983522704075480436}
-  frontier: []
   neighbours: []
   spawnedRelics: []
