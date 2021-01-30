@@ -44,9 +44,7 @@ public class Enemy : Character
     protected override void Update()
     {
         if (!isAlive)
-        {           
-            flashlight.TurnOfLight();
-            
+        {                      
             spriteRenderer.material.SetFloat("_Fade", fade); //material.SetFloat("Fade",fade);
 
             fade -= 1f * Time.deltaTime;
@@ -125,6 +123,7 @@ public class Enemy : Character
     
     public override void GotKilled()
     {
+        flashlight.TurnOfLight();
         stolenRelic = null;
         base.GotKilled();
         spriteRenderer.material = dissolveMaterial;
@@ -232,6 +231,7 @@ public class Enemy : Character
         spriteRenderer.material = baseMaterial;
         CurrentPos = spawnPoint.GridPos;
         transform.position = spawnPoint.transform.position;
+        flashlight.ResetFlashLight();
         Respawn();
         respawning = false;
     }
