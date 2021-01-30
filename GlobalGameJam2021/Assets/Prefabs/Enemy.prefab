@@ -80,8 +80,8 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_ShadowIntensity: 1
   m_ShadowVolumeIntensity: 0
-  m_PointLightInnerAngle: 34
-  m_PointLightOuterAngle: 60
+  m_PointLightInnerAngle: 52
+  m_PointLightOuterAngle: 76
   m_PointLightInnerRadius: 10
   m_PointLightOuterRadius: 26
   m_PointLightDistance: 3
@@ -121,10 +121,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.1920166, y: 19.62651}
-      - {x: -7.4799414, y: 17.655392}
+    - - {x: -0.02597092, y: 15.539186}
+      - {x: -6.9349895, y: 11.878643}
       - {x: -0.011704862, y: 0.023090482}
-      - {x: 7.735976, y: 17.46333}
+      - {x: 6.863997, y: 11.959073}
 --- !u!1 &8395075012779991579
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,7 +437,7 @@ MonoBehaviour:
   - {x: -2.5082133, y: 1.8351898, z: 0}
   m_ShapePathHash: 757019231
   m_Mesh: {fileID: 0}
-  m_InstanceId: 60326
+  m_InstanceId: 61244
 --- !u!114 &495886572538984206
 MonoBehaviour:
   m_ObjectHideFlags: 0
