@@ -298,6 +298,7 @@ public class MazeCreator : MonoBehaviour
 			if(indexTry > 5)
             {
 				relicSpot = FindFirstValidSpawnPos(squareNodes[index],bottomBounds,topBounds);
+				break;
             }
 		}
 		while ((x < bottomBounds.x || x > topBounds.x || y < bottomBounds.y || y > topBounds.y));
