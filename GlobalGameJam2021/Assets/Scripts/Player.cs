@@ -55,7 +55,7 @@ public class Player : Character
         Vector2Int inputTry = new Vector2Int((int)direction.x, (int)direction.y) + CurrentPos;
         if (grid.ContainsKey(inputTry) && !grid[inputTry].isWall )
             return true;
-        Debug.Log("non valid movement");
+        //Debug.Log("non valid movement");
         return false;
     }
 
