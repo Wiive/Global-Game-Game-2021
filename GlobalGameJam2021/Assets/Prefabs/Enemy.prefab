@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5638000118443993268}
   m_Layer: 7
   m_Name: Flashlight
-  m_TagString: Untagged
+  m_TagString: Flashlight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -382,6 +382,7 @@ MonoBehaviour:
   WaitTime: 2
   range: 4
   dissolveMaterial: {fileID: 2100000, guid: 919c27cd6a056d146a61bacf8261375a, type: 2}
+  stolenRelic: {fileID: 0}
 --- !u!114 &8395075013845601892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -517,7 +518,7 @@ MonoBehaviour:
   - {x: -5.012352, y: 1.9315033, z: 0}
   m_ShapePathHash: -527702491
   m_Mesh: {fileID: 0}
-  m_InstanceId: 31434
+  m_InstanceId: 54804
 --- !u!114 &495886572538984206
 MonoBehaviour:
   m_ObjectHideFlags: 0

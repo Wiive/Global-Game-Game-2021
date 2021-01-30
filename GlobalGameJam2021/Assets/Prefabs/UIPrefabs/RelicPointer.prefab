@@ -160,6 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4788416560999021889}
   - component: {fileID: 4788416560999021888}
+  - component: {fileID: 3697577650208493760}
   m_Layer: 5
   m_Name: RelicPointer
   m_TagString: Untagged
@@ -202,7 +203,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetSymbol: {fileID: 4788416560140325888}
   arrow: {fileID: 4788416559653421699}
+  blinkTime: 0.5
   positionOffset: 16
   isActive: 0
+  isPickedUp: 0
   target: {fileID: 0}
   angleOffset: 180
+--- !u!95 &3697577650208493760
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4788416560999021894}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b2ef8abfc124ba243a81e1c925ac0b8c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

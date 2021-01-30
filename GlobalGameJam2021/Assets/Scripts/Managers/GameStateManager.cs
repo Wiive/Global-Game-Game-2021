@@ -30,7 +30,7 @@ public class GameStateManager : MonoBehaviour
         if (instance == null)
             instance = this;
         else
-            Destroy(this);
+            Destroy(gameObject);
     }
     
     public Action<GameStateManager.GameState> onChangeGameState;

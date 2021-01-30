@@ -6,7 +6,11 @@ using UnityEngine;
 public class RelicPointerController : MonoBehaviour
 {
     public Image targetSymbol;
+    Animator animator;
+
+    private Sprite defultArrowSprite;
     public Image arrow;
+    public float blinkTime = 0.5f; 
 
     public int positionOffset = 16;
 
@@ -18,6 +22,12 @@ public class RelicPointerController : MonoBehaviour
 
     [SerializeField] int angleOffset;
 
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+        defultArrowSprite = arrow.sprite;
+    }
+
     private void Update()
     {
         if(target == null) return;
@@ -28,6 +38,16 @@ public class RelicPointerController : MonoBehaviour
 
             RotateArrow();
             MoveRelicPointerObject();
+            if (target.isPickedUp)
+            {
+                animator.enabled = true;
+            }
+            else
+            {
+                animator.enabled = false;
+                arrow.sprite = defultArrowSprite;
+            }
+                
         }
 
         else

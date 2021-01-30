@@ -55,14 +55,12 @@ public class Player : Character
         Vector2Int inputTry = new Vector2Int((int)direction.x, (int)direction.y) + CurrentPos;
         if (grid.ContainsKey(inputTry) && !grid[inputTry].isWall )
             return true;
-        //Debug.Log("non valid movement");
         return false;
     }
 
     protected override void Pickup(Relic relic)
     {
         Debug.Log($"{name} Pickups Relic!");
-        relic.ReturnToStartPosition();
     }
    
     protected override void Attack(Character character)
@@ -73,6 +71,13 @@ public class Player : Character
     public override void GotKilled()
     {
         base.GotKilled();
+        MenuManager menuManager;
+        if ((menuManager = FindObjectOfType<MenuManager>()) != null)
+        {
+            menuManager.ShowGameOverMenu();
+        }
+        else
+            Debug.LogError("Missing MenuManager Prefab in Scene");
     }
 
     protected override void UpdateTimers()
@@ -83,6 +88,11 @@ public class Player : Character
     protected override void OnTriggerEnter2D(Collider2D other)
     {
         base.OnTriggerEnter2D(other);
+
+        if(other.CompareTag("Flashlight"))
+        {
+            GotKilled();
+        }
 
         if (other.CompareTag("Enemy"))
         {           
