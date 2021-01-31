@@ -24,10 +24,10 @@ public class HighScoreManager : MonoBehaviour
 
     void LoadScore()
     {
-        score1 = PlayerPrefs.GetInt("Score-1", 500);
-        score2 = PlayerPrefs.GetInt("Score-2", 400);
-        score3 = PlayerPrefs.GetInt("Score-3", 300);
-        score4 = PlayerPrefs.GetInt("Score-4", 200);
+        score1 = PlayerPrefs.GetInt("score-1", 500);
+        score2 = PlayerPrefs.GetInt("score-2", 400);
+        score3 = PlayerPrefs.GetInt("score-3", 300);
+        score4 = PlayerPrefs.GetInt("score-4", 200);
     }
 
     public void UpdateHighscoreUI()
@@ -56,17 +56,20 @@ public class HighScoreManager : MonoBehaviour
 
             for (int i = 0; i < valueList.Count; i++)
             {
-                Debug.Log(PlayerPrefs.GetInt("Score-" + i));
+               Debug.Log(i);
+               Debug.Log("score-" + (valueList.Count - i));
+               Debug.Log(PlayerPrefs.GetInt("score-" + i));
                PlayerPrefs.SetInt("score-" + (valueList.Count - i), valueList[i]);
+               Debug.Log(PlayerPrefs.GetInt("score-" + (valueList.Count - i)));
             }
         }
     }
 
     bool IsNewScoreHighScore()
     {
-        if (GameManager.instance.GetCurrentScore() >= PlayerPrefs.GetInt("Score-4"))
+        if (GameManager.instance.GetCurrentScore() >= PlayerPrefs.GetInt("score-4"))
         {
-            Debug.Log("Gz new Hi-Score! " + GameManager.instance.GetCurrentScore() + " > " + PlayerPrefs.GetInt("Score-4"));
+            Debug.Log("Gz new Hi-Score! " + GameManager.instance.GetCurrentScore() + " > " + PlayerPrefs.GetInt("score-4"));
             return true;
         }      
         return false;
