@@ -33,7 +33,7 @@ SpriteAtlas:
     packables:
     - {fileID: 102900000, guid: 34afea06496b7421ebf70580faa933c0, type: 3}
     - {fileID: 102900000, guid: 9f8e0094543ee43f5940c2cdb9d49132, type: 3}
-    totalSpriteSurfaceArea: 330315
+    totalSpriteSurfaceArea: 329690
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -189,7 +189,6 @@ SpriteAtlas:
   - {fileID: 7666284743563581910, guid: 62230f7dacbbff943812240178481011, type: 3}
   - {fileID: 833921446612175136, guid: 62230f7dacbbff943812240178481011, type: 3}
   - {fileID: 915957990075623508, guid: 62230f7dacbbff943812240178481011, type: 3}
-  - {fileID: 21300000, guid: daa83a8d597084ffc998882effedcc90, type: 3}
   - {fileID: 21300000, guid: 459425bd2e0e44779a4a50f712c9738d, type: 3}
   - {fileID: 8352832123834819458, guid: 75ce21dd12b763b4d84f2c7d49016ccf, type: 3}
   - {fileID: 7016694955830873508, guid: 75ce21dd12b763b4d84f2c7d49016ccf, type: 3}
@@ -353,7 +352,6 @@ SpriteAtlas:
   - banner with character_A
   - banner with character_Player_2
   - banner with character_Player_1
-  - lightcookie
   - Box-Arrow-UP_Enemy_01
   - relics spritesheet_2
   - relics spritesheet_3
