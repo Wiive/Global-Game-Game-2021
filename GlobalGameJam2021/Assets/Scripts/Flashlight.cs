@@ -8,7 +8,7 @@ public class Flashlight : MonoBehaviour
     private AudioSource audioSource;
     private const int Offset = 2;
 
-    public Light2D light2D;
+    private Light2D flashlight;
     
     public float minIntensity = 0.2f;
     public float maxIntensity = 0.4f;
@@ -38,7 +38,7 @@ public class Flashlight : MonoBehaviour
 
     private void Start()
     {
-        light2D = GetComponentInChildren<Light2D>();
+        flashlight = GetComponentInChildren<Light2D>();
         polyCollider = GetComponentInChildren<PolygonCollider2D>();
 
         currentIntensity = Random.Range(minIntensity, maxIntensity);
@@ -74,9 +74,9 @@ public class Flashlight : MonoBehaviour
         }
 
         if (flashLightActive)
-            light2D.intensity = currentIntensity;
+            flashlight.intensity = currentIntensity;
         else
-            light2D.intensity = 0f;
+            flashlight.intensity = 0f;
         
         UpdateRadius();
     }
@@ -129,16 +129,16 @@ public class Flashlight : MonoBehaviour
     {
         if (increaseRadius)
         {
-            if (light2D.pointLightOuterRadius < maxRadius)
+            if (flashlight.pointLightOuterRadius < maxRadius)
             {
-                light2D.pointLightOuterRadius += increaseTime * Time.deltaTime;
+                flashlight.pointLightOuterRadius += increaseTime * Time.deltaTime;
             }
         }
         else
         {
-            if (light2D.pointLightOuterRadius > minRadius)
+            if (flashlight.pointLightOuterRadius > minRadius)
             {
-                light2D.pointLightOuterRadius -= reduceTime * Time.deltaTime;
+                flashlight.pointLightOuterRadius -= reduceTime * Time.deltaTime;
             }
         }
     }
