@@ -5,6 +5,7 @@ public class Flashlight : MonoBehaviour
 {
     [SerializeField] private Animator taserAnimator;
     private SpriteRenderer spriteRenderer;
+    private AudioSource audioSource;
     private const int Offset = 2;
 
     private Light2D flashlight;
@@ -49,6 +50,7 @@ public class Flashlight : MonoBehaviour
     private void GetAllComponents()
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -146,7 +148,8 @@ public class Flashlight : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             taserAnimator.SetTrigger("Attack");
-            // Debug.Log($"{name} Found and wants to kill player!");
+            audioSource.PlayOneShot(audioSource.clip);
+            //Debug.Log($"{name} Found and wants to kill player!");
         }
     }
 }

@@ -5,4 +5,13 @@ using UnityEngine;
 public class EnemyData : ScriptableObject
 {
     public RuntimeAnimatorController runtimeAnimatorController;
+    public enum SpriteSheets
+    {
+        A,
+        B,
+        C,
+        D
+    }
+    public SpriteSheets currentSpriteSheet;
+
 }

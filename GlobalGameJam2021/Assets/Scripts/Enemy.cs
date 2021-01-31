@@ -145,7 +145,7 @@ public class Enemy : Character
         stolenRelic = null;
         base.GotKilled();
         spriteRenderer.material = dissolveMaterial;
-        enemySound.PlayDeathSound();
+        enemySound.PlayDeathSound(data.currentSpriteSheet);
     }
     
     private void UpdateFlashlightDirection()
