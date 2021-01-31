@@ -134,6 +134,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6134080d5118d74f85c3fa705b1d5d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &132729628 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2568491145113677386, guid: de3a95981d5e69f4282317a328ded3df, type: 3}
+  m_PrefabInstance: {fileID: 1930151153}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a536a4b9532c0c4fb0b78223bc64d94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &167308048 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1124760188, guid: de3a95981d5e69f4282317a328ded3df, type: 3}
@@ -7453,16 +7464,44 @@ PrefabInstance:
       value: 25.399998
       objectReference: {fileID: 0}
     - target: {fileID: 2424579347378973557, guid: de3a95981d5e69f4282317a328ded3df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2424579347378973557, guid: de3a95981d5e69f4282317a328ded3df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2424579347378973557, guid: de3a95981d5e69f4282317a328ded3df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2424579347378973557, guid: de3a95981d5e69f4282317a328ded3df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2117145399}
     - target: {fileID: 2424579347378973557, guid: de3a95981d5e69f4282317a328ded3df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 132729628}
+    - target: {fileID: 2424579347378973557, guid: de3a95981d5e69f4282317a328ded3df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2424579347378973557, guid: de3a95981d5e69f4282317a328ded3df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 2424579347378973557, guid: de3a95981d5e69f4282317a328ded3df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: ShowMainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2424579347378973557, guid: de3a95981d5e69f4282317a328ded3df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: MenuManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2424579347378973557, guid: de3a95981d5e69f4282317a328ded3df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2568491145101011688, guid: de3a95981d5e69f4282317a328ded3df, type: 3}
       propertyPath: m_IsActive
@@ -7719,6 +7758,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2986235805432775714, guid: 4b60ef0a7b08d0c4092687180f48697f, type: 3}
+      propertyPath: m_text
+      value: 'Time: 00.00'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986235805432775714, guid: 4b60ef0a7b08d0c4092687180f48697f, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3498102139792025144, guid: 4b60ef0a7b08d0c4092687180f48697f, type: 3}
       propertyPath: m_text
       value: A Relic was stolen!
