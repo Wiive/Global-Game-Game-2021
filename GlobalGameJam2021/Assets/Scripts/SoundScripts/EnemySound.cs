@@ -61,10 +61,16 @@ public class EnemySound : MonoBehaviour
         PlaySound(relicPickup);
     }
 
-    public void PlayDeathSound()
+    public void PlayDeathSound(EnemyData.SpriteSheets sprite)
     {
-        PlayRandomSoundFromArray(deathSounds);
+        //PlayRandomSoundFromArray(deathSounds);
+        if (sprite == EnemyData.SpriteSheets.B)
+        {
+            PlaySound(deathSounds[1]);
 
+        }
+        else
+            PlaySound(deathSounds[0]);
     }
 
     public void PlaySpawnSound()
