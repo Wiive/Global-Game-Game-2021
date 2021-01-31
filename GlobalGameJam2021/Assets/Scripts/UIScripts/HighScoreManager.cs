@@ -55,9 +55,8 @@ public class HighScoreManager : MonoBehaviour
             valueList.Sort();
 
             for (int i = 0; i < valueList.Count; i++)
-            {              
-               Debug.Log(i);
-               Debug.Log(PlayerPrefs.GetInt("Score-" + i));
+            {
+                Debug.Log(PlayerPrefs.GetInt("Score-" + i));
                PlayerPrefs.SetInt("score-" + (valueList.Count - i), valueList[i]);
             }
         }
