@@ -46,7 +46,7 @@ SpriteAtlas:
     - {fileID: 102900000, guid: 34afea06496b7421ebf70580faa933c0, type: 3}
     - {fileID: 102900000, guid: 9f8e0094543ee43f5940c2cdb9d49132, type: 3}
     - {fileID: 102900000, guid: 142c1f23eb843402e9d25c58188210d7, type: 3}
-    totalSpriteSurfaceArea: 712777
+    totalSpriteSurfaceArea: 713289
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -95,6 +95,7 @@ SpriteAtlas:
   - {fileID: -1300900884463874075, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
   - {fileID: -1190323932966942647, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
   - {fileID: 3170186828618963668, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: 21300000, guid: 2e0b1e6100d96914fb86ed673c23d4ca, type: 3}
   - {fileID: -7668935643376289763, guid: b2fa1081a31cfb24d9884dc732d15bf7, type: 3}
   - {fileID: -8204106064592327607, guid: b2fa1081a31cfb24d9884dc732d15bf7, type: 3}
   - {fileID: 4251474379455968655, guid: b2fa1081a31cfb24d9884dc732d15bf7, type: 3}
@@ -278,6 +279,7 @@ SpriteAtlas:
   - {fileID: -7398625299782134378, guid: cdd72268090b8314ab6a9cfda836cac3, type: 3}
   - {fileID: -2219885614059768260, guid: cdd72268090b8314ab6a9cfda836cac3, type: 3}
   - {fileID: 21300000, guid: eaf8f6593e85a1e49a6383ab0a747bb2, type: 3}
+  - {fileID: 21300000, guid: b9c89bb9870a6a64aad9c3a54d9181ba, type: 3}
   - {fileID: 21300000, guid: 53ec5b9a87a3fe14989d229424c3ebd7, type: 3}
   - {fileID: -1422879033022387748, guid: 3c31f71baec804355b0db2d5b837f34b, type: 3}
   - {fileID: -1934042785196833869, guid: 3c31f71baec804355b0db2d5b837f34b, type: 3}
@@ -477,6 +479,7 @@ SpriteAtlas:
   - moas decos_23
   - moas decos_20
   - moas decos_21
+  - cursor1
   - EnemyA_Idle_Right
   - EnemyA_Move_Right_1
   - EnemyA_Move_Right_2
@@ -660,6 +663,7 @@ SpriteAtlas:
   - EnemyA_Idle_Up_3
   - EnemyA_Idle_Up_4
   - Treasurehunter_A_victory
+  - cursor2
   - Treasurehunter_D_victory
   - Wall_Left-Right
   - Wall_BIG_LeftDown
