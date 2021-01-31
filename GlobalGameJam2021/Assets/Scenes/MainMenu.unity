@@ -491,6 +491,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1097366117}
+    - target: {fileID: 2568491146260739365, guid: de3a95981d5e69f4282317a328ded3df, type: 3}
+      propertyPath: m_text
+      value: Defender of the Relics
+      objectReference: {fileID: 0}
     - target: {fileID: 2568491146333594405, guid: de3a95981d5e69f4282317a328ded3df, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
