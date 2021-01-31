@@ -5,7 +5,7 @@ public class Flashlight : MonoBehaviour
 {
     [SerializeField] private Animator taserAnimator;
     private SpriteRenderer spriteRenderer;
-    private const int Offset = 8;
+    private const int Offset = 2;
 
     private Light2D flashlight;
     
@@ -37,8 +37,8 @@ public class Flashlight : MonoBehaviour
 
     private void Start()
     {
-        flashlight = GetComponent<Light2D>();
-        polyCollider = GetComponent<PolygonCollider2D>();
+        flashlight = GetComponentInChildren<Light2D>();
+        polyCollider = GetComponentInChildren<PolygonCollider2D>();
 
         currentIntensity = Random.Range(minIntensity, maxIntensity);
         startIntensity = currentIntensity;
@@ -79,24 +79,29 @@ public class Flashlight : MonoBehaviour
         UpdateRadius();
     }
 
-    public void UpdateDirection(Vector2 direction)
+    public void UpdateDirection(Vector2 direction, Vector2 targetDirection)
     {
         if (lastDirection != direction)
         {
             increaseRadius = true;
         }
 
-        if (direction == Vector2.down)
-        {
-            transform.localPosition = direction * (Offset - 6f);
-        }
+        // if (direction == Vector2.down)
+        // {
+        //     transform.localPosition = direction * (Offset - 6f);
+        // }
+        // else
+        // {
+        //     transform.localPosition = direction * Offset;
+        // }
+
+        if (targetDirection == Vector2.down)
+            transform.localPosition = direction * Offset + Vector2.up * 2f;
         else
-        {
             transform.localPosition = direction * Offset;
-        }
         
-        
-        transform.up = direction;
+        // transform.up = direction;
+        transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f);
 
         lastDirection = direction;
     }

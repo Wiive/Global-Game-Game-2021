@@ -4,52 +4,52 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -8204196735075895470
-    second: Guardian_02_0
+    second: Player_Move_Left_1
   - first:
       213: 6281174389266385954
-    second: Guardian_02_1
+    second: Player_Move_Left_2
   - first:
       213: -2057044366307050142
-    second: Guardian_02_2
+    second: Player_Move_Left_3
   - first:
       213: 1642346099630817638
-    second: Guardian_02_3
+    second: Player_Move_Left_4
   - first:
       213: -549446921989894934
-    second: Guardian_02_4
+    second: Player_Move_Up_1
   - first:
       213: 3718243843009004191
-    second: Guardian_02_5
+    second: Player_Move_Up_2
   - first:
       213: -168494241038521132
-    second: Guardian_02_6
+    second: Player_Move_Up_3
   - first:
       213: 4933646419072343823
-    second: Guardian_02_7
+    second: Player_Move_Up_4
   - first:
       213: 1629940462576061509
-    second: Guardian_02_8
+    second: Player_Move_Down_1
   - first:
       213: -7207433003292652413
-    second: Guardian_02_9
+    second: Player_Move_Down_2
   - first:
       213: -6800417158436716949
-    second: Guardian_02_10
+    second: Player_Move_Down_3
   - first:
       213: -6851729480880876615
-    second: Guardian_02_11
+    second: Player_Move_Down_4
   - first:
       213: 9053198553882529903
-    second: Guardian_02_12
+    second: Player_Move_Right_1
   - first:
       213: -198502682384474827
-    second: Guardian_02_13
+    second: Player_Move_Right_2
   - first:
       213: -6149523371728446369
-    second: Guardian_02_14
+    second: Player_Move_Right_3
   - first:
       213: 3191364809083727400
-    second: Guardian_02_15
+    second: Player_Move_Right_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -151,7 +151,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Guardian_02_0
+      name: Player_Move_Left_1
       rect:
         serializedVersion: 2
         x: 0
@@ -172,7 +172,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_02_1
+      name: Player_Move_Left_2
       rect:
         serializedVersion: 2
         x: 17
@@ -193,7 +193,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_02_2
+      name: Player_Move_Left_3
       rect:
         serializedVersion: 2
         x: 34
@@ -214,7 +214,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_02_3
+      name: Player_Move_Left_4
       rect:
         serializedVersion: 2
         x: 51
@@ -235,7 +235,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_02_4
+      name: Player_Move_Up_1
       rect:
         serializedVersion: 2
         x: 3
@@ -256,7 +256,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_02_5
+      name: Player_Move_Up_2
       rect:
         serializedVersion: 2
         x: 19
@@ -277,7 +277,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_02_6
+      name: Player_Move_Up_3
       rect:
         serializedVersion: 2
         x: 37
@@ -298,7 +298,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_02_7
+      name: Player_Move_Up_4
       rect:
         serializedVersion: 2
         x: 55
@@ -319,7 +319,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_02_8
+      name: Player_Move_Down_1
       rect:
         serializedVersion: 2
         x: 3
@@ -340,7 +340,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_02_9
+      name: Player_Move_Down_2
       rect:
         serializedVersion: 2
         x: 20
@@ -361,7 +361,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_02_10
+      name: Player_Move_Down_3
       rect:
         serializedVersion: 2
         x: 37
@@ -382,7 +382,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_02_11
+      name: Player_Move_Down_4
       rect:
         serializedVersion: 2
         x: 53
@@ -403,7 +403,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_02_12
+      name: Player_Move_Right_1
       rect:
         serializedVersion: 2
         x: 1
@@ -424,7 +424,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_02_13
+      name: Player_Move_Right_2
       rect:
         serializedVersion: 2
         x: 18
@@ -445,7 +445,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_02_14
+      name: Player_Move_Right_3
       rect:
         serializedVersion: 2
         x: 35
@@ -466,7 +466,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_02_15
+      name: Player_Move_Right_4
       rect:
         serializedVersion: 2
         x: 52

@@ -91,6 +91,7 @@ public class SpawnManager : MonoBehaviour
             enemy.TileSize = huntSpawners[spawnIndex].GetComponentInParent<MazeNode>().TileSize;
             enemy.CurrentPos = huntSpawners[spawnIndex].GetComponentInParent<MazeNode>().GridPos;
             enemy.SpawnPoint = huntSpawners[spawnIndex].GetComponentInParent<MazeNode>();
+            enemy.name = $"Enemy{spawnedHunters.Count}";
             spawnedHunters.Add(enemy);
         }
     }

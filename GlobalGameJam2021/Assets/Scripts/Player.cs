@@ -52,9 +52,12 @@ public class Player : Character
 
         if (!moveController.IsMoving && direction != Vector2.zero && IsValidInput())
         {
+            animator.SetBool("IsMoving", true);
             CurrentPos += new Vector2Int((int)direction.x, (int)direction.y);
             moveController.SetTargetPosition(direction);
         }
+        else
+            animator.SetBool("IsMoving", false);
     }
     
     bool IsValidInput()
@@ -88,6 +91,17 @@ public class Player : Character
         }
         else
             Debug.LogError("Missing MenuManager Prefab in Scene");
+    }
+    
+    protected override void UpdateAnimations()
+    {
+        if (direction != Vector2.zero)
+        {
+            animator.SetFloat("DirectionX", direction.x);
+            animator.SetFloat("DirectionY", direction.y);
+        }
+        
+        // animator.SetBool("IsMoving", moveController.IsMoving);
     }
 
     protected override void UpdateTimers()

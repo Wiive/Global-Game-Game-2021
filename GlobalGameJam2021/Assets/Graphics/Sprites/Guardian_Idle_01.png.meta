@@ -4,52 +4,52 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 8682794151416260962
-    second: Guardian_Idle_01_0
+    second: Player_Idle_Left_1
   - first:
       213: 8996033110596186860
-    second: Guardian_Idle_01_1
+    second: Player_Idle_Left_2
   - first:
       213: 7151859156352249730
-    second: Guardian_Idle_01_2
+    second: Player_Idle_Left_3
   - first:
       213: 8999403804417878265
-    second: Guardian_Idle_01_3
+    second: Player_Idle_Left_4
   - first:
       213: -1734458750576906496
-    second: Guardian_Idle_01_4
+    second: Player_Idle_Right_1
   - first:
       213: -6726843543723817209
-    second: Guardian_Idle_01_5
+    second: Player_Idle_Right_2
   - first:
       213: 8850720731225573904
-    second: Guardian_Idle_01_6
+    second: Player_Idle_Right_3
   - first:
       213: 7579315553172966897
-    second: Guardian_Idle_01_7
+    second: Player_Idle_Right_4
   - first:
       213: -5578946113230202271
-    second: Guardian_Idle_01_8
+    second: Player_Idle_Up_1
   - first:
       213: 1248049904380473483
-    second: Guardian_Idle_01_9
+    second: Player_Idle_Up_2
   - first:
       213: 8384784717177555047
-    second: Guardian_Idle_01_10
+    second: Player_Idle_Up_3
   - first:
       213: 4913762490246658375
-    second: Guardian_Idle_01_11
+    second: Player_Idle_Up_4
   - first:
       213: 8496741451223787333
-    second: Guardian_Idle_01_12
+    second: Player_Idle_Down_1
   - first:
       213: 8007316468340120795
-    second: Guardian_Idle_01_13
+    second: Player_Idle_Down_2
   - first:
       213: -6377191383528838739
-    second: Guardian_Idle_01_14
+    second: Player_Idle_Down_3
   - first:
       213: -1192201185425047670
-    second: Guardian_Idle_01_15
+    second: Player_Idle_Down_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -151,7 +151,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Guardian_Idle_01_0
+      name: Player_Idle_Left_1
       rect:
         serializedVersion: 2
         x: 0
@@ -172,7 +172,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_Idle_01_1
+      name: Player_Idle_Left_2
       rect:
         serializedVersion: 2
         x: 17
@@ -193,7 +193,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_Idle_01_2
+      name: Player_Idle_Left_3
       rect:
         serializedVersion: 2
         x: 34
@@ -214,7 +214,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_Idle_01_3
+      name: Player_Idle_Left_4
       rect:
         serializedVersion: 2
         x: 51
@@ -235,7 +235,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_Idle_01_4
+      name: Player_Idle_Right_1
       rect:
         serializedVersion: 2
         x: 1
@@ -256,7 +256,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_Idle_01_5
+      name: Player_Idle_Right_2
       rect:
         serializedVersion: 2
         x: 18
@@ -277,7 +277,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_Idle_01_6
+      name: Player_Idle_Right_3
       rect:
         serializedVersion: 2
         x: 35
@@ -298,7 +298,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_Idle_01_7
+      name: Player_Idle_Right_4
       rect:
         serializedVersion: 2
         x: 52
@@ -319,7 +319,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_Idle_01_8
+      name: Player_Idle_Up_1
       rect:
         serializedVersion: 2
         x: 3
@@ -340,7 +340,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_Idle_01_9
+      name: Player_Idle_Up_2
       rect:
         serializedVersion: 2
         x: 20
@@ -361,7 +361,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_Idle_01_10
+      name: Player_Idle_Up_3
       rect:
         serializedVersion: 2
         x: 37
@@ -382,7 +382,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_Idle_01_11
+      name: Player_Idle_Up_4
       rect:
         serializedVersion: 2
         x: 54
@@ -403,7 +403,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_Idle_01_12
+      name: Player_Idle_Down_1
       rect:
         serializedVersion: 2
         x: 3
@@ -424,7 +424,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_Idle_01_13
+      name: Player_Idle_Down_2
       rect:
         serializedVersion: 2
         x: 20
@@ -445,7 +445,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_Idle_01_14
+      name: Player_Idle_Down_3
       rect:
         serializedVersion: 2
         x: 37
@@ -466,7 +466,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_Idle_01_15
+      name: Player_Idle_Down_4
       rect:
         serializedVersion: 2
         x: 54

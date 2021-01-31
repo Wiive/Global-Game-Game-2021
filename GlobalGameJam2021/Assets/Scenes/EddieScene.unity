@@ -487,6 +487,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UiSFX
       objectReference: {fileID: 0}
+    - target: {fileID: 1603124624218846733, guid: 2b3e12eb1233fbe4a8e0dcdc166940b9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b3e12eb1233fbe4a8e0dcdc166940b9, type: 3}
 --- !u!114 &1189929938 stripped
