@@ -46,9 +46,6 @@ public class SpawnManager : MonoBehaviour
 
     private void Update()
     {
-        if(playerObject != null)
-            Debug.Log("DISTANCE: " + GetFurthestSpawnPoint());
-        
         if (currentlySpawned >= maxHunters) return;
         currentTime += Time.deltaTime;
         if (currentTime < timeInbetweenSpawns) return;
