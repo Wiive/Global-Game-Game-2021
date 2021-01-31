@@ -79,6 +79,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taserAnimator: {fileID: 8767373224887149043}
   light2D: {fileID: 0}
+  circleLight2D: {fileID: 2950210230678689309}
   minIntensity: 0.8
   maxIntensity: 1.2
   intensityStepModifier: 0.3

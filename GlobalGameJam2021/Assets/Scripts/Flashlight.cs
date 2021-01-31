@@ -9,7 +9,9 @@ public class Flashlight : MonoBehaviour
     private const int Offset = 2;
 
     public Light2D light2D;
-    
+    public Light2D circleLight2D;
+
+
     public float minIntensity = 0.2f;
     public float maxIntensity = 0.4f;
     public float intensityStepModifier = 0.9f;
@@ -74,10 +76,20 @@ public class Flashlight : MonoBehaviour
         }
 
         if (flashLightActive)
+        {
             light2D.intensity = currentIntensity;
+            circleLight2D.intensity = currentIntensity;
+
+        }
+
         else
+        {
             light2D.intensity = 0f;
-        
+            circleLight2D.intensity = 0f;
+
+        }
+
+
         UpdateRadius();
     }
 
