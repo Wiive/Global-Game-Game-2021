@@ -14,7 +14,7 @@ public class RelicPointerController : MonoBehaviour
 
     public int positionOffset = 16;
 
-    private int arrowOffset = 25;
+    // private int arrowOffset = 25;
 
     public bool isActive;
 
