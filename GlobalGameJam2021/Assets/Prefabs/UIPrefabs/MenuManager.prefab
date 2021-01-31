@@ -1259,7 +1259,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 41.199997}
+  m_AnchoredPosition: {x: 0, y: 51.7}
   m_SizeDelta: {x: 283.92, y: 53.0024}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1029688066
@@ -1290,7 +1290,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Defender of the 4 Relics
+  m_text: Defender of the Relics
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3023f21377afd404aa087ea427f8f6a2, type: 2}
   m_sharedMaterial: {fileID: -6144801613751014625, guid: 3023f21377afd404aa087ea427f8f6a2, type: 2}
@@ -5074,7 +5074,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1708059567987883876, guid: b3c775e3eb917544a9cade605266cc1d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.4
+      value: 25.399998
       objectReference: {fileID: 0}
     - target: {fileID: 1708059567987883876, guid: b3c775e3eb917544a9cade605266cc1d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
