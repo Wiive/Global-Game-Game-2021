@@ -395,6 +395,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2022564708}
+    - target: {fileID: 2445766897533716282, guid: a6511377aeeb61742b09a282b641c15e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2022564708}
+    - target: {fileID: 2905568628847844204, guid: a6511377aeeb61742b09a282b641c15e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3122356140069831416, guid: a6511377aeeb61742b09a282b641c15e, type: 3}
       propertyPath: m_Name
       value: IntroCanvas
@@ -487,6 +495,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1097366117}
+    - target: {fileID: 4386762760624167801, guid: a6511377aeeb61742b09a282b641c15e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 37.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6511377aeeb61742b09a282b641c15e, type: 3}
 --- !u!1001 &4716012827620326030

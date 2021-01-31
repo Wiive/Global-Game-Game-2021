@@ -1,18 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class IntroManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject[] banners;
+    [SerializeField] int currentBanner = 0;
+    int maxBanners = 6;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    [SerializeField] GameObject playButton;
+    [SerializeField] GameObject nextButton;
+
+    public void ActivateBanner()
+    {      
+        if (currentBanner < maxBanners)
+        {
+            banners[currentBanner].SetActive(true);
+            currentBanner++;
+        }
+        else
+        {
+            playButton.SetActive(true);
+            nextButton.SetActive(false);
+        }
     }
 }
