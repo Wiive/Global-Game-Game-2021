@@ -4,52 +4,52 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 3605815234284623358
-    second: IDLETreasurehunterC_0
+    second: EnemyC_Idle_Left_1
   - first:
       213: -5120577661636263999
-    second: IDLETreasurehunterC_1
+    second: EnemyC_Idle_Left_2
   - first:
       213: 1881251092187744838
-    second: IDLETreasurehunterC_2
+    second: EnemyC_Idle_Left_3
   - first:
       213: 8143080865179360846
-    second: IDLETreasurehunterC_3
+    second: EnemyC_Idle_Left_4
   - first:
       213: -1445620572197852029
-    second: IDLETreasurehunterC_4
+    second: EnemyC_Idle_Right_1
   - first:
       213: -7587310494124985226
-    second: IDLETreasurehunterC_5
+    second: EnemyC_Idle_Right_2
   - first:
       213: 8150800704248816649
-    second: IDLETreasurehunterC_6
+    second: EnemyC_Idle_Right_3
   - first:
       213: 174107575060569576
-    second: IDLETreasurehunterC_7
+    second: EnemyC_Idle_Right_4
   - first:
       213: -1944378608731902538
-    second: IDLETreasurehunterC_8
+    second: EnemyC_Idle_Down_1
   - first:
       213: 2717423742399567927
-    second: IDLETreasurehunterC_9
+    second: EnemyC_Idle_Down_2
   - first:
       213: 5336835794569382901
-    second: IDLETreasurehunterC_10
+    second: EnemyC_Idle_Down_3
   - first:
       213: -1275789503211659117
-    second: IDLETreasurehunterC_11
+    second: EnemyC_Idle_Down_4
   - first:
       213: -791243824234223815
-    second: IDLETreasurehunterC_12
+    second: EnemyC_Idle_Up_1
   - first:
       213: -1005979665881523300
-    second: IDLETreasurehunterC_13
+    second: EnemyC_Idle_Up_2
   - first:
       213: 4669626418932726009
-    second: IDLETreasurehunterC_14
+    second: EnemyC_Idle_Up_3
   - first:
       213: -5337206513446389564
-    second: IDLETreasurehunterC_15
+    second: EnemyC_Idle_Up_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -80,7 +80,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -135,11 +135,23 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IDLETreasurehunterC_0
+      name: EnemyC_Idle_Left_1
       rect:
         serializedVersion: 2
         x: 0
@@ -147,7 +159,7 @@ TextureImporter:
         width: 12
         height: 16
       alignment: 9
-      pivot: {x: 0.53175485, y: 0.0018322468}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,7 +172,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLETreasurehunterC_1
+      name: EnemyC_Idle_Left_2
       rect:
         serializedVersion: 2
         x: 15
@@ -168,7 +180,7 @@ TextureImporter:
         width: 12
         height: 16
       alignment: 9
-      pivot: {x: 0.5293123, y: 0.00000023841858}
+      pivot: {x: 0.5, y: 0.00000023841858}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,7 +193,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLETreasurehunterC_2
+      name: EnemyC_Idle_Left_3
       rect:
         serializedVersion: 2
         x: 30
@@ -189,7 +201,7 @@ TextureImporter:
         width: 12
         height: 15
       alignment: 9
-      pivot: {x: 0.53664047, y: 0.00000025431316}
+      pivot: {x: 0.5, y: 0.00000025431316}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -202,7 +214,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLETreasurehunterC_3
+      name: EnemyC_Idle_Left_4
       rect:
         serializedVersion: 2
         x: 45
@@ -210,7 +222,7 @@ TextureImporter:
         width: 12
         height: 16
       alignment: 9
-      pivot: {x: 0.5390832, y: 0.00000023841858}
+      pivot: {x: 0.5, y: 0.00000023841858}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -223,7 +235,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLETreasurehunterC_4
+      name: EnemyC_Idle_Right_1
       rect:
         serializedVersion: 2
         x: 2
@@ -231,7 +243,7 @@ TextureImporter:
         width: 12
         height: 16
       alignment: 9
-      pivot: {x: 0.45847452, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,7 +256,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLETreasurehunterC_5
+      name: EnemyC_Idle_Right_2
       rect:
         serializedVersion: 2
         x: 17
@@ -252,7 +264,7 @@ TextureImporter:
         width: 12
         height: 16
       alignment: 9
-      pivot: {x: 0.46091715, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -265,7 +277,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLETreasurehunterC_6
+      name: EnemyC_Idle_Right_3
       rect:
         serializedVersion: 2
         x: 32
@@ -273,7 +285,7 @@ TextureImporter:
         width: 12
         height: 15
       alignment: 9
-      pivot: {x: 0.45847479, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,7 +298,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLETreasurehunterC_7
+      name: EnemyC_Idle_Right_4
       rect:
         serializedVersion: 2
         x: 47
@@ -294,7 +306,7 @@ TextureImporter:
         width: 12
         height: 16
       alignment: 9
-      pivot: {x: 0.45603213, y: 0.0018320084}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -307,7 +319,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLETreasurehunterC_8
+      name: EnemyC_Idle_Down_1
       rect:
         serializedVersion: 2
         x: 2
@@ -315,7 +327,7 @@ TextureImporter:
         width: 10
         height: 16
       alignment: 9
-      pivot: {x: 0.4501694, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -328,7 +340,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLETreasurehunterC_9
+      name: EnemyC_Idle_Down_2
       rect:
         serializedVersion: 2
         x: 17
@@ -336,7 +348,7 @@ TextureImporter:
         width: 10
         height: 15
       alignment: 9
-      pivot: {x: 0.45016956, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -349,7 +361,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLETreasurehunterC_10
+      name: EnemyC_Idle_Down_3
       rect:
         serializedVersion: 2
         x: 32
@@ -357,7 +369,7 @@ TextureImporter:
         width: 10
         height: 15
       alignment: 9
-      pivot: {x: 0.45310098, y: 0.0019541422}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -370,7 +382,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLETreasurehunterC_11
+      name: EnemyC_Idle_Down_4
       rect:
         serializedVersion: 2
         x: 47
@@ -378,7 +390,7 @@ TextureImporter:
         width: 10
         height: 16
       alignment: 9
-      pivot: {x: 0.45016974, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -391,7 +403,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLETreasurehunterC_12
+      name: EnemyC_Idle_Up_1
       rect:
         serializedVersion: 2
         x: 2
@@ -412,7 +424,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLETreasurehunterC_13
+      name: EnemyC_Idle_Up_2
       rect:
         serializedVersion: 2
         x: 17
@@ -433,7 +445,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLETreasurehunterC_14
+      name: EnemyC_Idle_Up_3
       rect:
         serializedVersion: 2
         x: 32
@@ -454,7 +466,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLETreasurehunterC_15
+      name: EnemyC_Idle_Up_4
       rect:
         serializedVersion: 2
         x: 47
