@@ -8,6 +8,7 @@ public class Relic : MonoBehaviour
 
     SpriteRenderer spriteRenderer;
     [SerializeField] MazeNode spawnPoint;
+    private Transform originalParent;
     public MazeNode SpawnPoint
     {
         get { return spawnPoint; }
@@ -23,10 +24,10 @@ public class Relic : MonoBehaviour
     [SerializeField] int scoreValue = 1;
 
     float currentTime;
-
-
+    
     private void Awake()
     {
+        originalParent = transform.parent;
         startPosition = transform.position;
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         boxCollider2D = GetComponent<BoxCollider2D>();
@@ -56,9 +57,12 @@ public class Relic : MonoBehaviour
 
     public void ReturnToStartPosition()
     {
+        transform.parent = originalParent;
         transform.position = spawnPoint.transform.position;
         carrier = null;
         spawnPoint.hasRelic = true;
+        spriteRenderer.sprite = data.sprite;
+        spriteRenderer.sortingOrder = -1;
         spriteRenderer.enabled = true;
         boxCollider2D.enabled = true;
         isPickedUp = false;
@@ -73,8 +77,11 @@ public class Relic : MonoBehaviour
 
     public void GetPickedUp(Enemy carrier)
     {
+        transform.parent = carrier.transform;
         boxCollider2D.enabled = false;
-        spriteRenderer.enabled = false;
+        spriteRenderer.sprite = data.relicIcon;
+        spriteRenderer.sortingOrder = 100;
+        // spriteRenderer.enabled = false;
         this.carrier = carrier;
         isPickedUp = true;
     }
