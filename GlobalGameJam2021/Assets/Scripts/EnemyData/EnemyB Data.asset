@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: EnemyB Data
   m_EditorClassIdentifier: 
   runtimeAnimatorController: {fileID: 9100000, guid: 089ac03bbb5dd4b4391d33ac100c0e51, type: 2}
+  currentSpriteSheet: 1

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : Character
 {
-    [SerializeField] private bool moveConstant = false;
+
     Dictionary<Vector2Int, MazeNode> grid = new Dictionary<Vector2Int, MazeNode>();
     PlayerSound playerSound;
 

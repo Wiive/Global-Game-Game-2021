@@ -26,11 +26,18 @@ public class RelicPointerController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         defultArrowSprite = arrow.sprite;
+        SetRelicPointerVisable(true);
     }
 
     private void Update()
     {
-        if(target == null) return;
+        if (GameStateManager.instance.CurrentGameState == GameStateManager.GameState.GameOver)
+        {
+            SetRelicPointerVisable(false);
+            return;
+        }
+
+        if (target == null) return;
 
         if(isActive == true && !IsRelicVisibleOnScreen())
         {

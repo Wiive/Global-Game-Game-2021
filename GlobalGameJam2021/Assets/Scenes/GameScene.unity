@@ -134,6 +134,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6134080d5118d74f85c3fa705b1d5d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &167308048 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1124760188, guid: de3a95981d5e69f4282317a328ded3df, type: 3}
+  m_PrefabInstance: {fileID: 1930151153}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &167308053 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 3140091228607167565, guid: de3a95981d5e69f4282317a328ded3df, type: 3}
+  m_PrefabInstance: {fileID: 1930151153}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &167308054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167308048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fcb9411b069e984d8110fe6401761da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 167308053}
+  timeBeforeFade: 2
+  fadeDuration: 2
 --- !u!1001 &209684816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -401,6 +426,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b451883f9b52af3408c47d56506b6852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &880692865 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7845299266705662327, guid: de3a95981d5e69f4282317a328ded3df, type: 3}
+  m_PrefabInstance: {fileID: 1930151153}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &880692869
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880692865}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dca9d3869a7cea74bb1879390ed48864, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &883452185 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6441904637537722431, guid: b1d0a4b14aae151478ab994db333a954, type: 3}
@@ -7347,10 +7396,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 50.9
       objectReference: {fileID: 0}
+    - target: {fileID: 1124760188, guid: de3a95981d5e69f4282317a328ded3df, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1124760191, guid: de3a95981d5e69f4282317a328ded3df, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 913910453}
+    - target: {fileID: 1124760191, guid: de3a95981d5e69f4282317a328ded3df, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 1257249150, guid: de3a95981d5e69f4282317a328ded3df, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
