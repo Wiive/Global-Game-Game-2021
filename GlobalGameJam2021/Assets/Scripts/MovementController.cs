@@ -47,4 +47,9 @@ public class MovementController : MonoBehaviour
         targetPosition = (Vector2)transform.position + direction * TileSize;
         isMoving = true;
     }
+    public void SetEnemyTargetPosition(Vector2 destination)
+    {
+        targetPosition = destination;
+        isMoving = true;
+    }
 }
