@@ -32,7 +32,6 @@ public class Optimizer : MonoBehaviour
         }
     }
     
-    // Update is called once per frame
     void Update()
     {
         if (timer >= timeStep)
@@ -41,7 +40,7 @@ public class Optimizer : MonoBehaviour
             {
                 foreach (var shadow in wallShadow)
                 {
-                    //shadow.castsShadows = IsInsideBorder(shadow.transform.position);
+                    shadow.castsShadows = IsInsideBorder(shadow.transform.position, shadow.name);
                 }
             }
 
