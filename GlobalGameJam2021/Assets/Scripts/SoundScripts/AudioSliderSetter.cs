@@ -10,8 +10,8 @@ public class AudioSliderSetter : MonoBehaviour
     public Slider musicSlider;
     private void OnEnable()
     {
-        soundSlider.value = PlayerPrefs.GetFloat("SoundVolume");
-        musicSlider.value = PlayerPrefs.GetFloat("MusicVolume");
+        soundSlider.value = PlayerPrefs.GetFloat("SoundVolume", 0.7f);
+        musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 0.7f);
 
     }
 
