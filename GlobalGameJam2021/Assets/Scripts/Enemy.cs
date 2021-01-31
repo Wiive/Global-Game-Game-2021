@@ -113,6 +113,12 @@ public class Enemy : Character
     
     protected override void UpdateAnimations()
     {
+        if (GameStateManager.instance.CurrentGameState == GameStateManager.GameState.GameOver)
+        {
+            animator.SetBool("Win", true);
+            return;
+        }
+        
         if (direction != Vector2.zero)
         {
             animator.SetFloat("DirectionX", faceDirection.x);

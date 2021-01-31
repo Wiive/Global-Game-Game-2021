@@ -35,8 +35,8 @@ public class Character : MonoBehaviour
     }
     
     protected virtual void Update()
-    {
-            UpdateAnimations();
+    { 
+        UpdateAnimations();
     }
     
     protected virtual void FixedUpdate()
