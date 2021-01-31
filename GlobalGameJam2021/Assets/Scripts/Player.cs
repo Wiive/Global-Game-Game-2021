@@ -35,7 +35,37 @@ public class Player : Character
     private void ReadInput()
     {
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        if ((input.x != 0 && input.y == 0 || input.x == 0 && input.y != 0) && input != Vector2.zero)
+
+        if(input != Vector2.zero)
+        {
+            float xInput = Mathf.Abs(input.x);
+            float yInput = Mathf.Abs(input.y);
+
+            if(xInput > yInput)
+            {
+                if(input.x > 0)
+                {
+                    input = new Vector2(1, 0);
+                }
+                else
+                {
+                    input = new Vector2(-1, 0);
+                }
+            }
+            else
+            {
+                if(input.y > 0)
+                {
+                    input = new Vector2(0, 1);
+                }   
+                else
+                {
+                    input = new Vector2(0, -1);
+                }
+            }
+        }
+
+        if (input != Vector2.zero)
         {
             nextDirection = input;
         }
