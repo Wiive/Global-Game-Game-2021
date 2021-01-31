@@ -45,6 +45,7 @@ public class Enemy : Character
         base.Start();
         baseMaterial = spriteRenderer.material;
         direction = Vector2.down;
+        faceDirection = direction;
     }
 
     protected override void Update()
@@ -57,7 +58,7 @@ public class Enemy : Character
             
             if (fade <= 0)
             {
-                if(!respawning)
+                if (!respawning)
                 {
                     respawning = true;
                     StartCoroutine(HandleRespawn());
@@ -79,9 +80,9 @@ public class Enemy : Character
                 gettingNewPath = true;
                 StartCoroutine(HandleNewPath());
             }
+            
             UpdateFlashlightDirection();
         }
-     
     }
 
     protected override void GetAllComponents()
@@ -116,6 +117,7 @@ public class Enemy : Character
             animator.SetFloat("DirectionX", faceDirection.x);
             animator.SetFloat("DirectionY", faceDirection.y);
         }
+        
         animator.SetBool("IsMoving", moveController.IsMoving);
     }
 
@@ -138,7 +140,7 @@ public class Enemy : Character
     {
         GameManager.instance.AddToScore(100);
         flashlight.TurnOfLight();
-        stolenRelic.ReturnToStartPosition();
+        stolenRelic?.ReturnToStartPosition();
         stolenRelic = null;
         base.GotKilled();
         spriteRenderer.material = dissolveMaterial;
@@ -147,7 +149,7 @@ public class Enemy : Character
     
     private void UpdateFlashlightDirection()
     {
-        flashlight.UpdateDirection(direction);
+        flashlight.UpdateDirection(direction, targetDirection);
     }
     
     protected override void UpdateTimers()
@@ -171,14 +173,10 @@ public class Enemy : Character
 
         CurrentPos = path[pathIndexPosition].GridPos;
 
-        Vector2 newDirection = faceDirection;
-
         targetDirection = path[pathIndexPosition + 1].GridPos - CurrentPos;
         
-        if (direction != targetDirection )
-        {
+        if (direction != targetDirection)
             StartCoroutine(TurnCharacter());
-        }
         else
         {
             direction = path[pathIndexPosition + 1].GridPos - CurrentPos;
@@ -200,7 +198,7 @@ public class Enemy : Character
 
         float targetAngle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
 
-        Debug.Log($"{name}: TURN - startDiff: {startDiff} - dir: {direction} - targetDir: {targetDirection}");
+        // Debug.Log($"{name}: TURN - startDiff: {startDiff} - dir: {direction} - targetDir: {targetDirection}");
 
         while (turning)
         {
@@ -211,7 +209,7 @@ public class Enemy : Character
             float currentAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             float newAngle = Mathf.Lerp(currentAngle, targetAngle, turnSpeed * Time.deltaTime);
 
-            direction = new Vector2(Mathf.Cos(newAngle * Mathf.Deg2Rad), Mathf.Sin(newAngle * Mathf.Deg2Rad));
+            direction = new Vector2(Mathf.Cos(newAngle * Mathf.Deg2Rad), Mathf.Sin(newAngle * Mathf.Deg2Rad)).normalized;
             faceDirection = direction;
             
             currentAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -230,7 +228,7 @@ public class Enemy : Character
                 moveController.SetTargetPosition(direction);
                 pathIndexPosition++;
                 
-                Debug.Log($"{name}[{counter}] diff: {angleDiff} - Is Done Turning!");
+                // Debug.Log($"{name}[{counter}] diff: {angleDiff} - Is Done Turning!");
                 
                 break;
             }
@@ -253,11 +251,11 @@ public class Enemy : Character
         // float currentAngle = Vector2.Angle(direction, Vector2.up);
         // Debug.Log($"{name} currentAngle: {currentAngle}");
         
-        yield return new WaitForSeconds(WaitTime/2);
-        flashlight.EnemyStopped();
-        yield return new WaitForSeconds(WaitTime/2);
+        // yield return new WaitForSeconds(WaitTime/2);
+        // flashlight.EnemyStopped();
+        // yield return new WaitForSeconds(WaitTime/2);
         GetNewPath();
-        // yield return new WaitForSeconds(WaitTime);
+        yield return new WaitForSeconds(WaitTime);
         gettingNewPath = false;
     }
 
