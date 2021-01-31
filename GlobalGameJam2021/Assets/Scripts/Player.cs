@@ -8,6 +8,8 @@ public class Player : Character
     Dictionary<Vector2Int, MazeNode> grid = new Dictionary<Vector2Int, MazeNode>();
     PlayerSound playerSound;
 
+    [SerializeField] Vector2 nextDirection = new Vector2(0, 0);
+
     protected override void Awake()
     {
         base.Awake();
@@ -32,45 +34,36 @@ public class Player : Character
 
     private void ReadInput()
     {
-        // TODO: REMOVE LATER (DEBUG ONLY)
-        DebugInput();
-        if (moveController.IsMoving) return;
-
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        if (moveConstant)
+        if ((input.x != 0 && input.y == 0 || input.x == 0 && input.y != 0) && input != Vector2.zero)
         {
-            if ((input.x != 0 && input.y == 0 || input.x == 0 && input.y != 0) && input != Vector2.zero)
-                direction = input;
-        }
-        else
-        {
-            if (input.x != 0f && input.y != 0f)
-                direction = Vector2.zero;
-            else
-                direction = input;
+            nextDirection = input;
         }
 
-        if (!moveController.IsMoving && direction != Vector2.zero && IsValidInput())
+        if (!moveController.IsMoving && nextDirection != Vector2.zero && IsValidInput(nextDirection))
+        {
+            direction = new Vector2(nextDirection.x, nextDirection.y);
+            nextDirection = Vector2.zero;
+            animator.SetBool("IsMoving", true);
+            CurrentPos += new Vector2Int((int)direction.x, (int)direction.y);
+            moveController.SetTargetPosition(direction);
+        }
+        else if (!moveController.IsMoving && direction != Vector2.zero && IsValidInput(direction))
         {
             animator.SetBool("IsMoving", true);
             CurrentPos += new Vector2Int((int)direction.x, (int)direction.y);
             moveController.SetTargetPosition(direction);
         }
-        else
+        else if (!moveController.IsMoving)
             animator.SetBool("IsMoving", false);
     }
     
-    bool IsValidInput()
+    bool IsValidInput(Vector2 wantedDirection)
     {
-        Vector2Int inputTry = new Vector2Int((int)direction.x, (int)direction.y) + CurrentPos;
+        Vector2Int inputTry = new Vector2Int((int)wantedDirection.x, (int)wantedDirection.y) + CurrentPos;
         if (grid.ContainsKey(inputTry) && !grid[inputTry].isWall )
             return true;
         return false;
-    }
-
-    protected override void Pickup(Relic relic)
-    {
-        // Debug.Log($"{name} Pickups Relic!");
     }
    
     protected override void Attack(Character character)
@@ -99,9 +92,7 @@ public class Player : Character
         {
             animator.SetFloat("DirectionX", direction.x);
             animator.SetFloat("DirectionY", direction.y);
-        }
-        
-        // animator.SetBool("IsMoving", moveController.IsMoving);
+        }       
     }
 
     protected override void UpdateTimers()
@@ -124,12 +115,5 @@ public class Player : Character
             Attack(other.GetComponent<Enemy>());
             playerSound.PlayAttackSound();
         }
-    }
-
-    // TODO REMOVE LATER (DEBUG ONLY)
-    private void DebugInput()
-    {
-        if (Input.GetKeyDown(KeyCode.C))
-            moveConstant = !moveConstant;
     }
 }
