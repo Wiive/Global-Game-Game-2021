@@ -46,7 +46,7 @@ public class Relic : MonoBehaviour
             currentTime += Time.deltaTime;
             if (currentTime > scoreIncreaseTimer)
             {
-                Debug.Log("increasing score");
+                // Debug.Log("increasing score");
                 currentTime = 0;
                 GameManager.instance.AddToScore(scoreValue);
             }
