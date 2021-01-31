@@ -13,6 +13,7 @@ public class MenuSoundController : MonoBehaviour
     public Slider musicSlider;
     public TextMeshProUGUI soundText;
     public TextMeshProUGUI musicText;
+    public AudioClip UiClick;
 
     void Start()
     {
@@ -45,6 +46,12 @@ public class MenuSoundController : MonoBehaviour
         float volume = Mathf.Log10(soundSlider.value) * 20;
         mixer.SetFloat("SoundVolume", volume);
     }
+
+    public void PlayUiClick()
+    {
+        audioSource.PlayOneShot(UiClick);
+    }
+
 
     public void UpdateText(TextMeshProUGUI textMesh, string updatedText)
     {
