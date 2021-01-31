@@ -41,7 +41,7 @@ public class Relic : MonoBehaviour
             ReturnToStartPosition();
         }
 
-        if(!isPickedUp)
+        if(!isPickedUp && GameStateManager.instance.CurrentGameState == GameStateManager.GameState.GameLoop)
         {
             currentTime += Time.deltaTime;
             if (currentTime > scoreIncreaseTimer)
@@ -50,7 +50,6 @@ public class Relic : MonoBehaviour
                 currentTime = 0;
                 GameManager.instance.AddToScore(scoreValue);
             }
-
         }
 
     }
