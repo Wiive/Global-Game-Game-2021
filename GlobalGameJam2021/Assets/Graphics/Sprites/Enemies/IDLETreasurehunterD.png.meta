@@ -1,0 +1,492 @@
+fileFormatVersion: 2
+guid: 236dab939dea51a49994f80b03e8934e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2831744940869131614
+    second: IDLETreasurehunterD_0
+  - first:
+      213: 6356895863106026322
+    second: IDLETreasurehunterD_1
+  - first:
+      213: 6969718970453191085
+    second: IDLETreasurehunterD_2
+  - first:
+      213: 8110662324001621943
+    second: IDLETreasurehunterD_3
+  - first:
+      213: -555153465431451801
+    second: IDLETreasurehunterD_4
+  - first:
+      213: 8091182773912182528
+    second: IDLETreasurehunterD_5
+  - first:
+      213: -4669557490930020669
+    second: IDLETreasurehunterD_6
+  - first:
+      213: -2392640068756577395
+    second: IDLETreasurehunterD_7
+  - first:
+      213: -8739503176294249722
+    second: IDLETreasurehunterD_8
+  - first:
+      213: 7015297061080724579
+    second: IDLETreasurehunterD_9
+  - first:
+      213: 5203760331967596015
+    second: IDLETreasurehunterD_10
+  - first:
+      213: 2896082801330044517
+    second: IDLETreasurehunterD_11
+  - first:
+      213: 226384386849114402
+    second: IDLETreasurehunterD_12
+  - first:
+      213: 446001501529728432
+    second: IDLETreasurehunterD_13
+  - first:
+      213: -2878840524923682160
+    second: IDLETreasurehunterD_14
+  - first:
+      213: -2843415942285886267
+    second: IDLETreasurehunterD_15
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: IDLETreasurehunterD_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 51
+        width: 14
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5352448, y: -0.00000023841858}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d930f35016c4720800000000000000
+      internalID: 2831744940869131614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLETreasurehunterD_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 51
+        width: 14
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5352448, y: -0.00000025431316}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25bb5927b1b383850800000000000000
+      internalID: 6356895863106026322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLETreasurehunterD_2
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 51
+        width: 14
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5370069, y: -0.0016448975}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da9e92af97a69b060800000000000000
+      internalID: 6969718970453191085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLETreasurehunterD_3
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 51
+        width: 14
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5370069, y: -0.00000023841858}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b7c24b596cde8070800000000000000
+      internalID: 8110662324001621943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLETreasurehunterD_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34
+        width: 14
+        height: 16
+      alignment: 9
+      pivot: {x: 0.45966223, y: -0.0016806126}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76791215dd2bb48f0800000000000000
+      internalID: -555153465431451801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLETreasurehunterD_5
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 34
+        width: 14
+        height: 15
+      alignment: 9
+      pivot: {x: 0.463504, y: 0.00000025431316}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00f9bcb2dd7a94070800000000000000
+      internalID: 8091182773912182528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLETreasurehunterD_6
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 34
+        width: 14
+        height: 15
+      alignment: 9
+      pivot: {x: 0.4596623, y: -0.0017926533}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ce0adec336623fb0800000000000000
+      internalID: -4669557490930020669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLETreasurehunterD_7
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 34
+        width: 14
+        height: 16
+      alignment: 9
+      pivot: {x: 0.46542495, y: 0.00000023841858}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83e562c882abced0800000000000000
+      internalID: -2392640068756577395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLETreasurehunterD_8
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 17
+        width: 10
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5410371, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60b459f3a2c07b680800000000000000
+      internalID: -8739503176294249722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLETreasurehunterD_9
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 17
+        width: 10
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5468996, y: -0.0018320084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 364fe8722875b5160800000000000000
+      internalID: 7015297061080724579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLETreasurehunterD_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 17
+        width: 10
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5468998, y: 0.0019541422}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe582338378773840800000000000000
+      internalID: 5203760331967596015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLETreasurehunterD_11
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 17
+        width: 10
+        height: 16
+      alignment: 9
+      pivot: {x: 0.55109483, y: -0.0016806126}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e3565b6f3f03820800000000000000
+      internalID: 2896082801330044517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLETreasurehunterD_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 0
+        width: 10
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5439683, y: 0.0018319143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22906d08667442300800000000000000
+      internalID: 226384386849114402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLETreasurehunterD_13
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 0
+        width: 10
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5498308, y: -0.0000001008914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b568fba004803600800000000000000
+      internalID: 446001501529728432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLETreasurehunterD_14
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 10
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5468998, y: -0.0000001008914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 092ccea9bcd4c08d0800000000000000
+      internalID: -2878840524923682160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLETreasurehunterD_15
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 0
+        width: 10
+        height: 16
+      alignment: 9
+      pivot: {x: 0.54983103, y: 0.0018319143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ccfd5bf3482a88d0800000000000000
+      internalID: -2843415942285886267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
