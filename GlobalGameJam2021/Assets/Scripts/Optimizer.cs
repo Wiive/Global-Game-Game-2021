@@ -1,9 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Timers;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
+using Debug = UnityEngine.Debug;
 
 public class Optimizer : MonoBehaviour
 {
@@ -39,7 +41,7 @@ public class Optimizer : MonoBehaviour
             {
                 foreach (var shadow in wallShadow)
                 {
-                    //shadow.castsShadows = CheckInsideBorder(shadow.transform.position);
+                    //shadow.castsShadows = IsInsideBorder(shadow.transform.position);
                 }
             }
 
@@ -47,18 +49,11 @@ public class Optimizer : MonoBehaviour
             {
                 foreach (var hunter in SpawnManager.instance.SpawnedHunters)
                 {
-                    bool result = CheckInsideBorder(hunter.CurrentPos, hunter.name);
-
                     Flashlight flashlight = hunter.GetComponentInChildren<Flashlight>();
-                
-                    if (result)
-                    {
-                        flashlight.light2D.color = Color.green; //enabled = true;
-                    }
-                    else
-                    {
-                        flashlight.light2D.color = Color.red; //enabled = false;
-                    }
+                    if (flashlight.light2D == null)
+                        continue;
+
+                    flashlight.light2D.enabled = IsInsideBorder(hunter.CurrentPos, hunter.name);
                 }
             }
             
@@ -68,35 +63,13 @@ public class Optimizer : MonoBehaviour
         timer += Time.deltaTime;
     }
 
-    private bool CheckInsideBorder(Vector2 position, string name)
+    private bool IsInsideBorder(Vector2 position, string name)
     {
-        //DECLARE OUTSIDE OF FUNCTION
-        //public float distanceBorderXOffset = 100;
-        //public float distanceBorderYOffset = 80;
+        position *= 16f;
         
-        bool checkX = true;
-        bool checkY = true;
-        
-        
-        float distanceX = Mathf.Abs( position.x - transform.position.x);
-        float distanceY = Mathf.Abs(position.y - transform.position.y);
-        
-        Debug.Log(name + " x:" + distanceX + " y:" + distanceY + " pos:" + position);
-
-        if (distanceX > distanceBorderXOffset)
-        {
-            checkX = false;
-        }
-        
-        if (distanceY > distanceBorderYOffset)
-        {
-            checkY = false;
-        }
-
-        if (!checkX || !checkY)
-        {
+        if (Mathf.Abs(position.x - transform.position.x) > 160 + distanceBorderXOffset ||
+            Mathf.Abs(position.y - transform.position.y) > 90 + distanceBorderYOffset)
             return false;
-        }
 
         return true;
     }
