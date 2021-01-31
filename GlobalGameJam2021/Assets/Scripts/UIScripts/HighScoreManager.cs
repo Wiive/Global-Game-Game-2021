@@ -19,19 +19,21 @@ public class HighScoreManager : MonoBehaviour
 
     private void Start()
     {
-        SetScore();
+        LoadScore();
     }
 
-    void SetScore()
+    void LoadScore()
     {
-        score1 = PlayerPrefs.GetInt("Score-1", 13000);
-        score2 = PlayerPrefs.GetInt("Score-2", 9000);
-        score3 = PlayerPrefs.GetInt("Score-3", 5000);
-        score4 = PlayerPrefs.GetInt("Score-4", 1500);
+        score1 = PlayerPrefs.GetInt("Score-1", 500);
+        score2 = PlayerPrefs.GetInt("Score-2", 400);
+        score3 = PlayerPrefs.GetInt("Score-3", 300);
+        score4 = PlayerPrefs.GetInt("Score-4", 200);
     }
 
     public void UpdateHighscoreUI()
     {
+        LoadScore();
+        Debug.Log("Trying to update Highscore UI");
         number1.text = score1.ToString();
         number2.text = score2.ToString();
         number3.text = score3.ToString();
@@ -42,6 +44,8 @@ public class HighScoreManager : MonoBehaviour
     {
         if(IsNewScoreHighScore())
         {
+            Debug.Log("Truing to set new hihscore");
+            Debug.Log(GameManager.instance.GetCurrentScore());
             valueList.Add(score1);
             valueList.Add(score2);
             valueList.Add(score3);
@@ -51,8 +55,10 @@ public class HighScoreManager : MonoBehaviour
             valueList.Sort();
 
             for (int i = 0; i < valueList.Count; i++)
-            {
-                PlayerPrefs.SetInt("score-" + (valueList.Count - i).ToString(), valueList[i]);
+            {              
+               Debug.Log(i);
+               Debug.Log(PlayerPrefs.GetInt("Score-" + i));
+               PlayerPrefs.SetInt("score-" + (valueList.Count - i), valueList[i]);
             }
         }
     }
@@ -61,6 +67,7 @@ public class HighScoreManager : MonoBehaviour
     {
         if (GameManager.instance.GetCurrentScore() >= PlayerPrefs.GetInt("Score-4"))
         {
+            Debug.Log("Gz new Hi-Score! " + GameManager.instance.GetCurrentScore() + " > " + PlayerPrefs.GetInt("Score-4"));
             return true;
         }      
         return false;

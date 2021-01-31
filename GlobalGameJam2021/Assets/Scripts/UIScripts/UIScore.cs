@@ -5,7 +5,7 @@ public class UIScore : MonoBehaviour
 {
     TMP_Text scoreText;
 
-    private void Start()
+    private void Awake()
     {
         scoreText = GetComponent<TMP_Text>();       
     }
@@ -21,7 +21,7 @@ public class UIScore : MonoBehaviour
     }
 
     private void UpdateScore(int score)
-    {      
+    {
         scoreText.text = "Score: " + score.ToString();
     }
 }
