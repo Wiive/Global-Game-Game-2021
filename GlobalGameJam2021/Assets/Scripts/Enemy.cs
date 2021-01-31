@@ -9,6 +9,7 @@ public class Enemy : Character
     [SerializeField] float WaitTime = 2f;    
     [SerializeField]int range = 4;
     private Vector2 faceDirection;
+    private Vector2 targetDirection;
     private Flashlight flashlight;
     [SerializeField] private EnemyData data;
 
@@ -27,6 +28,8 @@ public class Enemy : Character
     bool gettingNewPath = false;
     bool isCarryingRelic = false;
     bool respawning = false;
+    private bool turning = false;
+    [SerializeField] private float turnSpeed;
 
     [SerializeField] Relic stolenRelic = null;
 
@@ -41,6 +44,7 @@ public class Enemy : Character
     {
         base.Start();
         baseMaterial = spriteRenderer.material;
+        direction = Vector2.down;
     }
 
     protected override void Update()
@@ -109,8 +113,8 @@ public class Enemy : Character
     {
         if (direction != Vector2.zero)
         {
-            animator.SetFloat("DirectionX", direction.x);
-            animator.SetFloat("DirectionY", direction.y);
+            animator.SetFloat("DirectionX", faceDirection.x);
+            animator.SetFloat("DirectionY", faceDirection.y);
         }
         animator.SetBool("IsMoving", moveController.IsMoving);
     }
@@ -162,13 +166,77 @@ public class Enemy : Character
 
     private void MoveEnemyAlongPath()
     {
-        if (moveController.IsMoving)
+        if (moveController.IsMoving || turning)
             return;
 
         CurrentPos = path[pathIndexPosition].GridPos;
-        direction = path[pathIndexPosition + 1].GridPos - CurrentPos;
-        moveController.SetTargetPosition(direction);
-        pathIndexPosition++;
+
+        Vector2 newDirection = faceDirection;
+
+        targetDirection = path[pathIndexPosition + 1].GridPos - CurrentPos;
+        
+        if (direction != targetDirection )
+        {
+            StartCoroutine(TurnCharacter());
+        }
+        else
+        {
+            direction = path[pathIndexPosition + 1].GridPos - CurrentPos;
+            moveController.SetTargetPosition(direction);
+            pathIndexPosition++;
+        }
+    }
+
+    IEnumerator TurnCharacter()
+    {
+        turning = true;
+
+        int counter = 0;
+        
+        float startDiff = Mathf.Abs(Mathf.DeltaAngle(Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg,
+                                            Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg));
+
+        float turnSpeed = startDiff > 90 ? this.turnSpeed / 2f : this.turnSpeed;
+
+        float targetAngle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
+
+        Debug.Log($"{name}: TURN - startDiff: {startDiff} - dir: {direction} - targetDir: {targetDirection}");
+
+        while (turning)
+        {
+            counter++;
+            
+            // direction = Vector2.Lerp(direction, targetDirection, turnSpeed * Time.deltaTime);
+
+            float currentAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            float newAngle = Mathf.Lerp(currentAngle, targetAngle, turnSpeed * Time.deltaTime);
+
+            direction = new Vector2(Mathf.Cos(newAngle * Mathf.Deg2Rad), Mathf.Sin(newAngle * Mathf.Deg2Rad));
+            faceDirection = direction;
+            
+            currentAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+            float angleDiff = Mathf.Abs(Mathf.DeltaAngle(currentAngle, targetAngle));
+
+            // Debug.Log(  $"{name}[{counter}] - currentAngle: {currentAngle} - targetAngle: {targetAngle} - diff: {angleDiff} - newAngle: {newAngle}\n" +
+            //                     $"targetDirection: {targetDirection} - newDirection: {direction}");
+
+            if (angleDiff <= 2f)
+            {
+                turning = false;
+            
+                direction = targetDirection;
+                faceDirection = direction;
+                moveController.SetTargetPosition(direction);
+                pathIndexPosition++;
+                
+                Debug.Log($"{name}[{counter}] diff: {angleDiff} - Is Done Turning!");
+                
+                break;
+            }
+
+            yield return 0;
+        }
     }
 
     IEnumerator HandleNewPath()
@@ -181,11 +249,15 @@ public class Enemy : Character
             Debug.Log("I Enemy: " + name + " have now exited the labyrinth with a relic");
             Destroy(gameObject);
         }*/
+
+        // float currentAngle = Vector2.Angle(direction, Vector2.up);
+        // Debug.Log($"{name} currentAngle: {currentAngle}");
         
         yield return new WaitForSeconds(WaitTime/2);
         flashlight.EnemyStopped();
         yield return new WaitForSeconds(WaitTime/2);
         GetNewPath();
+        // yield return new WaitForSeconds(WaitTime);
         gettingNewPath = false;
     }
 

@@ -299,7 +299,10 @@ MonoBehaviour:
   WaitTime: 2
   range: 4
   data: {fileID: 0}
+  respawnTime: 10
+  spawnPoint: {fileID: 0}
   dissolveMaterial: {fileID: 2100000, guid: 919c27cd6a056d146a61bacf8261375a, type: 2}
+  turnSpeed: 4
   stolenRelic: {fileID: 0}
 --- !u!114 &8395075013845601892
 MonoBehaviour:
