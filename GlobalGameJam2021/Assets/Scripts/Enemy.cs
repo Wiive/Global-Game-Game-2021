@@ -125,7 +125,7 @@ public class Enemy : Character
     protected override void Pickup(Relic relic)
     {
         if (stolenRelic != null) return;
-        Debug.Log($"{name} Pickups Relic!");
+        // Debug.Log($"{name} Pickups Relic!");
         stolenRelic = relic;
         relic.GetPickedUp(this);
         enemySound.PlayPickUpSound();

@@ -70,7 +70,7 @@ public class Player : Character
 
     protected override void Pickup(Relic relic)
     {
-        Debug.Log($"{name} Pickups Relic!");
+        // Debug.Log($"{name} Pickups Relic!");
     }
    
     protected override void Attack(Character character)
