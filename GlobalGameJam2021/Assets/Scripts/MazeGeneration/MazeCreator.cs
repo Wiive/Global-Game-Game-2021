@@ -355,12 +355,6 @@ public class MazeCreator : MonoBehaviour
 		mazeModell[pos.x, pos.y].isPlayerSpawner = true;
 		mazeModell[pos.x, pos.y].SetNodeState();
 	}
-	
-	// this might not be needed.
-	private void SetExits()
-	{
-		// set a exit point on each side, depending on where the relics are.
-	}
 
 	private void SetEnemySpawn()
 	{
@@ -380,13 +374,38 @@ public class MazeCreator : MonoBehaviour
 		int random = 0;
         for (int i = 0; i < borders.Length; i++)
         {
-            for (int j = 0; j < spawnOnEachSide; j++)
+			List<MazeNode> spawnedOnSide = new List<MazeNode>();
+			float minDistance = (borders[i].Count / spawnOnEachSide) * tileSize;
+			int sideBorders = borders[i].Count;
+			for (int j = 0; j < spawnOnEachSide; j++)
             {
-                random = Random.Range(0, borders[i].Count);
-                borders[i][random].isEnemySpawner = true;
-                borders[i][random].SetNodeState();
+				int indexTry = 0;
+				do
+				{
+					indexTry++;
+					random = Random.Range(0, sideBorders);
+				}
+				while (indexTry < 5 && CheckForDistance(spawnedOnSide,borders[i][random],minDistance));
+				spawnedOnSide.Add(borders[i][random]);
+				borders[i][random].isEnemySpawner = true;
+				borders[i][random].SetNodeState();
+			}
+        }
+    }
+
+	private bool CheckForDistance(List<MazeNode> placedSpawns, MazeNode newSpawn, float minDistance)
+    {
+		if (placedSpawns.Count < 1)
+			return false;
+        foreach (var spawn in placedSpawns)
+        {
+			float distance = Vector2.Distance(spawn.transform.position, newSpawn.transform.position);
+			if (distance < minDistance)
+            {
+				return true;
             }
         }
+		return false;
     }
 }
 

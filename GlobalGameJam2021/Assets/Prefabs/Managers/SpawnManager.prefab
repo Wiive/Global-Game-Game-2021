@@ -48,15 +48,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  huntSpawners: []
-  playerSpawners: []
-  relicSpawners: []
   hunterInitialSpawn: 4
   maxHunters: 10
   timeInbetweenSpawns: 2
-  currentlySpawned: 0
-  currentTime: 0
-  spawnedHunters: []
+  minimumSpawnDistanceFromPlayer: 64
   enemyPrefab: {fileID: 3877720369482156754, guid: e17faf266f74748adb15defbbdd729b9, type: 3}
   enemiesData:
   - {fileID: 11400000, guid: b1896836610b84716a355774032c1387, type: 2}

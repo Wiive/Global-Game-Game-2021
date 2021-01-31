@@ -13,6 +13,7 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] int hunterInitialSpawn = 4;
     [SerializeField] int maxHunters = 10;
     [SerializeField] float timeInbetweenSpawns = 2;
+    [SerializeField] int minimumSpawnDistanceFromPlayer = 10;
 
     int currentlySpawned = 0;
     float currentTime = 0;
@@ -115,33 +116,36 @@ public class SpawnManager : MonoBehaviour
     private MazeNode GetFurthestSpawnPoint()
     {
         Vector2 playerPosition = playerObject.transform.position;
-        
-        float furthestDistance = 0;
         MazeNode returnValue = null;
-        
+        List<MazeNode> validSpawnPoints = new List<MazeNode>();
         foreach (MazeNode spawnPoint in huntSpawners)
         {
             float distance = Vector2.Distance(playerPosition, spawnPoint.transform.position);
 
-            if (distance > furthestDistance)
+            if (distance > minimumSpawnDistanceFromPlayer)
             {
-                returnValue = spawnPoint;
-                furthestDistance = distance;
+                validSpawnPoints.Add(spawnPoint);
             }
         }
 
-        if(returnValue == null)
+        int index;
+
+        if(validSpawnPoints.Count > 0)
         {
-            int index = Random.Range(0, huntSpawners.Count);
+            index = Random.Range(0, validSpawnPoints.Count);
+            returnValue = validSpawnPoints[index];
+        }
+        else
+        {
+            index = Random.Range(0, huntSpawners.Count);
             returnValue = huntSpawners[index];
         }
-        
+
         return returnValue;
     }
     
     public void SpawnPlayer()
     {
-        //int prefabIndex = Random.Range(0, playerPrefab.Length);
         Player player = Instantiate(playerPrefab, playerSpawners[0].parent.transform.position, transform.rotation, transform.parent);
         player.TileSize = playerSpawners[0].GetComponentInParent<MazeNode>().TileSize;
         player.CurrentPos = playerSpawners[0].GetComponentInParent<MazeNode>().GridPos;
