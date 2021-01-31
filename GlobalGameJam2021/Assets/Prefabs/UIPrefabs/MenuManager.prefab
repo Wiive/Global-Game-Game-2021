@@ -3530,7 +3530,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Defender of the 4 Relics
+  m_text: Defender of the Relics
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3023f21377afd404aa087ea427f8f6a2, type: 2}
   m_sharedMaterial: {fileID: -6144801613751014625, guid: 3023f21377afd404aa087ea427f8f6a2, type: 2}
@@ -4117,7 +4117,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 217985995051319153, guid: b3c775e3eb917544a9cade605266cc1d, type: 3}
       propertyPath: m_Name
-      value: ExitButton
+      value: MenuButton
       objectReference: {fileID: 0}
     - target: {fileID: 767241780023108391, guid: b3c775e3eb917544a9cade605266cc1d, type: 3}
       propertyPath: m_Interactable
@@ -4198,7 +4198,7 @@ PrefabInstance:
     - target: {fileID: 767241780023108391, guid: b3c775e3eb917544a9cade605266cc1d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2568491145113677386}
     - target: {fileID: 767241780023108391, guid: b3c775e3eb917544a9cade605266cc1d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -4213,7 +4213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 767241780023108391, guid: b3c775e3eb917544a9cade605266cc1d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ExitGame
+      value: ShowMainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 767241780023108391, guid: b3c775e3eb917544a9cade605266cc1d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -4221,7 +4221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 767241780023108391, guid: b3c775e3eb917544a9cade605266cc1d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LevelManager, Assembly-CSharp
+      value: MenuManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 767241780023108391, guid: b3c775e3eb917544a9cade605266cc1d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -4325,11 +4325,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2058752230906500601, guid: b3c775e3eb917544a9cade605266cc1d, type: 3}
       propertyPath: m_text
-      value: Exit Game
+      value: Main Menu
       objectReference: {fileID: 0}
     - target: {fileID: 4000434013735708654, guid: b3c775e3eb917544a9cade605266cc1d, type: 3}
       propertyPath: m_text
-      value: Exit Game
+      value: Main Menu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3c775e3eb917544a9cade605266cc1d, type: 3}
