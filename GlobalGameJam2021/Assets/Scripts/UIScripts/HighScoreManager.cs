@@ -33,7 +33,6 @@ public class HighScoreManager : MonoBehaviour
     public void UpdateHighscoreUI()
     {
         LoadScore();
-        Debug.Log("Trying to update Highscore UI");
         number1.text = score1.ToString();
         number2.text = score2.ToString();
         number3.text = score3.ToString();
@@ -44,8 +43,6 @@ public class HighScoreManager : MonoBehaviour
     {
         if(IsNewScoreHighScore())
         {
-            Debug.Log("Truing to set new hihscore");
-            Debug.Log(GameManager.instance.GetCurrentScore());
             valueList.Add(score1);
             valueList.Add(score2);
             valueList.Add(score3);
