@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Intensity: 1.2017361
   m_LightVolumeOpacity: 0.56
   m_ApplyToSortingLayers: bb642e0e8d54600bc58533a5
-  m_LightCookieSprite: {fileID: 21300000, guid: 5ff2d01d570170e459bfc52b5dff5202, type: 3}
+  m_LightCookieSprite: {fileID: 21300000, guid: daa83a8d597084ffc998882effedcc90, type: 3}
   m_UseNormalMap: 0
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
