@@ -56,11 +56,7 @@ public class HighScoreManager : MonoBehaviour
 
             for (int i = 0; i < valueList.Count; i++)
             {
-               Debug.Log(i);
-               Debug.Log("score-" + (valueList.Count - i));
-               Debug.Log(PlayerPrefs.GetInt("score-" + i));
-               PlayerPrefs.SetInt("score-" + (valueList.Count - i), valueList[i]);
-               Debug.Log(PlayerPrefs.GetInt("score-" + (valueList.Count - i)));
+               PlayerPrefs.SetInt("score-" + (valueList.Count - i), valueList[i]);      
             }
         }
     }
@@ -69,7 +65,7 @@ public class HighScoreManager : MonoBehaviour
     {
         if (GameManager.instance.GetCurrentScore() >= PlayerPrefs.GetInt("score-4"))
         {
-            Debug.Log("Gz new Hi-Score! " + GameManager.instance.GetCurrentScore() + " > " + PlayerPrefs.GetInt("score-4"));
+            //Debug.Log("Gz new Hi-Score! " + GameManager.instance.GetCurrentScore() + " > " + PlayerPrefs.GetInt("score-4"));
             return true;
         }      
         return false;
