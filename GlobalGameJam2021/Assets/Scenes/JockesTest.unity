@@ -751,6 +751,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 25900908904625590, guid: 227e57179ce7dd74b81372dafc973a72, type: 3}
+      propertyPath: hunterInitialSpawn
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 25900908904625590, guid: 227e57179ce7dd74b81372dafc973a72, type: 3}
       propertyPath: relicsData.Array.size
       value: 4
       objectReference: {fileID: 0}
