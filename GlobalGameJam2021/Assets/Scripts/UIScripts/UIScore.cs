@@ -33,6 +33,10 @@ public class UIScore : MonoBehaviour
 	private void Update()
 	{
 		if (pointAnimTimer > 1) return;
+
+		if (GameStateManager.instance.CurrentGameState == GameStateManager.GameState.IngameMenu)
+			pointAnimTimer = 1;
+
 		pointAnimTimer += Time.deltaTime;
 		float prcComplete = pointAnimTimer / scoreTransitionTime;
 		displayedScore = (int)Mathf.Lerp(savedDisplayedScore, currentScore, prcComplete);
