@@ -174,6 +174,8 @@ public class MazeCreator : MonoBehaviour
 		SetPlayerSpawn();
 		SetEnemySpawn();
 		
+		Optimizer.instance.CollectWalls();
+		
 		tilemapDrawer.PaintMap();
 	}
 	private MazeNode GetRandomNeighbour(MazeNode frontier)

@@ -6,18 +6,20 @@ public class SpawnManager : MonoBehaviour
 {
     public static SpawnManager instance;
     [SerializeField] List<RelicPointerController> relicPointers = new List<RelicPointerController>();
-    [SerializeField] private List<MazeNode> huntSpawners = new List<MazeNode>();
-    [SerializeField] private List<Transform> playerSpawners = new List<Transform>();
-    [SerializeField] private List<Transform> relicSpawners = new List<Transform>();
+    private List<MazeNode> huntSpawners = new List<MazeNode>();
+    private List<Transform> playerSpawners = new List<Transform>();
+    private List<Transform> relicSpawners = new List<Transform>();
 
     [SerializeField] int hunterInitialSpawn = 4;
     [SerializeField] int maxHunters = 10;
     [SerializeField] float timeInbetweenSpawns = 2;
 
-    [SerializeField] int currentlySpawned = 0;
-    [SerializeField] float currentTime = 0;
+    int currentlySpawned = 0;
+    float currentTime = 0;
 
-    [SerializeField] List<Enemy> spawnedHunters = new List<Enemy>();
+    List<Enemy> spawnedHunters = new List<Enemy>();
+
+    public List<Enemy> SpawnedHunters => spawnedHunters;
 
     public Enemy enemyPrefab;
     public EnemyData[] enemiesData;
