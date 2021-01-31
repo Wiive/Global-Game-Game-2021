@@ -103,33 +103,25 @@ public class SpawnManager : MonoBehaviour
         return huntSpawners[0].GetComponentInParent<MazeNode>();
     }
 
-    private Vector2 GetFurthestSpawnPoint()
+    private Vector2 GetFurthestSpawnPoint(Player player)
     {
-        playerObject = GameObject.FindGameObjectWithTag("Player");
+        Vector2 playerPosition = player.transform.position;
         
-        Vector2 playerPosition = playerObject.transform.position;
-
         float furthestDistance = 0;
         Vector2 returnValue = Vector2.zero;
-
-        int counter = 0;
         
         foreach (Transform spawnPoint in huntSpawners)
         {
-            float distance = Vector2.Distance(playerPosition, new Vector2(spawnPoint.position.x, spawnPoint.position.y));
+            float distance = Vector2.Distance(playerPosition, spawnPoint.position);
 
             if (distance > furthestDistance)
             {
                 returnValue = spawnPoint.position;
                 furthestDistance = distance;
             }
-
-            counter++;
         }
         
-        Debug.Log("Counter: " + counter);
-        
-        return Vector2.zero;
+        return returnValue;
     }
     
     public void SpawnPlayer()
