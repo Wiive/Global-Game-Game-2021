@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EmitDust : MonoBehaviour
 {
-    public ParticleSystem _particleSystem;
+    [SerializeField] private ParticleSystem _particleSystem;
 
     public void EmitDustCLoud()
     {
