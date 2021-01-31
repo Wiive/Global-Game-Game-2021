@@ -13,7 +13,8 @@ public class MenuManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Escape) && GameStateManager.instance.CurrentGameState == GameStateManager.GameState.GameLoop 
+            || Input.GetKeyDown(KeyCode.P) && GameStateManager.instance.CurrentGameState == GameStateManager.GameState.GameLoop)
         {
             ShowPauseMenus();
         }       
@@ -54,7 +55,7 @@ public class MenuManager : MonoBehaviour
     }
 
     public void ShowPauseMenus()
-    {
+    {            
         mainMenu.SetActive(false);
         audioMenu.SetActive(false);
         gameOverMenu.SetActive(false);
