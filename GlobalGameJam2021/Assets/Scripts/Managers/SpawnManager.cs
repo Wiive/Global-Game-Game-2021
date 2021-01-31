@@ -22,6 +22,7 @@ public class SpawnManager : MonoBehaviour
     public Enemy enemyPrefab;
     public EnemyData[] enemiesData;
     public Player playerPrefab;
+    private GameObject playerObject;
 
     public Relic[] relicPrefab;
     public RelicData[] relicsData;
@@ -45,6 +46,9 @@ public class SpawnManager : MonoBehaviour
 
     private void Update()
     {
+        if(playerObject != null)
+            Debug.Log("DISTANCE: " + GetFurthestSpawnPoint());
+        
         if (currentlySpawned >= maxHunters) return;
         currentTime += Time.deltaTime;
         if (currentTime < timeInbetweenSpawns) return;
@@ -99,12 +103,42 @@ public class SpawnManager : MonoBehaviour
         return huntSpawners[0].GetComponentInParent<MazeNode>();
     }
 
+    private Vector2 GetFurthestSpawnPoint()
+    {
+        playerObject = GameObject.FindGameObjectWithTag("Player");
+        
+        Vector2 playerPosition = playerObject.transform.position;
+
+        float furthestDistance = 0;
+        Vector2 returnValue = Vector2.zero;
+
+        int counter = 0;
+        
+        foreach (Transform spawnPoint in huntSpawners)
+        {
+            float distance = Vector2.Distance(playerPosition, new Vector2(spawnPoint.position.x, spawnPoint.position.y));
+
+            if (distance > furthestDistance)
+            {
+                returnValue = spawnPoint.position;
+                furthestDistance = distance;
+            }
+
+            counter++;
+        }
+        
+        Debug.Log("Counter: " + counter);
+        
+        return Vector2.zero;
+    }
+    
     public void SpawnPlayer()
     {
         //int prefabIndex = Random.Range(0, playerPrefab.Length);
         Player player = Instantiate(playerPrefab, playerSpawners[0].parent.transform.position, transform.rotation, transform.parent);
         player.TileSize = playerSpawners[0].GetComponentInParent<MazeNode>().TileSize;
         player.CurrentPos = playerSpawners[0].GetComponentInParent<MazeNode>().GridPos;
+        playerObject = player.gameObject;
     }
     public void SpawnRelic(int amount)
     {
