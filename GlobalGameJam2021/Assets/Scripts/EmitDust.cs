@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EmitDust : MonoBehaviour
 {
-    public ParticleSystem particleSystem;
+    public ParticleSystem _particleSystem;
 
     public void EmitDustCLoud()
     {
-        particleSystem.Emit(9);
+        _particleSystem.Emit(9);
     }
 }
