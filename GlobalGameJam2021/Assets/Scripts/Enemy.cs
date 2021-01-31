@@ -43,6 +43,7 @@ public class Enemy : Character
     protected override void Start()
     {
         base.Start();
+        transform.position = spawnPoint.transform.position;
         baseMaterial = spriteRenderer.material;
         direction = Vector2.down;
         faceDirection = direction;
@@ -174,13 +175,14 @@ public class Enemy : Character
         CurrentPos = path[pathIndexPosition].GridPos;
 
         targetDirection = path[pathIndexPosition + 1].GridPos - CurrentPos;
+        Vector2 position = path[pathIndexPosition + 1].transform.position;
         
         if (direction != targetDirection)
             StartCoroutine(TurnCharacter());
         else
         {
             direction = path[pathIndexPosition + 1].GridPos - CurrentPos;
-            moveController.SetTargetPosition(direction);
+            moveController.SetEnemyTargetPosition(position);
             pathIndexPosition++;
         }
     }
@@ -239,7 +241,8 @@ public class Enemy : Character
 
     IEnumerator HandleNewPath()
     {
-        if(path.Count > 0)
+        yield return new WaitForSeconds(WaitTime);
+        if (path.Count > 0)
             CurrentPos = path[pathIndexPosition].GridPos;
 
 /*        if (pathFinder.GetWayPoint(CurrentPos).isExit && isCarryingRelic)
