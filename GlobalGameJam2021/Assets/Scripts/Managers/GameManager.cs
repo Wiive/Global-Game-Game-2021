@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour
     
     public void AddToScore(int amount)
     {
+        Debug.Log("adding: " + amount + " To Score");
         gameScore += amount;
         EventManager.instance.BroadcastOnScoreUpdate(gameScore);
     }

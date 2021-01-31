@@ -19,6 +19,11 @@ public class Relic : MonoBehaviour
 
     private Vector2 startPosition;
 
+    [SerializeField] float scoreIncreaseTimer = 0.5f;
+    [SerializeField] int scoreValue = 1;
+
+    float currentTime;
+
 
     private void Awake()
     {
@@ -31,10 +36,23 @@ public class Relic : MonoBehaviour
     {
         if (carrier != null)
             transform.position = carrier.transform.position;
-        else
+        else if (isPickedUp)
         {
             ReturnToStartPosition();
         }
+
+        if(!isPickedUp)
+        {
+            currentTime += Time.deltaTime;
+            if (currentTime > scoreIncreaseTimer)
+            {
+                Debug.Log("increasing score");
+                currentTime = 0;
+                GameManager.instance.AddToScore(scoreValue);
+            }
+
+        }
+
     }
 
     public void ReturnToStartPosition()
@@ -45,6 +63,7 @@ public class Relic : MonoBehaviour
         spriteRenderer.enabled = true;
         boxCollider2D.enabled = true;
         isPickedUp = false;
+        currentTime = 0;
     }
 
     public void SetData(RelicData data)
