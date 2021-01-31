@@ -46,13 +46,25 @@ SpriteAtlas:
     - {fileID: 102900000, guid: 34afea06496b7421ebf70580faa933c0, type: 3}
     - {fileID: 102900000, guid: 9f8e0094543ee43f5940c2cdb9d49132, type: 3}
     - {fileID: 102900000, guid: 142c1f23eb843402e9d25c58188210d7, type: 3}
-    totalSpriteSurfaceArea: 354053
+    totalSpriteSurfaceArea: 701449
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: afd84c50f47684efb9b05c73f1475623, type: 3}
+  - {fileID: 4171810733456836414, guid: 9fcdf5019403841d0ac2f19599a27a8b, type: 3}
+  - {fileID: 7978306294297118984, guid: 9fcdf5019403841d0ac2f19599a27a8b, type: 3}
+  - {fileID: -3643709021045679812, guid: 9fcdf5019403841d0ac2f19599a27a8b, type: 3}
+  - {fileID: 5153822703407003655, guid: 9fcdf5019403841d0ac2f19599a27a8b, type: 3}
+  - {fileID: 4892255418125560682, guid: 9fcdf5019403841d0ac2f19599a27a8b, type: 3}
+  - {fileID: 8559239700403275837, guid: 9fcdf5019403841d0ac2f19599a27a8b, type: 3}
+  - {fileID: 5923597946153480952, guid: 9fcdf5019403841d0ac2f19599a27a8b, type: 3}
+  - {fileID: 7222271235089928167, guid: 9fcdf5019403841d0ac2f19599a27a8b, type: 3}
+  - {fileID: -3153843446827198068, guid: 9fcdf5019403841d0ac2f19599a27a8b, type: 3}
+  - {fileID: -5064376725038251565, guid: 9fcdf5019403841d0ac2f19599a27a8b, type: 3}
+  - {fileID: -6453390830187929414, guid: 9fcdf5019403841d0ac2f19599a27a8b, type: 3}
+  - {fileID: 8507691459786746093, guid: 9fcdf5019403841d0ac2f19599a27a8b, type: 3}
   - {fileID: 5244017985712541682, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
   - {fileID: 8649523150740706730, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
   - {fileID: -3418204507842557513, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
@@ -359,6 +371,18 @@ SpriteAtlas:
   - {fileID: 21300000, guid: a92805ceae89b42afb5db61103b088d8, type: 3}
   m_PackedSpriteNamesToIndex:
   - Eyes_Enemy_01
+  - game_over_animation_spritesheet_10
+  - game_over_animation_spritesheet_11
+  - game_over_animation_spritesheet_9
+  - game_over_animation_spritesheet_8
+  - game_over_animation_spritesheet_1
+  - game_over_animation_spritesheet_0
+  - game_over_animation_spritesheet_3
+  - game_over_animation_spritesheet_2
+  - game_over_animation_spritesheet_5
+  - game_over_animation_spritesheet_4
+  - game_over_animation_spritesheet_7
+  - game_over_animation_spritesheet_6
   - moas decos_8
   - moas decos_9
   - moas decos_0
