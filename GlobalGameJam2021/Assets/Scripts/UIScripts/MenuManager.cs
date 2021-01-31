@@ -85,4 +85,23 @@ public class MenuManager : MonoBehaviour
         highscoreMenu.SetActive(false);
         GameStateManager.instance.ChangeGameState(GameStateManager.GameState.GameLoop);
     }
+
+    public void HighscoreBack()
+    {
+        if (GameStateManager.instance.CurrentGameState == GameStateManager.GameState.MainMenu)
+        {
+            ShowMainMenu();
+        }
+
+        else if (GameStateManager.instance.CurrentGameState == GameStateManager.GameState.GameOver)
+        {
+            ShowGameOverMenu();
+        }
+
+        else if (GameStateManager.instance.CurrentGameState == GameStateManager.GameState.IngameMenu)
+        {
+            ShowPauseMenus();
+        }
+
+    }
 }
