@@ -146,7 +146,7 @@ public class Flashlight : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             taserAnimator.SetTrigger("Attack");
-            Debug.Log($"{name} Found and wants to kill player!");
+            // Debug.Log($"{name} Found and wants to kill player!");
         }
     }
 }

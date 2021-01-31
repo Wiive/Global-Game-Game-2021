@@ -33,14 +33,43 @@ SpriteAtlas:
     packables:
     - {fileID: 102900000, guid: 34afea06496b7421ebf70580faa933c0, type: 3}
     - {fileID: 102900000, guid: 9f8e0094543ee43f5940c2cdb9d49132, type: 3}
-    totalSpriteSurfaceArea: 329690
+    totalSpriteSurfaceArea: 324613
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: afd84c50f47684efb9b05c73f1475623, type: 3}
-  - {fileID: 21300000, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: 5244017985712541682, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: 8649523150740706730, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: -3418204507842557513, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: -4850738881731346621, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: -4210781851464016589, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: -5328429649388243214, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: -2739406390647836231, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: -5033439172068857252, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: -8823567698060833231, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: 3070182261353318478, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: -5179849896444071904, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: 9111744164964132644, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: -7132680440744022740, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: 2521610435583582923, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: -8668182303445486123, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: 700145040436572079, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: 5546102157724615712, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: 365710348586826344, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: -8829674089579396028, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: 6631376035923117463, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: -3706408653880947253, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: -7931452972548557640, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: 2263137087192794093, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: 2991037682313011611, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: 8804254064991932097, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: -713598732072056618, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: -1234435878425524411, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: -1300900884463874075, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: -1190323932966942647, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
+  - {fileID: 3170186828618963668, guid: aa828d315f2deb04e98fd16fb6e05c0f, type: 3}
   - {fileID: -7668935643376289763, guid: b2fa1081a31cfb24d9884dc732d15bf7, type: 3}
   - {fileID: -8204106064592327607, guid: b2fa1081a31cfb24d9884dc732d15bf7, type: 3}
   - {fileID: 4251474379455968655, guid: b2fa1081a31cfb24d9884dc732d15bf7, type: 3}
@@ -203,7 +232,36 @@ SpriteAtlas:
   - {fileID: 21300000, guid: a92805ceae89b42afb5db61103b088d8, type: 3}
   m_PackedSpriteNamesToIndex:
   - Eyes_Enemy_01
-  - moas decos
+  - moas decos_8
+  - moas decos_9
+  - moas decos_0
+  - moas decos_1
+  - moas decos_2
+  - moas decos_3
+  - moas decos_4
+  - moas decos_5
+  - moas decos_6
+  - moas decos_7
+  - moas decos_19
+  - moas decos_18
+  - moas decos_13
+  - moas decos_12
+  - moas decos_28
+  - moas decos_11
+  - moas decos_29
+  - moas decos_10
+  - moas decos_26
+  - moas decos_17
+  - moas decos_27
+  - moas decos_16
+  - moas decos_24
+  - moas decos_15
+  - moas decos_25
+  - moas decos_14
+  - moas decos_22
+  - moas decos_23
+  - moas decos_20
+  - moas decos_21
   - EnemyA_Idle_Right
   - EnemyA_Move_Right_1
   - EnemyA_Move_Right_2

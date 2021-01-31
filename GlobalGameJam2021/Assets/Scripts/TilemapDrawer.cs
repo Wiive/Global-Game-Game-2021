@@ -11,8 +11,10 @@ public class TilemapDrawer : MonoBehaviour
     
     [SerializeField] private Tilemap wallLayer;
     [SerializeField] private Tilemap floorLayer;
+    [SerializeField] private Tilemap decorationLayer;
     [SerializeField] private TileBase wallTile;
     [SerializeField] private TileBase floorTile;
+    [SerializeField] private TileBase decorationTile;
 
     private void Awake()
     {
@@ -28,8 +30,9 @@ public class TilemapDrawer : MonoBehaviour
 
     public void PaintMap()
     {
-        wallLayer.ClearAllTiles();
         floorLayer.ClearAllTiles();
+        decorationLayer.ClearAllTiles();
+        wallLayer.ClearAllTiles();
 
         foreach (var node in map)
         {
@@ -37,8 +40,12 @@ public class TilemapDrawer : MonoBehaviour
             
             if (node.Value.isWall)
                 wallLayer.SetTile(node.Value.GridPos3, wallTile);
+            else if (UnityEngine.Random.Range(0, 10) == 0)
+                decorationLayer.SetTile(node.Value.GridPos3, decorationTile);
         }
         
+        floorLayer.RefreshAllTiles();
+        decorationLayer.RefreshAllTiles();
         wallLayer.RefreshAllTiles();
     }
 }

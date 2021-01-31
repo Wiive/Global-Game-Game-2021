@@ -81,20 +81,20 @@ public class Character : MonoBehaviour
 
     public virtual void GotKilled()
     {
-        Debug.Log($"{name} got Killed!");
+        // Debug.Log($"{name} got Killed!");
         selfCollider.enabled = false;
         isAlive = false;
     }
     
     protected virtual void Attack(Character character)
     {
-        Debug.Log($"{name} Attacks {character.name}!");
+        // Debug.Log($"{name} Attacks {character.name}!");
         character.GotKilled();
     }
     
     protected virtual void Pickup(Relic relic)
     {
-        Debug.Log($"{name} Pickups Relic \"{relic.name}\"!");
+        // Debug.Log($"{name} Pickups Relic \"{relic.name}\"!");
     }
 
     protected virtual void UpdateAnimations()
@@ -104,6 +104,7 @@ public class Character : MonoBehaviour
             animator.SetFloat("DirectionX", direction.x);
             animator.SetFloat("DirectionY", direction.y);
         }
+        
         animator.SetBool("IsMoving", moveController.IsMoving);
     }
     
