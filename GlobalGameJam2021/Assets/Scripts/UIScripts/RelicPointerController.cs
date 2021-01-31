@@ -110,6 +110,9 @@ public class RelicPointerController : MonoBehaviour
         float y = Mathf.Clamp(relicPosition.y, cameraPosition.y - (height - arrowSize), cameraPosition.y + (height - arrowSize));
         float x = Mathf.Clamp(relicPosition.x, cameraPosition.x - (width - arrowSize), cameraPosition.x + (width - arrowSize));
 
+        Vector2 direction = new Vector2(cameraPosition.x - x, cameraPosition.y - y).normalized;
+        targetSymbol.transform.localPosition = direction * 16f;
+
         transform.position = new Vector3(x, y, 0);
     }
 
