@@ -6,7 +6,7 @@ public class SpawnManager : MonoBehaviour
 {
     public static SpawnManager instance;
     [SerializeField] List<RelicPointerController> relicPointers = new List<RelicPointerController>();
-    [SerializeField] private List<Transform> huntSpawners = new List<Transform>();
+    [SerializeField] private List<MazeNode> huntSpawners = new List<MazeNode>();
     [SerializeField] private List<Transform> playerSpawners = new List<Transform>();
     [SerializeField] private List<Transform> relicSpawners = new List<Transform>();
 
@@ -50,7 +50,7 @@ public class SpawnManager : MonoBehaviour
         currentTime += Time.deltaTime;
         if (currentTime < timeInbetweenSpawns) return;
         currentTime = 0;
-        SpawnHunter(1);
+        SpawnNewHunter();
     }
 
     public void SpawnEntities()
@@ -65,7 +65,7 @@ public class SpawnManager : MonoBehaviour
     {
         foreach (var spawnPoint in GameObject.FindGameObjectsWithTag("HunterSpawner"))
         {
-            huntSpawners.Add(spawnPoint.transform);
+            huntSpawners.Add(spawnPoint.GetComponentInParent<MazeNode>());
         }
         foreach (var spawnPoint in GameObject.FindGameObjectsWithTag("PlayerSpawner"))
         {
@@ -76,46 +76,62 @@ public class SpawnManager : MonoBehaviour
             relicSpawners.Add(spawnPoint.transform);
         }
     }
-    public void SpawnHunter(int amount)
+    private void SpawnHunter(int amount)
     {
         for (int i = 0; i < amount; i++)
         {
             currentlySpawned++;
             int spawnIndex = Random.Range(0, huntSpawners.Count);
-            //int prefabIndex = Random.Range(0, hunterPrefab.Length);
-            Enemy enemy = Instantiate(enemyPrefab, huntSpawners[spawnIndex].parent.transform.position, transform.rotation,transform.parent);
-            enemy.SetData(enemiesData[amount == enemiesData.Length ? i : UnityEngine.Random.Range(0, enemiesData.Length-1)]);
-            enemy.TileSize = huntSpawners[spawnIndex].GetComponentInParent<MazeNode>().TileSize;
-            enemy.CurrentPos = huntSpawners[spawnIndex].GetComponentInParent<MazeNode>().GridPos;
-            enemy.SpawnPoint = huntSpawners[spawnIndex].GetComponentInParent<MazeNode>();
+            Enemy enemy = Instantiate(enemyPrefab, huntSpawners[spawnIndex].transform.position, transform.rotation,transform.parent);
+            enemy.SetData(enemiesData[amount == enemiesData.Length ? i : Random.Range(0, enemiesData.Length-1)]);
+            enemy.TileSize = huntSpawners[spawnIndex].TileSize;
+            enemy.CurrentPos = huntSpawners[spawnIndex].GridPos;
+            enemy.SpawnPoint = huntSpawners[spawnIndex];
             enemy.name = $"Enemy{spawnedHunters.Count}";
             spawnedHunters.Add(enemy);
         }
     }
 
-    public MazeNode GetSpawnPos()
+    private void SpawnNewHunter()
     {
-        // get the furthest away from player.
-
-        return huntSpawners[0].GetComponentInParent<MazeNode>();
+        currentlySpawned++;
+        MazeNode hunterSpawnPoint = GetFurthestSpawnPoint();
+        Enemy enemy = Instantiate(enemyPrefab, hunterSpawnPoint.transform.position, transform.rotation, transform.parent);
+        enemy.SetData(enemiesData[Random.Range(0, enemiesData.Length - 1)]);
+        enemy.TileSize = hunterSpawnPoint.TileSize;
+        enemy.CurrentPos = hunterSpawnPoint.GridPos;
+        enemy.SpawnPoint = hunterSpawnPoint;
+        enemy.name = $"Enemy{spawnedHunters.Count}";
+        spawnedHunters.Add(enemy);
     }
 
-    private Vector2 GetFurthestSpawnPoint(Player player)
+    public MazeNode GetSpawnPos()
     {
-        Vector2 playerPosition = player.transform.position;
+        return GetFurthestSpawnPoint();
+    }
+
+    private MazeNode GetFurthestSpawnPoint()
+    {
+        Vector2 playerPosition = playerObject.transform.position;
         
         float furthestDistance = 0;
-        Vector2 returnValue = Vector2.zero;
+        MazeNode returnValue = null;
         
-        foreach (Transform spawnPoint in huntSpawners)
+        foreach (MazeNode spawnPoint in huntSpawners)
         {
-            float distance = Vector2.Distance(playerPosition, spawnPoint.position);
+            float distance = Vector2.Distance(playerPosition, spawnPoint.transform.position);
 
             if (distance > furthestDistance)
             {
-                returnValue = spawnPoint.position;
+                returnValue = spawnPoint;
                 furthestDistance = distance;
             }
+        }
+
+        if(returnValue == null)
+        {
+            int index = Random.Range(0, huntSpawners.Count);
+            returnValue = huntSpawners[index];
         }
         
         return returnValue;
