@@ -1,23 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class MenuManager : MonoBehaviour
 {
     public GameObject mainMenu;
     public GameObject audioMenu;
+
     public GameObject gameOverMenu;
+    [SerializeField] GameObject firstGameOverButton = null;
+    [SerializeField] EventSystem gameOverEventSystem = null;
+
     public GameObject pauseMenu;
     public GameObject highscoreMenu;
 
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && GameStateManager.instance.CurrentGameState == GameStateManager.GameState.GameLoop 
-            || Input.GetKeyDown(KeyCode.P) && GameStateManager.instance.CurrentGameState == GameStateManager.GameState.GameLoop)
+        if (Input.GetButtonDown("Pause") && GameStateManager.instance.CurrentGameState == GameStateManager.GameState.GameLoop)
         {
             ShowPauseMenus();
-        }       
+        }
+        else if (Input.GetButtonDown("Pause") && GameStateManager.instance.CurrentGameState == GameStateManager.GameState.IngameMenu)
+        {
+            CloseAllMenus();
+        }
     }
 
 
@@ -31,7 +39,7 @@ public class MenuManager : MonoBehaviour
         GameStateManager.instance.ChangeGameState(GameStateManager.GameState.MainMenu);
     }
 
-    public void ShowAdioMenu()
+    public void ShowAudioMenu()
     {
         mainMenu.SetActive(false);
         audioMenu.SetActive(true);
@@ -43,15 +51,16 @@ public class MenuManager : MonoBehaviour
     public void ShowGameOverMenu()
     {
         GameStateManager.instance.ChangeGameState(GameStateManager.GameState.GameOver);
-
         HighScoreManager scoreManager = GetComponent<HighScoreManager>();
         scoreManager.SetHighScore();
-
+        
         mainMenu.SetActive(false);
         audioMenu.SetActive(false);
         gameOverMenu.SetActive(true);
         pauseMenu.SetActive(false);
         highscoreMenu.SetActive(false);
+        gameOverEventSystem.SetSelectedGameObject(null);
+        gameOverEventSystem.SetSelectedGameObject(firstGameOverButton);
     }
 
     public void ShowPauseMenus()

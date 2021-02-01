@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class IntroManager : MonoBehaviour
 {
@@ -8,6 +10,9 @@ public class IntroManager : MonoBehaviour
 
     [SerializeField] GameObject playButton;
     [SerializeField] GameObject nextButton;
+    [SerializeField] GameObject skipButton;
+
+    [SerializeField] EventSystem eventSystem;
 
     public void ActivateBanner()
     {      
@@ -19,7 +24,9 @@ public class IntroManager : MonoBehaviour
         else
         {
             playButton.SetActive(true);
+            eventSystem.SetSelectedGameObject(playButton);
             nextButton.SetActive(false);
+            skipButton.SetActive(false);
         }
     }
 }

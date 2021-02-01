@@ -24,12 +24,9 @@ public class Player : Character
 
     protected override void Update()
     {
+        if (GameStateManager.instance.CurrentGameState != GameStateManager.GameState.GameLoop) return;
         base.Update();
-
-        if (GameStateManager.instance.CurrentGameState == GameStateManager.GameState.GameLoop)
-        {
-            ReadInput();
-        }
+        ReadInput();
     }
 
     private void ReadInput()
