@@ -202,8 +202,8 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_PressedColor: {r: 0.5764706, g: 0.5764706, b: 0.5764706, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -219,7 +219,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1257249151}
+  m_TargetGraphic: {fileID: 1386038659}
   m_FillRect: {fileID: 1386038658}
   m_HandleRect: {fileID: 1257249150}
   m_Direction: 0
@@ -3272,12 +3272,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 2568491145101011688}
+  mainMenuEventSystem: {fileID: 675041964}
   audioMenu: {fileID: 2568491146254326691}
   gameOverMenu: {fileID: 1124760188}
   firstGameOverButton: {fileID: 217985995527391081}
   gameOverEventSystem: {fileID: 618309543}
   pauseMenu: {fileID: 999206506}
+  pauseEventSystem: {fileID: 1750861456}
   highscoreMenu: {fileID: 62393945}
+  lastPressedPauseButton: {fileID: 0}
+  lastPressedMainMenuButton: {fileID: 0}
+  lastPressedGameOVerButton: {fileID: 0}
 --- !u!114 &573762062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3581,8 +3586,8 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_PressedColor: {r: 0.5764706, g: 0.5764706, b: 0.5764706, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -3598,7 +3603,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 2568491146333594404}
+  m_TargetGraphic: {fileID: 2568491145528252314}
   m_FillRect: {fileID: 2568491145528252315}
   m_HandleRect: {fileID: 2568491146333594405}
   m_Direction: 0
