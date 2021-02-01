@@ -107,6 +107,8 @@ public class Player : Character
         MenuManager menuManager;
         if ((menuManager = FindObjectOfType<MenuManager>()) != null)
         {
+            HighScoreManager scoreManager = FindObjectOfType<HighScoreManager>();
+            scoreManager.SetHighScore();
             menuManager.ShowGameOverMenu();
         }
         else

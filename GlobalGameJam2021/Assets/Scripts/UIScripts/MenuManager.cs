@@ -59,9 +59,7 @@ public class MenuManager : MonoBehaviour
     public void ShowGameOverMenu()
     {
         GameStateManager.instance.ChangeGameState(GameStateManager.GameState.GameOver);
-        HighScoreManager scoreManager = GetComponent<HighScoreManager>();
-        scoreManager.SetHighScore();
-        
+
         mainMenu.SetActive(false);
         audioMenu.SetActive(false);
         gameOverMenu.SetActive(true);
